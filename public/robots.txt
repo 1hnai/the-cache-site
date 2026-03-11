@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://thecache.com/sitemap-index.xml

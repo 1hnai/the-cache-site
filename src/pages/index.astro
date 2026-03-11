@@ -1,0 +1,52 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="The Cache"
+  description="The best stuff you didn't know you needed. Weekly curation of the top gear, tech, fashion, and finds — every recommendation earned, never paid."
+>
+  <section style="text-align:center; padding: 4rem 0 3rem;">
+    <p style="font-size:0.85rem; font-weight:600; text-transform:uppercase; letter-spacing:0.1em; color:var(--brand-accent); margin-bottom:1rem;">Men's Gear & Lifestyle</p>
+    <h1 style="font-size:clamp(2rem,5vw,3rem); font-weight:800; line-height:1.15; letter-spacing:-0.03em; margin-bottom:1.25rem; font-family: Georgia, serif;">
+      The best stuff you didn't<br>know you needed.
+    </h1>
+    <p style="font-size:1.1rem; color:var(--brand-muted); max-width:520px; margin:0 auto 2.5rem;">
+      Weekly curation of the top 5 across gear, tech, fashion, cars, and drinks.
+      <strong style="color:var(--brand-text)">Every pick researched, never paid for.</strong>
+    </p>
+    <div class="subscribe-bar" style="margin: 0 auto; max-width: 480px; padding: 1.5rem;">
+      <p style="margin-bottom:1rem; font-size:0.95rem; color:#a8a29e;">Get the weekly drop in your inbox.</p>
+      <div class="subscribe-form">
+        <input type="email" placeholder="your@email.com" aria-label="Email address" />
+        <button class="btn">Subscribe free</button>
+      </div>
+    </div>
+  </section>
+
+  <hr style="border:none; border-top:1px solid var(--brand-border); margin: 2rem 0;" />
+
+  <section style="margin: 3rem 0;">
+    <h2 style="font-size:0.85rem; font-weight:700; margin-bottom:1.5rem; color:var(--brand-muted); text-transform:uppercase; letter-spacing:0.05em;">What's in The Cache</h2>
+    <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap:1rem;">
+      {[
+        { emoji: '🎒', cat: 'Gear', desc: 'The best carry, outdoor, and everyday kit.' },
+        { emoji: '💻', cat: 'Tech', desc: 'Gadgets and tools that are actually worth it.' },
+        { emoji: '👔', cat: 'Style', desc: 'Minimal, sharp, and built to last.' },
+        { emoji: '🚗', cat: 'Cars', desc: 'Vehicles and everything around them.' },
+        { emoji: '🥃', cat: 'Drinks', desc: 'Spirits, coffee, and everything worth sipping.' },
+      ].map(({ emoji, cat, desc }) => (
+        <div style="background:white; border:1px solid var(--brand-border); border-radius:10px; padding:1.25rem;">
+          <div style="font-size:1.5rem; margin-bottom:0.4rem;">{emoji}</div>
+          <h3 style="font-weight:700; margin-bottom:0.3rem; font-size:0.95rem;">{cat}</h3>
+          <p style="font-size:0.85rem; color:var(--brand-muted);">{desc}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <section style="margin: 3rem 0;">
+    <h2 style="font-size:0.85rem; font-weight:700; margin-bottom:1.5rem; color:var(--brand-muted); text-transform:uppercase; letter-spacing:0.05em;">Latest Picks</h2>
+    <p style="color:var(--brand-muted); font-style:italic;">First drop coming soon. <a href="/articles">Browse the archive</a> once we launch.</p>
+  </section>
+</BaseLayout>
