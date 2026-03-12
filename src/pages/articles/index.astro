@@ -1,20 +1,33 @@
 ---
+import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const articles = await getCollection('articles');
+articles.sort((a, b) => new Date(b.data.publishedDate).getTime() - new Date(a.data.publishedDate).getTime());
+
+const categoryColors: Record<string, string> = {
+  gear: '#c2410c',
+  tech: '#0369a1',
+  drinks: '#7c3aed',
+  style: '#4f7942',
+  cars: '#b45309',
+};
 ---
 
 <BaseLayout
   title="Picks — The Cache"
-  description="The best gear, tech, fashion, cars, and drinks — curated weekly by The Cache."
+  description="The best gear, tech, fashion, cars, and drinks — curated and reviewed by The Cache."
 >
   <h1 style="font-size:1.75rem; font-weight:800; letter-spacing:-0.02em; margin-bottom:0.5rem; font-family:Georgia,serif;">The Picks</h1>
   <p style="color:var(--brand-muted); margin-bottom:3rem;">Gear, tech, style, cars, and drinks worth your attention.</p>
 
-  <div style="text-align:center; padding:4rem 0; border:1px dashed var(--brand-border); border-radius:12px;">
-    <p style="font-size:1.1rem; font-weight:600; margin-bottom:0.5rem;">First drop coming soon</p>
-    <p style="color:var(--brand-muted); margin-bottom:1.5rem;">Subscribe to get notified when we launch.</p>
-    <div style="display:flex; gap:0.5rem; max-width:380px; margin:0 auto;">
-      <input type="email" placeholder="your@email.com" style="flex:1; padding:0.6rem 1rem; border-radius:8px; border:1px solid #292524; background:#1c1917; color:white; font-size:0.95rem;" />
-      <button style="padding:0.6rem 1.25rem; border-radius:8px; font-weight:600; font-size:0.9rem; border:none; background:var(--brand-accent); color:white; cursor:pointer;">Notify me</button>
-    </div>
+  <div style="display:flex; flex-direction:column; gap:1.5rem;">
+    {articles.map(article => (
+      <a href={`/articles/${article.slug}`} style="display:block; background:white; border:1px solid var(--brand-border); border-radius:10px; padding:1.5rem; text-decoration:none; color:inherit; transition:box-shadow 0.15s;">
+        <div style={`font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.08em; color:${categoryColors[article.data.category] ?? 'var(--brand-accent)'}; margin-bottom:0.4rem;`}>{article.data.category}</div>
+        <h2 style="font-size:1.05rem; font-weight:700; margin-bottom:0.4rem; font-family:Georgia,serif;">{article.data.title}</h2>
+        <p style="font-size:0.9rem; color:var(--brand-muted); margin:0;">{article.data.description}</p>
+      </a>
+    ))}
   </div>
 </BaseLayout>
