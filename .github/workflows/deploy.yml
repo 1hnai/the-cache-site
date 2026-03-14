@@ -8,10 +8,11 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Trigger Railway deployment
+      - name: Trigger Railway deployment (build from source)
         run: |
-          curl -s -X POST https://backboard.railway.app/graphql/v2 \
+          RESULT=$(curl -s -X POST https://backboard.railway.app/graphql/v2 \
             -H "Authorization: Bearer ${{ secrets.RAILWAY_API_TOKEN }}" \
             -H "Content-Type: application/json" \
-            -d '{"query":"mutation { serviceInstanceRedeploy(serviceId: \"bf1b60c9-0ef6-4a08-bb90-aacfca29e417\", environmentId: \"b9cc9ddb-5dc1-497d-b480-d20d8d181149\") }"}' \
-            | grep -q '"serviceInstanceRedeploy":true' && echo "Deploy triggered ✓" || echo "Deploy failed"
+            -d '{"query":"mutation { serviceInstanceDeployV2(serviceId: \"bf1b60c9-0ef6-4a08-bb90-aacfca29e417\", environmentId: \"b9cc9ddb-5dc1-497d-b480-d20d8d181149\") }"}')
+          echo "$RESULT"
+          echo "$RESULT" | grep -q '"serviceInstanceDeployV2"' && echo "Deploy triggered ✓" || echo "Deploy failed — check token permissions"
