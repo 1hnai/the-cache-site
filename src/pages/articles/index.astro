@@ -2,7 +2,7 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 
-const articles = await getCollection('articles', ({ data }) => data.status === 'live');
+const articles = await getCollection('articles', ({ data }) => data.status === 'live' || data.status === 'approved');
 articles.sort((a, b) => new Date(b.data.publishedDate).getTime() - new Date(a.data.publishedDate).getTime());
 
 function formatDate(dateStr: string) {

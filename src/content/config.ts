@@ -7,7 +7,7 @@ const articles = defineCollection({
     description: z.string(),
     category: z.string(),
     publishedDate: z.string(),
-    status: z.enum(['draft', 'live']).default('draft'),
+    status: z.enum(['draft', 'approved', 'live', 'rejected']).default('draft'),
     price: z.string().optional(),
     image: z.string().optional(),
     buyUrl: z.string().optional(),
