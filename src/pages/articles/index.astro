@@ -4,14 +4,20 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 
 const articles = await getCollection('articles', ({ data }) => data.status === 'live');
 articles.sort((a, b) => new Date(b.data.publishedDate).getTime() - new Date(a.data.publishedDate).getTime());
+
+function formatDate(dateStr: string) {
+  return new Date(dateStr).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+}
 ---
 
 <BaseLayout
   title="Picks — The Cache"
   description="Gear, tech, style, cars, and drinks worth your attention."
 >
-  <h1 class="page-title">The Picks</h1>
-  <p class="page-sub">Gear, tech, style, cars, and drinks worth your attention.</p>
+  <div class="page-header">
+    <h1 class="page-title">The Picks</h1>
+    <p class="page-sub">Gear, tech, style, cars, and drinks worth your attention.</p>
+  </div>
 
   {articles.length > 0 ? (
     <div class="picks-list">
@@ -23,11 +29,15 @@ articles.sort((a, b) => new Date(b.data.publishedDate).getTime() - new Date(a.da
             </div>
           )}
           <div class="pick-info">
-            <span class="pick-cat">{article.data.category}</span>
+            <div class="pick-meta">
+              <span class="pick-cat">{article.data.category}</span>
+              <span class="pick-date">{formatDate(article.data.publishedDate)}</span>
+            </div>
             <h2 class="pick-title">{article.data.title}</h2>
             <p class="pick-desc">{article.data.description}</p>
             {article.data.price && <span class="pick-price">{article.data.price}</span>}
           </div>
+          <div class="pick-arrow" aria-hidden="true">&#8594;</div>
         </a>
       ))}
     </div>
@@ -37,50 +47,56 @@ articles.sort((a, b) => new Date(b.data.publishedDate).getTime() - new Date(a.da
 </BaseLayout>
 
 <style>
+  .page-header {
+    padding: 2rem 0 2.5rem;
+    border-bottom: 1px solid var(--brand-border);
+    margin-bottom: 2rem;
+  }
+
   .page-title {
-    font-size: 1.75rem;
-    font-weight: 800;
+    font-family: var(--font-serif);
+    font-size: 1.85rem;
+    font-weight: 700;
     letter-spacing: -0.02em;
     margin-bottom: 0.4rem;
-    font-family: Georgia, serif;
+    color: var(--brand-text);
   }
 
   .page-sub {
     color: var(--brand-muted);
-    margin-bottom: 3rem;
+    font-size: 0.9375rem;
   }
 
   .picks-list {
     display: flex;
     flex-direction: column;
-    gap: 1px;
-    border: 1px solid var(--brand-border);
-    border-radius: 10px;
-    overflow: hidden;
-    background: var(--brand-border);
   }
 
   .pick-row {
     display: flex;
-    gap: 1.25rem;
-    background: white;
-    padding: 1.25rem;
+    gap: 1.5rem;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid var(--brand-border);
     text-decoration: none;
     color: inherit;
     transition: background 0.1s;
     align-items: flex-start;
+    position: relative;
   }
 
-  .pick-row:hover {
-    background: var(--brand-surface);
-    text-decoration: none;
+  .pick-row:first-child {
+    padding-top: 0;
+  }
+
+  .pick-row:hover .pick-title {
+    color: var(--brand-accent);
   }
 
   .pick-thumb {
-    width: 100px;
-    height: 70px;
+    width: 140px;
+    height: 100px;
     flex-shrink: 0;
-    border-radius: 6px;
+    border-radius: 5px;
     overflow: hidden;
     background: var(--brand-surface);
   }
@@ -97,31 +113,45 @@ articles.sort((a, b) => new Date(b.data.publishedDate).getTime() - new Date(a.da
     min-width: 0;
   }
 
+  .pick-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.4rem;
+  }
+
   .pick-cat {
-    font-size: 0.7rem;
-    font-weight: 700;
+    font-size: 0.675rem;
+    font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.12em;
     color: var(--brand-accent);
-    display: block;
-    margin-bottom: 0.3rem;
+  }
+
+  .pick-date {
+    font-size: 0.75rem;
+    color: var(--brand-muted);
   }
 
   .pick-title {
-    font-size: 1rem;
+    font-family: var(--font-serif);
+    font-size: 1.1rem;
     font-weight: 700;
-    font-family: Georgia, serif;
-    margin-bottom: 0.3rem;
+    margin-bottom: 0.4rem;
     line-height: 1.3;
+    color: var(--brand-text);
+    transition: color 0.15s;
   }
 
   .pick-desc {
     font-size: 0.875rem;
     color: var(--brand-muted);
-    margin: 0 0 0.4rem;
-    white-space: nowrap;
+    line-height: 1.55;
+    margin-bottom: 0.5rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
     overflow: hidden;
-    text-overflow: ellipsis;
   }
 
   .pick-price {
@@ -130,12 +160,31 @@ articles.sort((a, b) => new Date(b.data.publishedDate).getTime() - new Date(a.da
     color: var(--brand-muted);
   }
 
+  .pick-arrow {
+    color: var(--brand-border-strong);
+    font-size: 1.1rem;
+    align-self: center;
+    flex-shrink: 0;
+    transition: color 0.15s, transform 0.15s;
+  }
+
+  .pick-row:hover .pick-arrow {
+    color: var(--brand-accent);
+    transform: translateX(3px);
+  }
+
   .empty {
     color: var(--brand-muted);
     font-style: italic;
+    padding: 2rem 0;
   }
 
-  @media (max-width: 500px) {
-    .pick-thumb { display: none; }
+  @media (max-width: 600px) {
+    .pick-thumb {
+      width: 90px;
+      height: 68px;
+    }
+    .pick-arrow { display: none; }
+    .pick-desc { display: none; }
   }
 </style>

@@ -27,7 +27,7 @@ const fullTitle = title === siteName ? title : `${title} | ${siteName}`;
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#1c1917" />
+    <meta name="theme-color" content="#ffffff" />
 
     <title>{fullTitle}</title>
     <meta name="description" content={description} />
@@ -58,131 +58,253 @@ const fullTitle = title === siteName ? title : `${title} | ${siteName}`;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="alternate" type="application/rss+xml" title={siteName} href="/rss.xml" />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
     <style>
       :root {
-        --brand-bg: #fafaf9;
-        --brand-surface: #f5f5f4;
+        --brand-bg: #ffffff;
+        --brand-surface: #f7f7f5;
         --brand-accent: #c2410c;
-        --brand-accent-light: #ea580c;
-        --brand-text: #1c1917;
-        --brand-muted: #78716c;
-        --brand-border: #e7e5e4;
-        --max-width: 720px;
-        --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+        --brand-accent-hover: #9a3409;
+        --brand-text: #111111;
+        --brand-muted: #6b7280;
+        --brand-border: #e5e7eb;
+        --brand-border-strong: #d1d5db;
+        --max-width: 1160px;
+        --reading-width: 700px;
+        --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
         --font-serif: Georgia, 'Times New Roman', serif;
       }
 
       *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-      html { font-size: 16px; scroll-behavior: smooth; }
+      html { font-size: 16px; scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
 
       body {
         font-family: var(--font-sans);
         background: var(--brand-bg);
         color: var(--brand-text);
-        line-height: 1.7;
+        line-height: 1.6;
         min-height: 100vh;
         display: flex;
         flex-direction: column;
       }
 
-      a { color: var(--brand-accent-light); text-decoration: none; }
-      a:hover { text-decoration: underline; }
+      a { color: var(--brand-accent); text-decoration: none; }
+      a:hover { color: var(--brand-accent-hover); }
 
-      header { border-bottom: 1px solid var(--brand-border); padding: 1rem 1.5rem; background: white; }
+      /* ── Header ─────────────────────────────────── */
+      .site-header {
+        border-bottom: 1px solid var(--brand-border);
+        background: var(--brand-bg);
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
 
-      header nav {
+      .site-header-inner {
         max-width: var(--max-width);
         margin: 0 auto;
+        padding: 0 2rem;
+        height: 60px;
         display: flex;
         align-items: center;
         justify-content: space-between;
         gap: 2rem;
       }
 
-      .logo { font-weight: 800; font-size: 1.15rem; color: var(--brand-text); letter-spacing: -0.03em; font-family: var(--font-serif); }
-      .logo em { color: var(--brand-accent); font-style: italic; }
+      .site-logo {
+        font-family: var(--font-serif);
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: var(--brand-text);
+        letter-spacing: -0.02em;
+        text-decoration: none;
+        flex-shrink: 0;
+      }
 
-      nav ul { list-style: none; display: flex; gap: 1.5rem; font-size: 0.9rem; }
-      nav ul a { color: var(--brand-muted); }
-      nav ul a:hover { color: var(--brand-text); text-decoration: none; }
+      .site-logo:hover { color: var(--brand-text); }
 
+      .site-logo span {
+        color: var(--brand-accent);
+        font-style: italic;
+      }
+
+      .site-nav {
+        display: flex;
+        align-items: center;
+        gap: 0.25rem;
+      }
+
+      .site-nav a {
+        color: var(--brand-muted);
+        font-size: 0.8125rem;
+        font-weight: 500;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        padding: 0.4rem 0.75rem;
+        border-radius: 4px;
+        transition: color 0.15s, background 0.15s;
+      }
+
+      .site-nav a:hover {
+        color: var(--brand-text);
+        background: var(--brand-surface);
+      }
+
+      /* ── Main content ───────────────────────────── */
       main {
         max-width: var(--max-width);
         margin: 0 auto;
-        padding: 3rem 1.5rem;
+        padding: 3rem 2rem 4rem;
         flex: 1;
         width: 100%;
       }
 
-      footer { border-top: 1px solid var(--brand-border); padding: 2rem 1.5rem; text-align: center; font-size: 0.85rem; color: var(--brand-muted); background: white; }
-      footer nav { display: flex; justify-content: center; gap: 1.5rem; margin-bottom: 1rem; }
-      footer a { color: var(--brand-muted); }
-      footer a:hover { color: var(--brand-text); text-decoration: none; }
-
+      /* ── Subscribe bar ──────────────────────────── */
       .subscribe-bar {
         background: var(--brand-text);
         color: white;
-        border-radius: 12px;
-        padding: 2rem;
+        border-radius: 8px;
+        padding: 2.25rem 2rem;
         text-align: center;
         margin: 3rem 0;
       }
 
-      .subscribe-bar h2 { font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem; }
-      .subscribe-bar p { color: #a8a29e; font-size: 0.95rem; margin-bottom: 1.25rem; }
+      .subscribe-bar h2 {
+        font-family: var(--font-serif);
+        font-size: 1.35rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+        letter-spacing: -0.01em;
+      }
 
-      .subscribe-form { display: flex; gap: 0.5rem; max-width: 400px; margin: 0 auto; }
+      .subscribe-bar p {
+        color: #9ca3af;
+        font-size: 0.9rem;
+        margin-bottom: 1.25rem;
+      }
+
+      .subscribe-form {
+        display: flex;
+        gap: 0.5rem;
+        max-width: 400px;
+        margin: 0 auto;
+      }
 
       .subscribe-form input {
         flex: 1;
-        padding: 0.6rem 1rem;
-        border-radius: 8px;
-        border: 1px solid #44403c;
-        background: #292524;
+        padding: 0.65rem 1rem;
+        border-radius: 5px;
+        border: 1px solid #374151;
+        background: #1f2937;
         color: white;
-        font-size: 0.95rem;
+        font-size: 0.9rem;
+        font-family: var(--font-sans);
       }
 
+      .subscribe-form input::placeholder { color: #6b7280; }
+      .subscribe-form input:focus { outline: 2px solid var(--brand-accent); border-color: transparent; }
+
       .btn {
-        padding: 0.6rem 1.25rem;
-        border-radius: 8px;
+        padding: 0.65rem 1.25rem;
+        border-radius: 5px;
         font-weight: 600;
-        font-size: 0.9rem;
+        font-size: 0.85rem;
         cursor: pointer;
         border: none;
         background: var(--brand-accent);
         color: white;
-        transition: opacity 0.15s;
+        transition: background 0.15s;
         white-space: nowrap;
+        font-family: var(--font-sans);
       }
 
-      .btn:hover { opacity: 0.85; }
+      .btn:hover { background: var(--brand-accent-hover); }
 
-      @media (max-width: 600px) { .subscribe-form { flex-direction: column; } }
+      /* ── Footer ─────────────────────────────────── */
+      .site-footer {
+        border-top: 1px solid var(--brand-border);
+        padding: 2rem;
+        font-size: 0.8125rem;
+        color: var(--brand-muted);
+        background: var(--brand-bg);
+      }
+
+      .site-footer-inner {
+        max-width: var(--max-width);
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1.5rem;
+        flex-wrap: wrap;
+      }
+
+      .site-footer-brand {
+        font-family: var(--font-serif);
+        font-size: 0.9rem;
+        font-weight: 700;
+        color: var(--brand-text);
+        letter-spacing: -0.01em;
+      }
+
+      .site-footer nav {
+        display: flex;
+        gap: 1.25rem;
+      }
+
+      .site-footer nav a {
+        color: var(--brand-muted);
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        font-size: 0.75rem;
+        font-weight: 500;
+      }
+
+      .site-footer nav a:hover { color: var(--brand-text); }
+
+      .site-footer-copy {
+        color: var(--brand-muted);
+        font-size: 0.75rem;
+      }
+
+      /* ── Mobile ──────────────────────────────────── */
+      @media (max-width: 640px) {
+        .site-header-inner { padding: 0 1.25rem; }
+        main { padding: 2rem 1.25rem 3rem; }
+        .subscribe-form { flex-direction: column; }
+        .site-footer-inner { flex-direction: column; align-items: flex-start; gap: 1rem; }
+        .site-footer { padding: 1.5rem 1.25rem; }
+      }
     </style>
   </head>
   <body>
-    <header>
-      <nav>
-        <a href="/" class="logo">The <em>Cache</em></a>
-        <ul>
-          <li><a href="/articles">Picks</a></li>
-          <li><a href="/about">About</a></li>
-        </ul>
-      </nav>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a href="/" class="site-logo">The <span>Cache</span></a>
+        <nav class="site-nav">
+          <a href="/articles">Picks</a>
+          <a href="/about">About</a>
+        </nav>
+      </div>
     </header>
 
     <main>
       <slot />
     </main>
 
-    <footer>
-      <nav>
-        <a href="/articles">Picks</a>
-        <a href="/about">About</a>
-        <a href="/rss.xml">RSS</a>
-      </nav>
-      <p>© {new Date().getFullYear()} The Cache. The best stuff you didn't know you needed.</p>
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <span class="site-footer-brand">The Cache</span>
+        <nav>
+          <a href="/articles">Picks</a>
+          <a href="/about">About</a>
+          <a href="/rss.xml">RSS</a>
+        </nav>
+        <span class="site-footer-copy">&copy; {new Date().getFullYear()} The Cache</span>
+      </div>
     </footer>
   </body>
 </html>

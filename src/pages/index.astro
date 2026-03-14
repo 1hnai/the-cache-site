@@ -2,9 +2,10 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 
-const articles = await getCollection('articles');
+const articles = await getCollection('articles', ({ data }) => data.status === 'live');
 articles.sort((a, b) => new Date(b.data.publishedDate).getTime() - new Date(a.data.publishedDate).getTime());
-const latest = articles.slice(0, 6);
+const featured = articles[0];
+const rest = articles.slice(1, 7);
 ---
 
 <BaseLayout
@@ -13,24 +14,33 @@ const latest = articles.slice(0, 6);
 >
   <section class="hero">
     <p class="kicker">Men's Gear &amp; Lifestyle</p>
-    <h1>The best stuff you didn't<br>know you needed.</h1>
-    <p class="sub">Curated picks across gear, tech, style, cars, and drinks. Nothing paid for. Nothing average.</p>
-    <div class="subscribe-bar">
-      <p>Get the weekly drop in your inbox.</p>
-      <div class="subscribe-form">
-        <input type="email" placeholder="your@email.com" aria-label="Email address" />
-        <button class="btn">Subscribe free</button>
-      </div>
-    </div>
+    <h1>The best stuff you didn't know you needed.</h1>
+    <p class="sub">Curated picks across gear, tech, style, cars, and drinks — nothing paid for, nothing average.</p>
   </section>
 
-  <hr class="divider" />
+  {featured && (
+    <section class="featured">
+      <a href={`/articles/${featured.slug}`} class="featured-card">
+        {featured.data.image && (
+          <div class="featured-image">
+            <img src={featured.data.image} alt={featured.data.title} loading="lazy" />
+          </div>
+        )}
+        <div class="featured-body">
+          <span class="card-category">{featured.data.category}</span>
+          <h2 class="featured-title">{featured.data.title}</h2>
+          <p class="featured-desc">{featured.data.description}</p>
+          {featured.data.price && <span class="card-price">{featured.data.price}</span>}
+        </div>
+      </a>
+    </section>
+  )}
 
-  {latest.length > 0 ? (
-    <section class="latest">
+  {rest.length > 0 && (
+    <section class="picks">
       <h2 class="section-label">Latest Picks</h2>
       <div class="picks-grid">
-        {latest.map(article => (
+        {rest.map(article => (
           <a href={`/articles/${article.slug}`} class="pick-card">
             {article.data.image && (
               <div class="pick-image">
@@ -38,140 +48,190 @@ const latest = articles.slice(0, 6);
               </div>
             )}
             <div class="pick-body">
-              <span class="pick-category">{article.data.category}</span>
+              <span class="card-category">{article.data.category}</span>
               <h3 class="pick-title">{article.data.title}</h3>
-              {article.data.price && <span class="pick-price">{article.data.price}</span>}
+              {article.data.price && <span class="card-price">{article.data.price}</span>}
             </div>
           </a>
         ))}
       </div>
     </section>
-  ) : (
-    <section class="latest">
+  )}
+
+  {articles.length === 0 && (
+    <section class="picks">
       <h2 class="section-label">Latest Picks</h2>
       <p class="empty">First drop coming soon.</p>
     </section>
   )}
+
+  <div class="subscribe-bar">
+    <h2>Get the weekly drop</h2>
+    <p>The best finds, straight to your inbox. No noise.</p>
+    <div class="subscribe-form">
+      <input type="email" placeholder="your@email.com" aria-label="Email address" />
+      <button class="btn">Subscribe free</button>
+    </div>
+  </div>
 </BaseLayout>
 
 <style>
+  /* ── Hero ─────────────────────────────────── */
   .hero {
-    padding: 5rem 0 3.5rem;
-    text-align: center;
+    padding: 4rem 0 3rem;
+    border-bottom: 1px solid var(--brand-border);
+    margin-bottom: 3rem;
   }
 
   .kicker {
-    font-size: 0.75rem;
-    font-weight: 700;
+    font-size: 0.7rem;
+    font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 0.12em;
+    letter-spacing: 0.14em;
     color: var(--brand-accent);
-    margin-bottom: 1.25rem;
-  }
-
-  h1 {
-    font-size: clamp(2rem, 5vw, 3rem);
-    font-weight: 800;
-    line-height: 1.12;
-    letter-spacing: -0.03em;
-    font-family: Georgia, serif;
-    margin-bottom: 1.25rem;
-  }
-
-  .sub {
-    font-size: 1.05rem;
-    color: var(--brand-muted);
-    max-width: 480px;
-    margin: 0 auto 2.5rem;
-    line-height: 1.6;
-  }
-
-  .subscribe-bar {
-    background: var(--brand-text);
-    color: white;
-    border-radius: 12px;
-    padding: 1.75rem 2rem;
-    max-width: 460px;
-    margin: 0 auto;
-    text-align: center;
-  }
-
-  .subscribe-bar p {
-    font-size: 0.9rem;
-    color: #a8a29e;
     margin-bottom: 1rem;
   }
 
-  .subscribe-form {
+  h1 {
+    font-family: var(--font-serif);
+    font-size: clamp(2rem, 4vw, 2.75rem);
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    color: var(--brand-text);
+    margin-bottom: 1rem;
+    max-width: 640px;
+  }
+
+  .sub {
+    font-size: 1rem;
+    color: var(--brand-muted);
+    max-width: 520px;
+    line-height: 1.65;
+  }
+
+  /* ── Featured card ───────────────────────── */
+  .featured {
+    margin-bottom: 3rem;
+  }
+
+  .featured-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    text-decoration: none;
+    color: inherit;
+    border: 1px solid var(--brand-border);
+    border-radius: 6px;
+    overflow: hidden;
+    transition: box-shadow 0.15s;
+  }
+
+  .featured-card:hover {
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  }
+
+  .featured-image {
+    background: var(--brand-surface);
+    aspect-ratio: 4/3;
+    overflow: hidden;
+  }
+
+  .featured-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+  }
+
+  .featured-card:hover .featured-image img {
+    transform: scale(1.02);
+  }
+
+  .featured-body {
+    padding: 2.5rem;
     display: flex;
-    gap: 0.5rem;
+    flex-direction: column;
+    justify-content: center;
+    background: var(--brand-bg);
   }
 
-  .subscribe-form input {
-    flex: 1;
-    padding: 0.6rem 1rem;
-    border-radius: 8px;
-    border: 1px solid #44403c;
-    background: #292524;
-    color: white;
-    font-size: 0.9rem;
+  .featured-title {
+    font-family: var(--font-serif);
+    font-size: clamp(1.4rem, 2.5vw, 1.85rem);
+    font-weight: 700;
+    line-height: 1.25;
+    letter-spacing: -0.02em;
+    margin: 0.5rem 0 0.75rem;
+    color: var(--brand-text);
   }
 
-  .btn {
-    padding: 0.6rem 1.25rem;
-    border-radius: 8px;
+  .featured-desc {
+    font-size: 0.9375rem;
+    color: var(--brand-muted);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+
+  /* ── Shared card elements ─────────────────── */
+  .card-category {
+    font-size: 0.675rem;
     font-weight: 600;
-    font-size: 0.85rem;
-    cursor: pointer;
-    border: none;
-    background: var(--brand-accent);
-    color: white;
-    white-space: nowrap;
-    transition: opacity 0.15s;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--brand-accent);
+    display: block;
   }
 
-  .btn:hover { opacity: 0.85; }
+  .card-price {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--brand-muted);
+    display: block;
+    margin-top: 0.25rem;
+  }
 
-  .divider {
-    border: none;
-    border-top: 1px solid var(--brand-border);
-    margin: 2rem 0;
+  /* ── Picks grid ──────────────────────────── */
+  .picks {
+    margin-bottom: 0;
   }
 
   .section-label {
-    font-size: 0.75rem;
-    font-weight: 700;
+    font-size: 0.675rem;
+    font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.12em;
     color: var(--brand-muted);
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--brand-border);
   }
 
   .picks-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 1.25rem;
   }
 
   .pick-card {
     display: block;
-    background: white;
     border: 1px solid var(--brand-border);
-    border-radius: 10px;
+    border-radius: 6px;
     overflow: hidden;
     text-decoration: none;
     color: inherit;
     transition: box-shadow 0.15s;
+    background: var(--brand-bg);
   }
 
   .pick-card:hover {
-    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-    text-decoration: none;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.07);
   }
 
   .pick-image {
     width: 100%;
-    aspect-ratio: 16/9;
+    aspect-ratio: 4/3;
     overflow: hidden;
     background: var(--brand-surface);
   }
@@ -181,43 +241,42 @@ const latest = articles.slice(0, 6);
     height: 100%;
     object-fit: cover;
     display: block;
+    transition: transform 0.3s ease;
+  }
+
+  .pick-card:hover .pick-image img {
+    transform: scale(1.02);
   }
 
   .pick-body {
-    padding: 1.25rem;
-  }
-
-  .pick-category {
-    font-size: 0.7rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: var(--brand-accent);
-    display: block;
-    margin-bottom: 0.4rem;
+    padding: 1rem 1.125rem 1.125rem;
   }
 
   .pick-title {
+    font-family: var(--font-serif);
     font-size: 1rem;
     font-weight: 700;
     line-height: 1.35;
-    font-family: Georgia, serif;
-    margin-bottom: 0.5rem;
-  }
-
-  .pick-price {
-    font-size: 0.85rem;
-    font-weight: 600;
-    color: var(--brand-muted);
+    margin: 0.35rem 0 0.25rem;
+    color: var(--brand-text);
   }
 
   .empty {
     color: var(--brand-muted);
     font-style: italic;
+    padding: 2rem 0;
   }
 
-  @media (max-width: 600px) {
-    .subscribe-form { flex-direction: column; }
+  /* ── Responsive ──────────────────────────── */
+  @media (max-width: 800px) {
+    .featured-card { grid-template-columns: 1fr; }
+    .featured-image { aspect-ratio: 16/9; }
+    .featured-body { padding: 1.5rem; }
+    .picks-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  @media (max-width: 500px) {
+    .hero { padding: 2.5rem 0 2rem; }
     .picks-grid { grid-template-columns: 1fr; }
   }
 </style>
