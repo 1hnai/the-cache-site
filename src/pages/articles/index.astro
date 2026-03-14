@@ -2,8 +2,10 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 
-const articles = await getCollection('articles');
-articles.sort((a, b) => new Date(b.data.publishedDate).getTime() - new Date(a.data.publishedDate).getTime());
+const allArticles = await getCollection('articles');
+const articles = allArticles
+  .filter(a => a.data.status === 'live')
+  .sort((a, b) => new Date(b.data.publishedDate).getTime() - new Date(a.data.publishedDate).getTime());
 
 const categoryColors: Record<string, string> = {
   gear: '#c2410c',
