@@ -141,23 +141,9 @@ declare module 'astro:content' {
 
 	type ContentEntryMap = {
 		"articles": {
-"best-carry-on-luggage-men-2026.md": {
-	id: "best-carry-on-luggage-men-2026.md";
-  slug: "best-carry-on-luggage-men-2026";
-  body: string;
-  collection: "articles";
-  data: InferEntrySchema<"articles">
-} & { render(): Render[".md"] };
-"best-coffee-grinders-2026.md": {
-	id: "best-coffee-grinders-2026.md";
-  slug: "best-coffee-grinders-2026";
-  body: string;
-  collection: "articles";
-  data: InferEntrySchema<"articles">
-} & { render(): Render[".md"] };
-"best-noise-cancelling-headphones-2026.md": {
-	id: "best-noise-cancelling-headphones-2026.md";
-  slug: "best-noise-cancelling-headphones-2026";
+"hoto-pixeldrive-cordless-screwdriver.md": {
+	id: "hoto-pixeldrive-cordless-screwdriver.md";
+  slug: "hoto-pixeldrive-cordless-screwdriver";
   body: string;
   collection: "articles";
   data: InferEntrySchema<"articles">

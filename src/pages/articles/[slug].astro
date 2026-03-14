@@ -3,29 +3,40 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 
 export async function getStaticPaths() {
-  const articles = await getCollection('articles');
-  return articles
-    .filter(a => a.data.status === 'live')
-    .map(article => ({
-      params: { slug: article.slug },
-      props: { article },
-    }));
+  const articles = await getCollection('articles', ({ data }) => data.status === 'live');
+  return articles.map(article => ({
+    params: { slug: article.slug },
+    props: { article },
+  }));
 }
 
 const { article } = Astro.props;
 const { Content } = await article.render();
-const { title, description, category, publishedDate } = article.data;
+const { title, description, category, publishedDate, image, price, buyUrl } = article.data;
 ---
 
 <BaseLayout title={title} description={description} article={true} publishedDate={publishedDate}>
-  <div style="margin-bottom:2rem;">
-    <span style="font-size:0.8rem; font-weight:600; text-transform:uppercase; letter-spacing:0.08em; color:var(--brand-accent);">{category}</span>
-  </div>
-  <h1 style="font-size:clamp(1.6rem,4vw,2.2rem); font-weight:800; letter-spacing:-0.02em; line-height:1.2; margin-bottom:1.5rem; font-family:Georgia,serif;">{title}</h1>
-  <div style="color:var(--brand-muted); font-size:0.85rem; margin-bottom:3rem;">Updated {publishedDate}</div>
-  <div class="article-body">
-    <Content />
-  </div>
+  <article>
+    <div class="meta">
+      <span class="category">{category}</span>
+    </div>
+    <h1 class="article-title">{title}</h1>
+    {price && buyUrl && (
+      <div class="buy-strip">
+        <span class="buy-price">{price}</span>
+        <a href={buyUrl} class="buy-btn" target="_blank" rel="noopener noreferrer">Buy</a>
+      </div>
+    )}
+    {image && (
+      <div class="hero-image">
+        <img src={image} alt={title} />
+      </div>
+    )}
+    <div class="article-body">
+      <Content />
+    </div>
+  </article>
+
   <div class="subscribe-bar" style="margin-top:4rem;">
     <h2>Get The Cache weekly</h2>
     <p>The best stuff you didn't know you needed — every week in your inbox.</p>
@@ -37,42 +48,80 @@ const { title, description, category, publishedDate } = article.data;
 </BaseLayout>
 
 <style>
-  .article-body :global(h2) {
-    font-size: 1.3rem;
-    font-weight: 700;
-    margin: 2.5rem 0 0.75rem;
-    font-family: Georgia, serif;
-    letter-spacing: -0.01em;
-  }
-  .article-body :global(h3) {
-    font-size: 1.1rem;
-    font-weight: 700;
-    margin: 2rem 0 0.5rem;
-  }
-  .article-body :global(p) {
+  .meta {
     margin-bottom: 1rem;
   }
-  .article-body :global(ul), .article-body :global(ol) {
-    margin: 0.75rem 0 1rem 1.5rem;
-  }
-  .article-body :global(li) {
-    margin-bottom: 0.35rem;
-  }
-  .article-body :global(strong) {
+
+  .category {
+    font-size: 0.75rem;
     font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--brand-accent);
   }
-  .article-body :global(hr) {
-    border: none;
-    border-top: 1px solid var(--brand-border);
-    margin: 2rem 0;
+
+  .article-title {
+    font-size: clamp(1.6rem, 4vw, 2.25rem);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+    margin-bottom: 1.25rem;
+    font-family: Georgia, serif;
   }
-  .article-body :global(a) {
-    color: var(--brand-accent-light);
+
+  .buy-strip {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    padding: 1rem 1.25rem;
+    background: var(--brand-surface);
+    border-radius: 8px;
+    border: 1px solid var(--brand-border);
   }
-  .article-body :global(blockquote) {
-    border-left: 3px solid var(--brand-accent);
-    padding-left: 1rem;
-    color: var(--brand-muted);
-    margin: 1.5rem 0;
+
+  .buy-price {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--brand-text);
   }
+
+  .buy-btn {
+    padding: 0.45rem 1rem;
+    background: var(--brand-accent);
+    color: white;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: opacity 0.15s;
+  }
+
+  .buy-btn:hover {
+    opacity: 0.85;
+    text-decoration: none;
+  }
+
+  .hero-image {
+    margin-bottom: 2.5rem;
+    border-radius: 10px;
+    overflow: hidden;
+    background: var(--brand-surface);
+  }
+
+  .hero-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .article-body :global(p) { margin-bottom: 1.1rem; font-size: 1.05rem; line-height: 1.75; }
+  .article-body :global(h2) { font-size: 1.3rem; font-weight: 700; margin: 2.5rem 0 0.75rem; font-family: Georgia, serif; letter-spacing: -0.01em; }
+  .article-body :global(h3) { font-size: 1.1rem; font-weight: 700; margin: 2rem 0 0.5rem; }
+  .article-body :global(ul), .article-body :global(ol) { margin: 0.75rem 0 1rem 1.5rem; }
+  .article-body :global(li) { margin-bottom: 0.35rem; font-size: 1rem; }
+  .article-body :global(strong) { font-weight: 700; }
+  .article-body :global(hr) { border: none; border-top: 1px solid var(--brand-border); margin: 2rem 0; }
+  .article-body :global(a) { color: var(--brand-accent-light); }
+  .article-body :global(blockquote) { border-left: 3px solid var(--brand-accent); padding-left: 1rem; color: var(--brand-muted); margin: 1.5rem 0; }
 </style>
