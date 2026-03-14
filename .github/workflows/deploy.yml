@@ -4,38 +4,14 @@ on:
   push:
     branches: [main]
 
-# NOTE: This workflow is currently a no-op placeholder.
-#
-# Root cause: `serviceInstanceRedeploy` (the previous approach) re-runs the
-# last deployment IMAGE — it does not build from new source code. That is why
-# production has never reflected any code changes pushed to main.
-#
-# The correct fix is one of these two options (requires Railway dashboard access):
-#
-#   Option A — Enable Railway's native GitHub integration:
-#     Railway dashboard → service → Settings → GitHub → connect repo → auto-deploy from `main`
-#     No GitHub Action needed at all once this is set up.
-#
-#   Option B — Use the Railway CLI in CI:
-#     1. Go to Railway dashboard → Project Settings → Tokens → generate a project token.
-#     2. Add it as the GitHub secret RAILWAY_TOKEN (separate from RAILWAY_API_TOKEN).
-#     3. Uncomment the CLI step below.
-#
-# Once either option is in place, delete this comment block.
-
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-
-      # Uncomment after RAILWAY_TOKEN secret is set (see Option B above):
-      # - name: Install Railway CLI
-      #   run: npm install -g @railway/cli
-      # - name: Deploy to Railway
-      #   run: railway up --service bf1b60c9-0ef6-4a08-bb90-aacfca29e417 --environment b9cc9ddb-5dc1-497d-b480-d20d8d181149 --detach
-      #   env:
-      #     RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
-
-      - name: Awaiting Railway connection setup
-        run: echo "See workflow comments — deployment requires Railway dashboard action."
+      - name: Trigger Railway deployment
+        run: |
+          curl -s -X POST https://backboard.railway.app/graphql/v2 \
+            -H "Authorization: Bearer ${{ secrets.RAILWAY_API_TOKEN }}" \
+            -H "Content-Type: application/json" \
+            -d '{"query":"mutation { serviceInstanceRedeploy(serviceId: \"bf1b60c9-0ef6-4a08-bb90-aacfca29e417\", environmentId: \"b9cc9ddb-5dc1-497d-b480-d20d8d181149\") }"}' \
+            | grep -q '"serviceInstanceRedeploy":true' && echo "Deploy triggered ✓" || echo "Deploy failed"
