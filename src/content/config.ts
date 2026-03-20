@@ -11,6 +11,7 @@ const articles = defineCollection({
     price: z.string().optional(),
     image: z.string().optional(),
     buyUrl: z.string().optional(),
+    featured: z.boolean().optional().default(false),
   }),
 });
 

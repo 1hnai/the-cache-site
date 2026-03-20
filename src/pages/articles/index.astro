@@ -5,6 +5,8 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 const articles = await getCollection('articles', ({ data }) => data.status === 'live' || data.status === 'approved');
 articles.sort((a, b) => new Date(b.data.publishedDate).getTime() - new Date(a.data.publishedDate).getTime());
 
+const categories = ['all', 'gear', 'tech', 'style', 'cars', 'drinks', 'etc'];
+
 function formatDate(dateStr: string) {
   return new Date(dateStr).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
 }
@@ -14,177 +16,320 @@ function formatDate(dateStr: string) {
   title="Picks — The Cache"
   description="Gear, tech, style, cars, and drinks worth your attention."
 >
-  <div class="page-header">
-    <h1 class="page-title">The Picks</h1>
-    <p class="page-sub">Gear, tech, style, cars, and drinks worth your attention.</p>
-  </div>
+  <div class="page-wrap">
+    <div class="container">
 
-  {articles.length > 0 ? (
-    <div class="picks-list">
-      {articles.map(article => (
-        <a href={`/articles/${article.slug}`} class="pick-row">
-          {article.data.image && (
-            <div class="pick-thumb">
-              <img src={article.data.image} alt={article.data.title} loading="lazy" />
-            </div>
-          )}
-          <div class="pick-info">
-            <div class="pick-meta">
-              <span class="pick-cat">{article.data.category}</span>
-              <span class="pick-date">{formatDate(article.data.publishedDate)}</span>
-            </div>
-            <h2 class="pick-title">{article.data.title}</h2>
-            <p class="pick-desc">{article.data.description}</p>
-            {article.data.price && <span class="pick-price">{article.data.price}</span>}
-          </div>
-          <div class="pick-arrow" aria-hidden="true">&#8594;</div>
-        </a>
-      ))}
+      <!-- Page header -->
+      <div class="page-header">
+        <div class="page-header-text">
+          <span class="page-kicker">The Archive</span>
+          <h1 class="page-title">Every Pick.</h1>
+          <p class="page-sub">Nothing average, nothing paid for. {articles.length} picks across gear, tech, style, cars, and drinks.</p>
+        </div>
+      </div>
+
+      <!-- Category filter -->
+      <div class="filter-bar" id="filterBar">
+        {categories.map(cat => (
+          <button
+            class={`filter-btn ${cat === 'all' ? 'active' : ''}`}
+            data-cat={cat}
+          >
+            {cat === 'all' ? 'All' : cat.charAt(0).toUpperCase() + cat.slice(1)}
+          </button>
+        ))}
+      </div>
+
+      <!-- Picks grid -->
+      {articles.length > 0 ? (
+        <div class="picks-grid" id="picksGrid">
+          {articles.map(article => (
+            <a
+              href={`/articles/${article.slug}`}
+              class="pick-card"
+              data-cat={article.data.category.toLowerCase()}
+            >
+              <div class="pick-image">
+                {article.data.image ? (
+                  <img src={article.data.image} alt={article.data.title} loading="lazy" />
+                ) : (
+                  <div class="image-placeholder"></div>
+                )}
+                <div class="pick-overlay"></div>
+                <span class="pick-cat-badge">{article.data.category}</span>
+              </div>
+              <div class="pick-body">
+                <div class="pick-meta">
+                  <span class="pick-date">{formatDate(article.data.publishedDate)}</span>
+                  {article.data.price && <span class="pick-price">{article.data.price}</span>}
+                </div>
+                <h2 class="pick-title">{article.data.title}</h2>
+                <p class="pick-desc">{article.data.description}</p>
+                <span class="pick-cta">View Pick &rarr;</span>
+              </div>
+            </a>
+          ))}
+        </div>
+      ) : (
+        <p class="empty-state">First picks dropping soon. Check back.</p>
+      )}
+
     </div>
-  ) : (
-    <p class="empty">First picks coming soon.</p>
-  )}
+  </div>
 </BaseLayout>
 
+<script>
+  const filterBar = document.getElementById('filterBar');
+  const picksGrid = document.getElementById('picksGrid');
+
+  if (filterBar && picksGrid) {
+    filterBar.addEventListener('click', (e) => {
+      const btn = (e.target as HTMLElement).closest('.filter-btn') as HTMLButtonElement | null;
+      if (!btn) return;
+
+      const cat = btn.dataset.cat;
+
+      // Update active state
+      filterBar.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      // Filter cards
+      picksGrid.querySelectorAll<HTMLElement>('.pick-card').forEach(card => {
+        if (cat === 'all' || card.dataset.cat === cat) {
+          card.style.display = '';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  }
+</script>
+
 <style>
+  .page-wrap {
+    padding: 4rem 0;
+  }
+
+  /* ── Page header ──────────────────────────── */
   .page-header {
-    padding: 2rem 0 2.5rem;
+    padding-bottom: 3rem;
     border-bottom: 1px solid var(--brand-border);
     margin-bottom: 2rem;
   }
 
+  .page-kicker {
+    display: block;
+    font-size: 0.675rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--brand-accent);
+    margin-bottom: 1rem;
+  }
+
   .page-title {
     font-family: var(--font-serif);
-    font-size: 1.85rem;
-    font-weight: 700;
-    letter-spacing: -0.02em;
-    margin-bottom: 0.4rem;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 800;
+    letter-spacing: -0.03em;
     color: var(--brand-text);
+    margin-bottom: 0.75rem;
+    line-height: 1.1;
   }
 
   .page-sub {
-    color: var(--brand-muted);
     font-size: 0.9375rem;
+    color: var(--brand-text-secondary);
+    line-height: 1.6;
+    max-width: 480px;
   }
 
-  .picks-list {
+  /* ── Filter bar ───────────────────────────── */
+  .filter-bar {
+    display: flex;
+    gap: 0.375rem;
+    flex-wrap: wrap;
+    margin-bottom: 2.5rem;
+  }
+
+  .filter-btn {
+    padding: 0.45rem 1rem;
+    border-radius: 3px;
+    border: 1px solid var(--brand-border-strong);
+    background: transparent;
+    color: var(--brand-muted);
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-family: var(--font-sans);
+    transition: all 0.15s;
+  }
+
+  .filter-btn:hover {
+    border-color: var(--brand-accent);
+    color: var(--brand-accent);
+    background: rgba(194, 65, 12, 0.06);
+  }
+
+  .filter-btn.active {
+    background: var(--brand-accent);
+    border-color: var(--brand-accent);
+    color: white;
+  }
+
+  /* ── Picks grid ───────────────────────────── */
+  .picks-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .pick-card {
     display: flex;
     flex-direction: column;
-  }
-
-  .pick-row {
-    display: flex;
-    gap: 1.5rem;
-    padding: 1.5rem 0;
-    border-bottom: 1px solid var(--brand-border);
-    text-decoration: none;
-    color: inherit;
-    transition: background 0.1s;
-    align-items: flex-start;
-    position: relative;
-  }
-
-  .pick-row:first-child {
-    padding-top: 0;
-  }
-
-  .pick-row:hover .pick-title {
-    color: var(--brand-accent);
-  }
-
-  .pick-thumb {
-    width: 140px;
-    height: 100px;
-    flex-shrink: 0;
+    border: 1px solid var(--brand-border);
     border-radius: 5px;
     overflow: hidden;
+    text-decoration: none;
+    color: inherit;
     background: var(--brand-surface);
+    transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
   }
 
-  .pick-thumb img {
+  .pick-card:hover {
+    border-color: var(--brand-border-strong);
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.35);
+    transform: translateY(-2px);
+  }
+
+  .pick-image {
+    position: relative;
+    aspect-ratio: 4/3;
+    overflow: hidden;
+    background: var(--brand-surface-2);
+  }
+
+  .pick-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
+    transition: transform 0.4s ease;
   }
 
-  .pick-info {
+  .pick-card:hover .pick-image img {
+    transform: scale(1.05);
+  }
+
+  .pick-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(10,10,10,0.5) 0%, transparent 55%);
+    pointer-events: none;
+  }
+
+  .pick-cat-badge {
+    position: absolute;
+    bottom: 0.75rem;
+    left: 0.875rem;
+    font-size: 0.6rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: rgba(240, 237, 232, 0.75);
+    background: rgba(10, 10, 10, 0.6);
+    padding: 0.25rem 0.5rem;
+    border-radius: 2px;
+    backdrop-filter: blur(4px);
+  }
+
+  .pick-body {
+    padding: 1.125rem 1.25rem 1.375rem;
     flex: 1;
-    min-width: 0;
+    display: flex;
+    flex-direction: column;
   }
 
   .pick-meta {
     display: flex;
     align-items: center;
-    gap: 0.75rem;
-    margin-bottom: 0.4rem;
-  }
-
-  .pick-cat {
-    font-size: 0.675rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
-    color: var(--brand-accent);
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
   }
 
   .pick-date {
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     color: var(--brand-muted);
+    letter-spacing: 0.04em;
+  }
+
+  .pick-price {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--brand-accent);
   }
 
   .pick-title {
     font-family: var(--font-serif);
-    font-size: 1.1rem;
+    font-size: 1.0625rem;
     font-weight: 700;
-    margin-bottom: 0.4rem;
     line-height: 1.3;
     color: var(--brand-text);
+    margin-bottom: 0.5rem;
     transition: color 0.15s;
   }
 
+  .pick-card:hover .pick-title {
+    color: var(--brand-accent);
+  }
+
   .pick-desc {
-    font-size: 0.875rem;
-    color: var(--brand-muted);
+    font-size: 0.8125rem;
+    color: var(--brand-text-secondary);
     line-height: 1.55;
-    margin-bottom: 0.5rem;
+    flex: 1;
+    margin-bottom: 0.875rem;
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
   }
 
-  .pick-price {
-    font-size: 0.8rem;
-    font-weight: 600;
+  .pick-cta {
+    font-size: 0.75rem;
+    font-weight: 500;
     color: var(--brand-muted);
+    letter-spacing: 0.04em;
+    transition: color 0.15s;
   }
 
-  .pick-arrow {
-    color: var(--brand-border-strong);
-    font-size: 1.1rem;
-    align-self: center;
-    flex-shrink: 0;
-    transition: color 0.15s, transform 0.15s;
-  }
-
-  .pick-row:hover .pick-arrow {
+  .pick-card:hover .pick-cta {
     color: var(--brand-accent);
-    transform: translateX(3px);
   }
 
-  .empty {
+  /* ── Shared ──────────────────────────────── */
+  .image-placeholder {
+    width: 100%;
+    height: 100%;
+    background: var(--brand-surface-2);
+  }
+
+  .empty-state {
     color: var(--brand-muted);
     font-style: italic;
-    padding: 2rem 0;
+    padding: 3rem 0;
   }
 
-  @media (max-width: 600px) {
-    .pick-thumb {
-      width: 90px;
-      height: 68px;
-    }
-    .pick-arrow { display: none; }
-    .pick-desc { display: none; }
+  /* ── Responsive ──────────────────────────── */
+  @media (max-width: 900px) {
+    .picks-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  @media (max-width: 560px) {
+    .page-wrap { padding: 2.5rem 0; }
+    .picks-grid { grid-template-columns: 1fr; }
+    .page-header { padding-bottom: 2rem; }
   }
 </style>

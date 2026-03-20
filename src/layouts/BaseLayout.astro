@@ -27,7 +27,7 @@ const fullTitle = title === siteName ? title : `${title} | ${siteName}`;
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#ffffff" />
+    <meta name="theme-color" content="#0a0a0a" />
 
     <title>{fullTitle}</title>
     <meta name="description" content={description} />
@@ -60,22 +60,24 @@ const fullTitle = title === siteName ? title : `${title} | ${siteName}`;
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
 
     <style>
       :root {
-        --brand-bg: #ffffff;
-        --brand-surface: #f7f7f5;
+        --brand-bg: #0a0a0a;
+        --brand-surface: #111111;
+        --brand-surface-2: #1a1a1a;
         --brand-accent: #c2410c;
-        --brand-accent-hover: #9a3409;
-        --brand-text: #111111;
+        --brand-accent-hover: #ea580c;
+        --brand-text: #f0ede8;
+        --brand-text-secondary: #a8a29e;
         --brand-muted: #6b7280;
-        --brand-border: #e5e7eb;
-        --brand-border-strong: #d1d5db;
-        --max-width: 1160px;
-        --reading-width: 700px;
+        --brand-border: #1f1f1f;
+        --brand-border-strong: #2d2d2d;
+        --max-width: 1200px;
+        --reading-width: 720px;
         --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-        --font-serif: Georgia, 'Times New Roman', serif;
+        --font-serif: 'Playfair Display', Georgia, 'Times New Roman', serif;
       }
 
       *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -94,10 +96,14 @@ const fullTitle = title === siteName ? title : `${title} | ${siteName}`;
       a { color: var(--brand-accent); text-decoration: none; }
       a:hover { color: var(--brand-accent-hover); }
 
+      img { display: block; max-width: 100%; }
+
       /* ── Header ─────────────────────────────────── */
       .site-header {
         border-bottom: 1px solid var(--brand-border);
-        background: var(--brand-bg);
+        background: rgba(10, 10, 10, 0.95);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
         position: sticky;
         top: 0;
         z-index: 100;
@@ -107,7 +113,7 @@ const fullTitle = title === siteName ? title : `${title} | ${siteName}`;
         max-width: var(--max-width);
         margin: 0 auto;
         padding: 0 2rem;
-        height: 60px;
+        height: 64px;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -116,112 +122,127 @@ const fullTitle = title === siteName ? title : `${title} | ${siteName}`;
 
       .site-logo {
         font-family: var(--font-serif);
-        font-size: 1.25rem;
-        font-weight: 700;
+        font-size: 1.35rem;
+        font-weight: 800;
         color: var(--brand-text);
-        letter-spacing: -0.02em;
+        letter-spacing: -0.01em;
         text-decoration: none;
         flex-shrink: 0;
+        line-height: 1;
       }
 
       .site-logo:hover { color: var(--brand-text); }
 
-      .site-logo span {
+      .site-logo .accent {
         color: var(--brand-accent);
-        font-style: italic;
       }
 
       .site-nav {
         display: flex;
         align-items: center;
-        gap: 0.25rem;
+        gap: 0.125rem;
       }
 
       .site-nav a {
         color: var(--brand-muted);
-        font-size: 0.8125rem;
+        font-size: 0.75rem;
         font-weight: 500;
-        letter-spacing: 0.06em;
+        letter-spacing: 0.1em;
         text-transform: uppercase;
-        padding: 0.4rem 0.75rem;
-        border-radius: 4px;
+        padding: 0.45rem 0.85rem;
+        border-radius: 3px;
         transition: color 0.15s, background 0.15s;
       }
 
       .site-nav a:hover {
         color: var(--brand-text);
-        background: var(--brand-surface);
+        background: var(--brand-surface-2);
+      }
+
+      .site-nav a.active {
+        color: var(--brand-accent);
       }
 
       /* ── Main content ───────────────────────────── */
       main {
-        max-width: var(--max-width);
-        margin: 0 auto;
-        padding: 3rem 2rem 4rem;
         flex: 1;
         width: 100%;
       }
 
-      /* ── Subscribe bar ──────────────────────────── */
-      .subscribe-bar {
-        background: var(--brand-text);
-        color: white;
-        border-radius: 8px;
-        padding: 2.25rem 2rem;
-        text-align: center;
-        margin: 3rem 0;
+      /* ── Newsletter strip ───────────────────────── */
+      .newsletter-strip {
+        background: var(--brand-surface);
+        border-top: 1px solid var(--brand-border);
+        padding: 4rem 2rem;
       }
 
-      .subscribe-bar h2 {
+      .newsletter-inner {
+        max-width: var(--max-width);
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+        align-items: center;
+      }
+
+      .newsletter-copy h2 {
         font-family: var(--font-serif);
-        font-size: 1.35rem;
-        font-weight: 700;
+        font-size: 1.75rem;
+        font-weight: 800;
+        letter-spacing: -0.02em;
+        color: var(--brand-text);
         margin-bottom: 0.5rem;
-        letter-spacing: -0.01em;
+        line-height: 1.2;
       }
 
-      .subscribe-bar p {
-        color: #9ca3af;
-        font-size: 0.9rem;
-        margin-bottom: 1.25rem;
+      .newsletter-copy p {
+        color: var(--brand-text-secondary);
+        font-size: 0.9375rem;
+        line-height: 1.6;
       }
 
-      .subscribe-form {
+      .newsletter-form {
         display: flex;
         gap: 0.5rem;
-        max-width: 400px;
-        margin: 0 auto;
       }
 
-      .subscribe-form input {
+      .newsletter-form input {
         flex: 1;
-        padding: 0.65rem 1rem;
-        border-radius: 5px;
-        border: 1px solid #374151;
-        background: #1f2937;
-        color: white;
+        padding: 0.75rem 1rem;
+        border-radius: 4px;
+        border: 1px solid var(--brand-border-strong);
+        background: var(--brand-bg);
+        color: var(--brand-text);
         font-size: 0.9rem;
         font-family: var(--font-sans);
+        transition: border-color 0.15s;
       }
 
-      .subscribe-form input::placeholder { color: #6b7280; }
-      .subscribe-form input:focus { outline: 2px solid var(--brand-accent); border-color: transparent; }
+      .newsletter-form input::placeholder { color: var(--brand-muted); }
+      .newsletter-form input:focus {
+        outline: none;
+        border-color: var(--brand-accent);
+      }
 
       .btn {
-        padding: 0.65rem 1.25rem;
-        border-radius: 5px;
+        padding: 0.75rem 1.5rem;
+        border-radius: 4px;
         font-weight: 600;
-        font-size: 0.85rem;
+        font-size: 0.8125rem;
         cursor: pointer;
         border: none;
         background: var(--brand-accent);
         color: white;
-        transition: background 0.15s;
+        transition: background 0.15s, transform 0.1s;
         white-space: nowrap;
         font-family: var(--font-sans);
+        letter-spacing: 0.03em;
       }
 
-      .btn:hover { background: var(--brand-accent-hover); }
+      .btn:hover {
+        background: var(--brand-accent-hover);
+        transform: translateY(-1px);
+      }
 
       /* ── Footer ─────────────────────────────────── */
       .site-footer {
@@ -244,7 +265,7 @@ const fullTitle = title === siteName ? title : `${title} | ${siteName}`;
 
       .site-footer-brand {
         font-family: var(--font-serif);
-        font-size: 0.9rem;
+        font-size: 0.95rem;
         font-weight: 700;
         color: var(--brand-text);
         letter-spacing: -0.01em;
@@ -252,15 +273,16 @@ const fullTitle = title === siteName ? title : `${title} | ${siteName}`;
 
       .site-footer nav {
         display: flex;
-        gap: 1.25rem;
+        gap: 1.5rem;
       }
 
       .site-footer nav a {
         color: var(--brand-muted);
-        letter-spacing: 0.05em;
+        letter-spacing: 0.06em;
         text-transform: uppercase;
-        font-size: 0.75rem;
+        font-size: 0.7rem;
         font-weight: 500;
+        transition: color 0.15s;
       }
 
       .site-footer nav a:hover { color: var(--brand-text); }
@@ -270,23 +292,49 @@ const fullTitle = title === siteName ? title : `${title} | ${siteName}`;
         font-size: 0.75rem;
       }
 
+      /* ── Shared utilities ─────────────────────── */
+      .container {
+        max-width: var(--max-width);
+        margin: 0 auto;
+        padding: 0 2rem;
+      }
+
+      .label {
+        font-size: 0.675rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.14em;
+        color: var(--brand-accent);
+      }
+
       /* ── Mobile ──────────────────────────────────── */
-      @media (max-width: 640px) {
-        .site-header-inner { padding: 0 1.25rem; }
-        main { padding: 2rem 1.25rem 3rem; }
-        .subscribe-form { flex-direction: column; }
+      @media (max-width: 768px) {
+        .site-header-inner { padding: 0 1.25rem; height: 56px; }
+        .site-nav a { padding: 0.4rem 0.6rem; font-size: 0.7rem; letter-spacing: 0.08em; }
+        .newsletter-inner { grid-template-columns: 1fr; gap: 1.5rem; }
+        .newsletter-strip { padding: 3rem 1.25rem; }
+        .newsletter-form { flex-direction: column; }
         .site-footer-inner { flex-direction: column; align-items: flex-start; gap: 1rem; }
         .site-footer { padding: 1.5rem 1.25rem; }
+        .container { padding: 0 1.25rem; }
+      }
+
+      @media (max-width: 480px) {
+        .site-nav { display: none; }
       }
     </style>
   </head>
   <body>
     <header class="site-header">
       <div class="site-header-inner">
-        <a href="/" class="site-logo">The <span>Cache</span></a>
+        <a href="/" class="site-logo">The <span class="accent">Cache</span></a>
         <nav class="site-nav">
-          <a href="/articles">Picks</a>
-          <a href="/about">About</a>
+          <a href="/articles?cat=gear">Gear</a>
+          <a href="/articles?cat=tech">Tech</a>
+          <a href="/articles?cat=style">Style</a>
+          <a href="/articles?cat=cars">Cars</a>
+          <a href="/articles?cat=drinks">Drinks</a>
+          <a href="/articles?cat=etc">Etc.</a>
         </nav>
       </div>
     </header>
@@ -294,6 +342,19 @@ const fullTitle = title === siteName ? title : `${title} | ${siteName}`;
     <main>
       <slot />
     </main>
+
+    <div class="newsletter-strip">
+      <div class="newsletter-inner">
+        <div class="newsletter-copy">
+          <h2>Get the weekly drop.</h2>
+          <p>The best finds, straight to your inbox. No noise, no sponsors, no filler — just the good stuff.</p>
+        </div>
+        <form class="newsletter-form" onsubmit="return false;">
+          <input type="email" placeholder="your@email.com" aria-label="Email address" />
+          <button class="btn" type="submit">Subscribe free</button>
+        </form>
+      </div>
+    </div>
 
     <footer class="site-footer">
       <div class="site-footer-inner">
@@ -303,7 +364,7 @@ const fullTitle = title === siteName ? title : `${title} | ${siteName}`;
           <a href="/about">About</a>
           <a href="/rss.xml">RSS</a>
         </nav>
-        <span class="site-footer-copy">&copy; {new Date().getFullYear()} The Cache</span>
+        <span class="site-footer-copy">&copy; {new Date().getFullYear()} The Cache. All rights reserved.</span>
       </div>
     </footer>
   </body>
