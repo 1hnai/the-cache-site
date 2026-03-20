@@ -6,463 +6,457 @@ const articles = await getCollection('articles', ({ data }) => data.status === '
 articles.sort((a, b) => new Date(b.data.publishedDate).getTime() - new Date(a.data.publishedDate).getTime());
 
 const featured = articles.find(a => a.data.featured) || articles[0];
-const rest = articles.filter(a => a !== featured).slice(0, 6);
+const recent = articles.filter(a => a !== featured).slice(0, 6);
 
-function formatDate(dateStr: string) {
-  return new Date(dateStr).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+function shortDate(d: string) {
+  return new Date(d).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
 }
 ---
 
 <BaseLayout
   title="The Cache"
-  description="Curated editorial picks across gear, watches, cars, architecture, books, art, and culture."
+  description="Curated editorial picks across gear, watches, cars, tech, style and culture. The best stuff you didn't know you needed."
 >
 
-  <!-- Masthead -->
-  <div class="masthead">
+  <!-- ── HERO ───────────────────────────────────────── -->
+  {featured && (
+    <section class="hero">
+      <a href={`/articles/${featured.slug}`} class="hero-link">
+        <div class="hero-image-wrap">
+          {featured.data.image
+            ? <img src={featured.data.image} alt={featured.data.title} class="hero-img" loading="eager" />
+            : <div class="hero-img-placeholder"></div>
+          }
+          <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+          <div class="hero-content-inner">
+            <span class="hero-eyebrow">{featured.data.category}</span>
+            <h1 class="hero-title">{featured.data.title}</h1>
+            <p class="hero-excerpt">{featured.data.description}</p>
+            <div class="hero-meta">
+              {featured.data.price && <span class="hero-price">{featured.data.price}</span>}
+              <span class="hero-cta">Read the pick &rarr;</span>
+            </div>
+          </div>
+        </div>
+      </a>
+    </section>
+  )}
+
+  <!-- ── SECTION HEADER ─────────────────────────────── -->
+  <div class="section-rule">
     <div class="container">
-      <p class="masthead-tagline">Gear · Watches · Cars · Architecture · Books · Art · Culture</p>
-      <h1 class="masthead-headline">The best stuff you<br />didn't know you needed.</h1>
-      <p class="masthead-sub">Short, sharp editorial picks. A friend with impeccable taste telling you about something worth knowing.</p>
+      <div class="section-rule-inner">
+        <span class="section-rule-label">Recent Picks</span>
+        <a href="/articles" class="section-rule-link">All picks &rarr;</a>
+      </div>
     </div>
   </div>
 
-  <!-- Divider rule -->
-  <div class="container"><hr class="rule" /></div>
-
-  <!-- Featured piece -->
-  {featured && (
-    <div class="featured-section">
+  <!-- ── PICKS GRID ─────────────────────────────────── -->
+  {recent.length > 0 && (
+    <section class="picks">
       <div class="container">
-        <div class="section-header">
-          <span class="section-label">Featured</span>
-          <a href="/articles" class="view-all">All picks &rarr;</a>
-        </div>
-        <a href={`/articles/${featured.slug}`} class="featured-link">
-          <div class="featured-layout">
-            <div class="featured-image-wrap">
-              {featured.data.image ? (
-                <img src={featured.data.image} alt={featured.data.title} loading="eager" class="featured-img" />
-              ) : (
-                <div class="img-placeholder featured-img-placeholder"></div>
-              )}
-            </div>
-            <div class="featured-body">
-              <span class="cat-label">{featured.data.category}</span>
-              <h2 class="featured-title">{featured.data.title}</h2>
-              <p class="featured-excerpt">{featured.data.description}</p>
-              <div class="featured-foot">
-                {featured.data.price && <span class="price-tag">{featured.data.price}</span>}
-                <span class="read-link">Read &rarr;</span>
-              </div>
-            </div>
-          </div>
-        </a>
-      </div>
-    </div>
-  )}
-
-  <!-- Recent picks -->
-  {rest.length > 0 && (
-    <div class="picks-section">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-label">Recent Picks</span>
-        </div>
         <div class="picks-grid">
-          {rest.map(article => (
-            <a href={`/articles/${article.slug}`} class="pick-item">
+          {recent.map((article, i) => (
+            <a href={`/articles/${article.slug}`} class={`pick-card ${i === 0 ? 'pick-card--wide' : ''}`}>
               <div class="pick-image-wrap">
-                {article.data.image ? (
-                  <img src={article.data.image} alt={article.data.title} loading="lazy" class="pick-img" />
-                ) : (
-                  <div class="img-placeholder pick-img-placeholder"></div>
-                )}
+                {article.data.image
+                  ? <img src={article.data.image} alt={article.data.title} class="pick-img" loading="lazy" />
+                  : <div class="pick-img-placeholder"></div>
+                }
               </div>
               <div class="pick-body">
-                <span class="cat-label">{article.data.category}</span>
-                <h3 class="pick-title">{article.data.title}</h3>
-                <p class="pick-excerpt">{article.data.description}</p>
+                <span class="pick-cat">{article.data.category}</span>
+                <h2 class="pick-title">{article.data.title}</h2>
+                <p class="pick-desc">{article.data.description}</p>
                 <div class="pick-foot">
-                  <span class="pick-date">{formatDate(article.data.publishedDate)}</span>
-                  {article.data.price && <span class="price-tag">{article.data.price}</span>}
+                  <span class="pick-date">{shortDate(article.data.publishedDate)}</span>
+                  {article.data.price && <span class="pick-price">{article.data.price}</span>}
                 </div>
               </div>
             </a>
           ))}
         </div>
-        <div class="all-picks-cta">
-          <a href="/articles" class="all-picks-link">View all picks &rarr;</a>
+
+        <div class="all-cta">
+          <a href="/articles" class="all-cta-link">
+            <span>View all picks</span>
+            <span class="all-cta-arrow">&rarr;</span>
+          </a>
         </div>
       </div>
-    </div>
-  )}
-
-  {articles.length === 0 && (
-    <div class="container empty-state">
-      <p>First picks dropping soon. Check back.</p>
-    </div>
+    </section>
   )}
 
 </BaseLayout>
 
 <style>
-  /* ── Masthead ───────────────────────────────── */
-  .masthead {
-    padding: 5rem 0 4rem;
-    background: var(--brand-surface);
-    border-bottom: 1px solid var(--brand-border);
-  }
-
-  .masthead-tagline {
-    font-size: 0.65rem;
-    font-weight: 600;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--brand-accent);
-    margin-bottom: 1.5rem;
-  }
-
-  .masthead-headline {
-    font-family: var(--font-serif);
-    font-size: clamp(2.4rem, 5vw, 4.25rem);
-    font-weight: 800;
-    line-height: 1.08;
-    letter-spacing: -0.03em;
-    color: var(--brand-text);
-    margin-bottom: 1.5rem;
-    max-width: 720px;
-  }
-
-  .masthead-sub {
-    font-size: 1rem;
-    color: var(--brand-text-secondary);
-    max-width: 480px;
-    line-height: 1.7;
-  }
-
-  /* ── Rule ───────────────────────────────────── */
-  .rule {
-    border: none;
-    border-top: 1px solid var(--brand-border);
-    margin: 0;
-  }
-
-  /* ── Section headers ────────────────────────── */
-  .section-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-bottom: 1rem;
-    border-bottom: 2px solid var(--brand-text);
-    margin-bottom: 2rem;
-  }
-
-  .section-label {
-    font-size: 0.65rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.18em;
-    color: var(--brand-text);
-  }
-
-  .view-all {
-    font-size: 0.75rem;
-    font-weight: 500;
-    color: var(--brand-accent);
-    letter-spacing: 0.04em;
-    transition: color 0.15s;
-  }
-
-  .view-all:hover { color: var(--brand-accent-hover); }
-
-  /* ── Category label ─────────────────────────── */
-  .cat-label {
-    display: inline-block;
-    font-size: 0.6rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.18em;
-    color: var(--brand-accent);
-    margin-bottom: 0.75rem;
-  }
-
-  /* ── Featured section ───────────────────────── */
-  .featured-section {
-    padding: 3.5rem 0;
-    background: var(--brand-surface);
-  }
-
-  .featured-link {
-    display: block;
-    text-decoration: none;
-    color: inherit;
-  }
-
-  .featured-layout {
-    display: grid;
-    grid-template-columns: 1.15fr 1fr;
-    gap: 3rem;
-    align-items: center;
-  }
-
-  .featured-image-wrap {
+  /* ── HERO ──────────────────────────────────────── */
+  .hero {
+    position: relative;
+    width: 100%;
+    height: clamp(480px, 72vh, 780px);
     overflow: hidden;
-    aspect-ratio: 3/2;
-    background: var(--brand-surface-2);
+    background: var(--surface);
   }
 
-  .featured-img {
+  .hero-link {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+
+  .hero-image-wrap {
+    position: absolute;
+    inset: 0;
+  }
+
+  .hero-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    display: block;
-    transition: transform 0.5s ease;
+    object-position: center;
+    transition: transform 0.8s ease;
   }
 
-  .featured-link:hover .featured-img {
-    transform: scale(1.03);
+  .hero-link:hover .hero-img {
+    transform: scale(1.04);
   }
 
-  .featured-img-placeholder {
+  .hero-img-placeholder {
     width: 100%;
     height: 100%;
+    background: var(--surface-2);
   }
 
-  .featured-body {
-    padding: 1rem 0;
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to right,
+      rgba(10,10,10,0.92) 0%,
+      rgba(10,10,10,0.75) 45%,
+      rgba(10,10,10,0.25) 75%,
+      rgba(10,10,10,0.1) 100%
+    );
   }
 
-  .featured-title {
-    font-family: var(--font-serif);
-    font-size: clamp(1.6rem, 2.5vw, 2.25rem);
-    font-weight: 800;
-    line-height: 1.15;
-    letter-spacing: -0.025em;
-    color: var(--brand-text);
-    margin-bottom: 1rem;
-    transition: color 0.15s;
+  .hero-content {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
   }
 
-  .featured-link:hover .featured-title {
-    color: var(--brand-accent);
+  .hero-content-inner {
+    max-width: var(--max-width);
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 2rem;
+    max-width: 620px;
+    padding-left: clamp(1.25rem, 5vw, 4rem);
   }
 
-  .featured-excerpt {
+  .hero-eyebrow {
+    display: inline-block;
+    font-size: 0.6rem;
+    font-weight: 600;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 1.25rem;
+    border: 1px solid var(--accent);
+    padding: 0.3rem 0.75rem;
+  }
+
+  .hero-title {
+    font-family: var(--serif);
+    font-size: clamp(2rem, 4.5vw, 3.5rem);
+    font-weight: 900;
+    line-height: 1.06;
+    letter-spacing: -0.03em;
+    color: var(--text);
+    margin-bottom: 1.25rem;
+    max-width: 520px;
+  }
+
+  .hero-excerpt {
     font-size: 1rem;
-    color: var(--brand-text-secondary);
+    color: rgba(240,236,230,0.7);
     line-height: 1.7;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
+    max-width: 440px;
   }
 
-  .featured-foot {
+  .hero-meta {
     display: flex;
     align-items: center;
     gap: 1.5rem;
   }
 
-  .price-tag {
-    font-size: 0.8125rem;
-    font-weight: 600;
-    color: var(--brand-text);
-    letter-spacing: 0.02em;
+  .hero-price {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text);
+    font-family: var(--serif);
   }
 
-  .read-link {
-    font-size: 0.8125rem;
-    font-weight: 500;
-    color: var(--brand-accent);
-    letter-spacing: 0.04em;
+  .hero-cta {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
     transition: color 0.15s;
   }
 
-  .featured-link:hover .read-link {
-    color: var(--brand-accent-hover);
+  .hero-link:hover .hero-cta {
+    color: var(--accent-alt);
   }
 
-  /* ── Picks section ──────────────────────────── */
-  .picks-section {
-    padding: 3.5rem 0 4rem;
-    background: var(--brand-bg);
-    border-top: 1px solid var(--brand-border);
+  /* ── SECTION RULE ──────────────────────────────── */
+  .section-rule {
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    padding: 1.1rem 0;
+    background: var(--surface);
+  }
+
+  .section-rule-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .section-rule-label {
+    font-size: 0.6rem;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--text-3);
+  }
+
+  .section-rule-link {
+    font-size: 0.6rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    transition: color 0.15s;
+  }
+
+  .section-rule-link:hover { color: var(--accent-alt); }
+
+  /* ── PICKS ─────────────────────────────────────── */
+  .picks {
+    padding: 3.5rem 0 5rem;
+    background: var(--bg);
   }
 
   .picks-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    background: var(--border);
+    border: 1px solid var(--border);
+    margin-bottom: 3rem;
   }
 
-  .pick-item {
-    display: block;
-    text-decoration: none;
-    color: inherit;
-    padding: 1.75rem 0;
-    border-bottom: 1px solid var(--brand-border);
-    display: grid;
-    grid-template-columns: 120px 1fr;
-    gap: 1.5rem;
-    align-items: start;
-    transition: background 0.15s;
+  .pick-card {
+    display: flex;
+    flex-direction: column;
+    background: var(--bg);
+    transition: background 0.2s;
+    overflow: hidden;
   }
 
-  .pick-item:nth-child(odd) {
-    padding-right: 2.5rem;
-    border-right: 1px solid var(--brand-border);
+  .pick-card:hover {
+    background: var(--surface);
   }
 
-  .pick-item:nth-child(even) {
-    padding-left: 2.5rem;
-  }
-
-  .pick-item:hover {
-    background: transparent;
+  .pick-card--wide {
+    grid-column: span 2;
   }
 
   .pick-image-wrap {
     overflow: hidden;
-    aspect-ratio: 4/3;
-    background: var(--brand-surface-2);
+    aspect-ratio: 3/2;
+    background: var(--surface-2);
     flex-shrink: 0;
+  }
+
+  .pick-card--wide .pick-image-wrap {
+    aspect-ratio: 16/9;
   }
 
   .pick-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center;
     display: block;
-    transition: transform 0.4s ease;
+    transition: transform 0.5s ease;
   }
 
-  .pick-item:hover .pick-img {
+  .pick-card:hover .pick-img {
     transform: scale(1.05);
   }
 
   .pick-img-placeholder {
     width: 100%;
     height: 100%;
+    background: var(--surface-2);
   }
 
   .pick-body {
+    padding: 1.5rem;
     display: flex;
     flex-direction: column;
+    flex: 1;
+  }
+
+  .pick-cat {
+    font-size: 0.55rem;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.6rem;
   }
 
   .pick-title {
-    font-family: var(--font-serif);
-    font-size: 1.1rem;
-    font-weight: 700;
-    line-height: 1.25;
-    letter-spacing: -0.01em;
-    color: var(--brand-text);
-    margin-bottom: 0.5rem;
+    font-family: var(--serif);
+    font-size: 1.15rem;
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: -0.015em;
+    color: var(--text);
+    margin-bottom: 0.6rem;
     transition: color 0.15s;
   }
 
-  .pick-item:hover .pick-title {
-    color: var(--brand-accent);
+  .pick-card--wide .pick-title {
+    font-size: 1.4rem;
   }
 
-  .pick-excerpt {
+  .pick-card:hover .pick-title {
+    color: var(--accent);
+  }
+
+  .pick-desc {
     font-size: 0.8125rem;
-    color: var(--brand-text-secondary);
-    line-height: 1.6;
-    margin-bottom: 0.75rem;
+    color: var(--text-2);
+    line-height: 1.65;
+    margin-bottom: 1.25rem;
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
+    flex: 1;
   }
 
   .pick-foot {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    justify-content: space-between;
+    gap: 0.75rem;
+    border-top: 1px solid var(--border);
+    padding-top: 0.85rem;
     margin-top: auto;
   }
 
   .pick-date {
+    font-size: 0.65rem;
+    color: var(--text-3);
+    letter-spacing: 0.04em;
+  }
+
+  .pick-price {
+    font-size: 0.8125rem;
+    font-weight: 700;
+    color: var(--text);
+    letter-spacing: 0.02em;
+  }
+
+  /* ── ALL CTA ───────────────────────────────────── */
+  .all-cta {
+    display: flex;
+    justify-content: center;
+  }
+
+  .all-cta-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
     font-size: 0.7rem;
-    color: var(--brand-muted);
-    letter-spacing: 0.03em;
-  }
-
-  /* ── All picks CTA ──────────────────────────── */
-  .all-picks-cta {
-    padding-top: 2.5rem;
-    text-align: center;
-  }
-
-  .all-picks-link {
-    font-size: 0.8rem;
     font-weight: 600;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.16em;
     text-transform: uppercase;
-    color: var(--brand-text);
-    border-bottom: 1px solid var(--brand-text);
-    padding-bottom: 2px;
+    color: var(--text-2);
+    border: 1px solid var(--border-mid);
+    padding: 0.85rem 2.5rem;
     transition: color 0.15s, border-color 0.15s;
   }
 
-  .all-picks-link:hover {
-    color: var(--brand-accent);
-    border-color: var(--brand-accent);
+  .all-cta-link:hover {
+    color: var(--accent);
+    border-color: var(--accent);
   }
 
-  /* ── Shared ─────────────────────────────────── */
-  .img-placeholder {
-    background: var(--brand-surface-2);
+  .all-cta-arrow {
+    transition: transform 0.2s;
   }
 
-  .empty-state {
-    padding: 4rem 0;
-    color: var(--brand-muted);
-    font-style: italic;
+  .all-cta-link:hover .all-cta-arrow {
+    transform: translateX(4px);
   }
 
-  /* ── Responsive ─────────────────────────────── */
-  @media (max-width: 900px) {
-    .featured-layout {
-      grid-template-columns: 1fr;
-      gap: 1.75rem;
+  /* ── RESPONSIVE ────────────────────────────────── */
+  @media (max-width: 960px) {
+    .picks-grid {
+      grid-template-columns: repeat(2, 1fr);
     }
 
-    .featured-image-wrap {
-      aspect-ratio: 16/9;
+    .pick-card--wide {
+      grid-column: span 2;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .hero { height: clamp(380px, 65vh, 520px); }
+
+    .hero-content-inner {
+      padding-left: 1.25rem;
+      padding-right: 1.25rem;
+    }
+
+    .hero-overlay {
+      background: linear-gradient(
+        to top,
+        rgba(10,10,10,0.95) 0%,
+        rgba(10,10,10,0.6) 60%,
+        rgba(10,10,10,0.2) 100%
+      );
+    }
+
+    .hero-content {
+      align-items: flex-end;
+      padding-bottom: 2.5rem;
     }
 
     .picks-grid {
       grid-template-columns: 1fr;
     }
 
-    .pick-item:nth-child(odd) {
-      padding-right: 0;
-      border-right: none;
+    .pick-card--wide {
+      grid-column: span 1;
     }
 
-    .pick-item:nth-child(even) {
-      padding-left: 0;
-    }
-  }
-
-  @media (max-width: 600px) {
-    .masthead { padding: 3rem 0 2.5rem; }
-    .featured-section { padding: 2.5rem 0; }
-    .picks-section { padding: 2.5rem 0 3rem; }
-
-    .pick-item {
-      grid-template-columns: 90px 1fr;
-      gap: 1rem;
-    }
-  }
-
-  @media (max-width: 400px) {
-    .pick-item {
-      grid-template-columns: 1fr;
-    }
-
-    .pick-image-wrap {
-      aspect-ratio: 16/9;
+    .pick-card--wide .pick-image-wrap {
+      aspect-ratio: 3/2;
     }
   }
 </style>
