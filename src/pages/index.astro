@@ -7,44 +7,54 @@ articles.sort((a, b) => new Date(b.data.publishedDate).getTime() - new Date(a.da
 
 const featured = articles.find(a => a.data.featured) || articles[0];
 const rest = articles.filter(a => a !== featured).slice(0, 6);
+
+function formatDate(dateStr: string) {
+  return new Date(dateStr).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+}
 ---
 
 <BaseLayout
   title="The Cache"
-  description="The best stuff you didn't know you needed. Curated picks across gear, tech, style, cars, and drinks."
+  description="Curated editorial picks across gear, watches, cars, architecture, books, art, and culture."
 >
-  <!-- Hero bar -->
-  <div class="hero-bar">
+
+  <!-- Masthead -->
+  <div class="masthead">
     <div class="container">
-      <span class="hero-kicker">Men's Gear &amp; Lifestyle</span>
-      <h1 class="hero-headline">The best stuff you<br />didn't know you needed.</h1>
-      <p class="hero-sub">Curated picks across gear, tech, style, cars, and drinks — nothing paid for, nothing average.</p>
+      <p class="masthead-tagline">Gear · Watches · Cars · Architecture · Books · Art · Culture</p>
+      <h1 class="masthead-headline">The best stuff you<br />didn't know you needed.</h1>
+      <p class="masthead-sub">Short, sharp editorial picks. A friend with impeccable taste telling you about something worth knowing.</p>
     </div>
   </div>
 
-  <!-- Featured item -->
+  <!-- Divider rule -->
+  <div class="container"><hr class="rule" /></div>
+
+  <!-- Featured piece -->
   {featured && (
-    <div class="featured-wrap">
+    <div class="featured-section">
       <div class="container">
         <div class="section-header">
-          <span class="section-label">Featured Pick</span>
+          <span class="section-label">Featured</span>
+          <a href="/articles" class="view-all">All picks &rarr;</a>
         </div>
-        <a href={`/articles/${featured.slug}`} class="featured-card">
-          <div class="featured-image">
-            {featured.data.image ? (
-              <img src={featured.data.image} alt={featured.data.title} loading="eager" />
-            ) : (
-              <div class="image-placeholder"></div>
-            )}
-            <div class="featured-overlay"></div>
-          </div>
-          <div class="featured-body">
-            <span class="card-cat">{featured.data.category}</span>
-            <h2 class="featured-title">{featured.data.title}</h2>
-            <p class="featured-desc">{featured.data.description}</p>
-            <div class="featured-footer">
-              {featured.data.price && <span class="featured-price">{featured.data.price}</span>}
-              <span class="featured-cta">View Pick &rarr;</span>
+        <a href={`/articles/${featured.slug}`} class="featured-link">
+          <div class="featured-layout">
+            <div class="featured-image-wrap">
+              {featured.data.image ? (
+                <img src={featured.data.image} alt={featured.data.title} loading="eager" class="featured-img" />
+              ) : (
+                <div class="img-placeholder featured-img-placeholder"></div>
+              )}
+            </div>
+            <div class="featured-body">
+              <span class="cat-label">{featured.data.category}</span>
+              <h2 class="featured-title">{featured.data.title}</h2>
+              <p class="featured-excerpt">{featured.data.description}</p>
+              <div class="featured-foot">
+                {featured.data.price && <span class="price-tag">{featured.data.price}</span>}
+                <span class="read-link">Read &rarr;</span>
+              </div>
             </div>
           </div>
         </a>
@@ -52,94 +62,108 @@ const rest = articles.filter(a => a !== featured).slice(0, 6);
     </div>
   )}
 
-  <!-- Latest picks grid -->
-  <div class="picks-wrap">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-label">Latest Picks</span>
-        <a href="/articles" class="view-all">View all &rarr;</a>
-      </div>
-
-      {rest.length > 0 ? (
+  <!-- Recent picks -->
+  {rest.length > 0 && (
+    <div class="picks-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Recent Picks</span>
+        </div>
         <div class="picks-grid">
           {rest.map(article => (
-            <a href={`/articles/${article.slug}`} class="pick-card">
-              <div class="pick-image">
+            <a href={`/articles/${article.slug}`} class="pick-item">
+              <div class="pick-image-wrap">
                 {article.data.image ? (
-                  <img src={article.data.image} alt={article.data.title} loading="lazy" />
+                  <img src={article.data.image} alt={article.data.title} loading="lazy" class="pick-img" />
                 ) : (
-                  <div class="image-placeholder"></div>
+                  <div class="img-placeholder pick-img-placeholder"></div>
                 )}
-                <div class="pick-overlay"></div>
               </div>
               <div class="pick-body">
-                <span class="card-cat">{article.data.category}</span>
+                <span class="cat-label">{article.data.category}</span>
                 <h3 class="pick-title">{article.data.title}</h3>
-                <p class="pick-desc">{article.data.description}</p>
-                {article.data.price && <span class="pick-price">{article.data.price}</span>}
+                <p class="pick-excerpt">{article.data.description}</p>
+                <div class="pick-foot">
+                  <span class="pick-date">{formatDate(article.data.publishedDate)}</span>
+                  {article.data.price && <span class="price-tag">{article.data.price}</span>}
+                </div>
               </div>
             </a>
           ))}
         </div>
-      ) : (
-        <p class="empty-state">First picks dropping soon. Check back.</p>
-      )}
+        <div class="all-picks-cta">
+          <a href="/articles" class="all-picks-link">View all picks &rarr;</a>
+        </div>
+      </div>
     </div>
-  </div>
+  )}
+
+  {articles.length === 0 && (
+    <div class="container empty-state">
+      <p>First picks dropping soon. Check back.</p>
+    </div>
+  )}
+
 </BaseLayout>
 
 <style>
-  /* ── Hero ─────────────────────────────────── */
-  .hero-bar {
-    background: var(--brand-bg);
+  /* ── Masthead ───────────────────────────────── */
+  .masthead {
     padding: 5rem 0 4rem;
+    background: var(--brand-surface);
     border-bottom: 1px solid var(--brand-border);
   }
 
-  .hero-kicker {
-    display: block;
-    font-size: 0.675rem;
+  .masthead-tagline {
+    font-size: 0.65rem;
     font-weight: 600;
-    letter-spacing: 0.18em;
+    letter-spacing: 0.2em;
     text-transform: uppercase;
     color: var(--brand-accent);
-    margin-bottom: 1.25rem;
+    margin-bottom: 1.5rem;
   }
 
-  .hero-headline {
+  .masthead-headline {
     font-family: var(--font-serif);
-    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-size: clamp(2.4rem, 5vw, 4.25rem);
     font-weight: 800;
-    line-height: 1.1;
+    line-height: 1.08;
     letter-spacing: -0.03em;
     color: var(--brand-text);
-    margin-bottom: 1.25rem;
-    max-width: 680px;
+    margin-bottom: 1.5rem;
+    max-width: 720px;
   }
 
-  .hero-sub {
+  .masthead-sub {
     font-size: 1rem;
     color: var(--brand-text-secondary);
-    max-width: 500px;
+    max-width: 480px;
     line-height: 1.7;
   }
 
-  /* ── Section headers ─────────────────────── */
+  /* ── Rule ───────────────────────────────────── */
+  .rule {
+    border: none;
+    border-top: 1px solid var(--brand-border);
+    margin: 0;
+  }
+
+  /* ── Section headers ────────────────────────── */
   .section-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-bottom: 1.25rem;
-    border-bottom: 1px solid var(--brand-border);
-    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--brand-text);
+    margin-bottom: 2rem;
   }
 
   .section-label {
-    font-size: 0.675rem;
+    font-size: 0.65rem;
     font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 0.14em;
-    color: var(--brand-muted);
+    letter-spacing: 0.18em;
+    color: var(--brand-text);
   }
 
   .view-all {
@@ -152,36 +176,43 @@ const rest = articles.filter(a => a !== featured).slice(0, 6);
 
   .view-all:hover { color: var(--brand-accent-hover); }
 
-  /* ── Featured card ───────────────────────── */
-  .featured-wrap {
-    padding: 3rem 0;
+  /* ── Category label ─────────────────────────── */
+  .cat-label {
+    display: inline-block;
+    font-size: 0.6rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--brand-accent);
+    margin-bottom: 0.75rem;
   }
 
-  .featured-card {
-    display: grid;
-    grid-template-columns: 1.1fr 1fr;
-    border: 1px solid var(--brand-border);
-    border-radius: 6px;
-    overflow: hidden;
-    text-decoration: none;
-    color: inherit;
-    transition: border-color 0.2s, box-shadow 0.2s;
+  /* ── Featured section ───────────────────────── */
+  .featured-section {
+    padding: 3.5rem 0;
     background: var(--brand-surface);
   }
 
-  .featured-card:hover {
-    border-color: var(--brand-border-strong);
-    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.4);
+  .featured-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
   }
 
-  .featured-image {
-    position: relative;
-    aspect-ratio: 3/2;
+  .featured-layout {
+    display: grid;
+    grid-template-columns: 1.15fr 1fr;
+    gap: 3rem;
+    align-items: center;
+  }
+
+  .featured-image-wrap {
     overflow: hidden;
+    aspect-ratio: 3/2;
     background: var(--brand-surface-2);
   }
 
-  .featured-image img {
+  .featured-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -189,66 +220,55 @@ const rest = articles.filter(a => a !== featured).slice(0, 6);
     transition: transform 0.5s ease;
   }
 
-  .featured-card:hover .featured-image img {
-    transform: scale(1.04);
+  .featured-link:hover .featured-img {
+    transform: scale(1.03);
   }
 
-  .featured-overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to right, transparent 60%, rgba(17,17,17,0.2));
-    pointer-events: none;
+  .featured-img-placeholder {
+    width: 100%;
+    height: 100%;
   }
 
   .featured-body {
-    padding: 3rem 2.5rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background: var(--brand-surface);
-  }
-
-  .card-cat {
-    display: block;
-    font-size: 0.65rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.14em;
-    color: var(--brand-accent);
-    margin-bottom: 0.75rem;
+    padding: 1rem 0;
   }
 
   .featured-title {
     font-family: var(--font-serif);
-    font-size: clamp(1.5rem, 2.5vw, 2rem);
+    font-size: clamp(1.6rem, 2.5vw, 2.25rem);
     font-weight: 800;
-    line-height: 1.2;
-    letter-spacing: -0.02em;
+    line-height: 1.15;
+    letter-spacing: -0.025em;
     color: var(--brand-text);
     margin-bottom: 1rem;
+    transition: color 0.15s;
   }
 
-  .featured-desc {
-    font-size: 0.9375rem;
+  .featured-link:hover .featured-title {
+    color: var(--brand-accent);
+  }
+
+  .featured-excerpt {
+    font-size: 1rem;
     color: var(--brand-text-secondary);
-    line-height: 1.65;
+    line-height: 1.7;
     margin-bottom: 1.5rem;
-    flex: 1;
   }
 
-  .featured-footer {
+  .featured-foot {
     display: flex;
     align-items: center;
     gap: 1.5rem;
   }
 
-  .featured-price {
-    font-size: 1rem;
+  .price-tag {
+    font-size: 0.8125rem;
     font-weight: 600;
     color: var(--brand-text);
+    letter-spacing: 0.02em;
   }
 
-  .featured-cta {
+  .read-link {
     font-size: 0.8125rem;
     font-weight: 500;
     color: var(--brand-accent);
@@ -256,47 +276,57 @@ const rest = articles.filter(a => a !== featured).slice(0, 6);
     transition: color 0.15s;
   }
 
-  .featured-card:hover .featured-cta {
+  .featured-link:hover .read-link {
     color: var(--brand-accent-hover);
   }
 
-  /* ── Picks grid ──────────────────────────── */
-  .picks-wrap {
-    padding: 0 0 4rem;
+  /* ── Picks section ──────────────────────────── */
+  .picks-section {
+    padding: 3.5rem 0 4rem;
+    background: var(--brand-bg);
+    border-top: 1px solid var(--brand-border);
   }
 
   .picks-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
   }
 
-  .pick-card {
-    display: flex;
-    flex-direction: column;
-    border: 1px solid var(--brand-border);
-    border-radius: 5px;
-    overflow: hidden;
+  .pick-item {
+    display: block;
     text-decoration: none;
     color: inherit;
-    background: var(--brand-surface);
-    transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+    padding: 1.75rem 0;
+    border-bottom: 1px solid var(--brand-border);
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 1.5rem;
+    align-items: start;
+    transition: background 0.15s;
   }
 
-  .pick-card:hover {
-    border-color: var(--brand-border-strong);
-    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.35);
-    transform: translateY(-2px);
+  .pick-item:nth-child(odd) {
+    padding-right: 2.5rem;
+    border-right: 1px solid var(--brand-border);
   }
 
-  .pick-image {
-    position: relative;
-    aspect-ratio: 4/3;
+  .pick-item:nth-child(even) {
+    padding-left: 2.5rem;
+  }
+
+  .pick-item:hover {
+    background: transparent;
+  }
+
+  .pick-image-wrap {
     overflow: hidden;
+    aspect-ratio: 4/3;
     background: var(--brand-surface-2);
+    flex-shrink: 0;
   }
 
-  .pick-image img {
+  .pick-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -304,50 +334,39 @@ const rest = articles.filter(a => a !== featured).slice(0, 6);
     transition: transform 0.4s ease;
   }
 
-  .pick-card:hover .pick-image img {
+  .pick-item:hover .pick-img {
     transform: scale(1.05);
   }
 
-  .pick-overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to top, rgba(10,10,10,0.3) 0%, transparent 50%);
-    pointer-events: none;
-    opacity: 0;
-    transition: opacity 0.3s;
-  }
-
-  .pick-card:hover .pick-overlay {
-    opacity: 1;
+  .pick-img-placeholder {
+    width: 100%;
+    height: 100%;
   }
 
   .pick-body {
-    padding: 1.125rem 1.25rem 1.375rem;
-    flex: 1;
     display: flex;
     flex-direction: column;
   }
 
   .pick-title {
     font-family: var(--font-serif);
-    font-size: 1.0625rem;
+    font-size: 1.1rem;
     font-weight: 700;
-    line-height: 1.3;
+    line-height: 1.25;
+    letter-spacing: -0.01em;
     color: var(--brand-text);
     margin-bottom: 0.5rem;
-    margin-top: 0.25rem;
     transition: color 0.15s;
   }
 
-  .pick-card:hover .pick-title {
+  .pick-item:hover .pick-title {
     color: var(--brand-accent);
   }
 
-  .pick-desc {
+  .pick-excerpt {
     font-size: 0.8125rem;
     color: var(--brand-text-secondary);
-    line-height: 1.55;
-    flex: 1;
+    line-height: 1.6;
     margin-bottom: 0.75rem;
     display: -webkit-box;
     -webkit-line-clamp: 2;
@@ -355,36 +374,95 @@ const rest = articles.filter(a => a !== featured).slice(0, 6);
     overflow: hidden;
   }
 
-  .pick-price {
-    font-size: 0.8rem;
-    font-weight: 600;
-    color: var(--brand-muted);
+  .pick-foot {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: auto;
   }
 
-  /* ── Shared ──────────────────────────────── */
-  .image-placeholder {
-    width: 100%;
-    height: 100%;
+  .pick-date {
+    font-size: 0.7rem;
+    color: var(--brand-muted);
+    letter-spacing: 0.03em;
+  }
+
+  /* ── All picks CTA ──────────────────────────── */
+  .all-picks-cta {
+    padding-top: 2.5rem;
+    text-align: center;
+  }
+
+  .all-picks-link {
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--brand-text);
+    border-bottom: 1px solid var(--brand-text);
+    padding-bottom: 2px;
+    transition: color 0.15s, border-color 0.15s;
+  }
+
+  .all-picks-link:hover {
+    color: var(--brand-accent);
+    border-color: var(--brand-accent);
+  }
+
+  /* ── Shared ─────────────────────────────────── */
+  .img-placeholder {
     background: var(--brand-surface-2);
   }
 
   .empty-state {
+    padding: 4rem 0;
     color: var(--brand-muted);
     font-style: italic;
-    padding: 3rem 0;
   }
 
-  /* ── Responsive ──────────────────────────── */
+  /* ── Responsive ─────────────────────────────── */
   @media (max-width: 900px) {
-    .featured-card { grid-template-columns: 1fr; }
-    .featured-image { aspect-ratio: 16/9; }
-    .featured-body { padding: 1.75rem; }
-    .picks-grid { grid-template-columns: repeat(2, 1fr); }
+    .featured-layout {
+      grid-template-columns: 1fr;
+      gap: 1.75rem;
+    }
+
+    .featured-image-wrap {
+      aspect-ratio: 16/9;
+    }
+
+    .picks-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .pick-item:nth-child(odd) {
+      padding-right: 0;
+      border-right: none;
+    }
+
+    .pick-item:nth-child(even) {
+      padding-left: 0;
+    }
   }
 
   @media (max-width: 600px) {
-    .hero-bar { padding: 3rem 0 2.5rem; }
-    .picks-grid { grid-template-columns: 1fr; }
-    .featured-wrap, .picks-wrap { padding-top: 2rem; }
+    .masthead { padding: 3rem 0 2.5rem; }
+    .featured-section { padding: 2.5rem 0; }
+    .picks-section { padding: 2.5rem 0 3rem; }
+
+    .pick-item {
+      grid-template-columns: 90px 1fr;
+      gap: 1rem;
+    }
+  }
+
+  @media (max-width: 400px) {
+    .pick-item {
+      grid-template-columns: 1fr;
+    }
+
+    .pick-image-wrap {
+      aspect-ratio: 16/9;
+    }
   }
 </style>

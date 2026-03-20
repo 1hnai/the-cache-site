@@ -27,7 +27,7 @@ const fullTitle = title === siteName ? title : `${title} | ${siteName}`;
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#0a0a0a" />
+    <meta name="theme-color" content="#ffffff" />
 
     <title>{fullTitle}</title>
     <meta name="description" content={description} />
@@ -64,18 +64,18 @@ const fullTitle = title === siteName ? title : `${title} | ${siteName}`;
 
     <style>
       :root {
-        --brand-bg: #0a0a0a;
-        --brand-surface: #111111;
-        --brand-surface-2: #1a1a1a;
-        --brand-accent: #c2410c;
-        --brand-accent-hover: #ea580c;
-        --brand-text: #f0ede8;
-        --brand-text-secondary: #a8a29e;
-        --brand-muted: #6b7280;
-        --brand-border: #1f1f1f;
-        --brand-border-strong: #2d2d2d;
+        --brand-bg: #fafafa;
+        --brand-surface: #ffffff;
+        --brand-surface-2: #f0f0ef;
+        --brand-accent: #b45309;
+        --brand-accent-hover: #92400e;
+        --brand-text: #111111;
+        --brand-text-secondary: #555555;
+        --brand-muted: #888888;
+        --brand-border: #e5e5e5;
+        --brand-border-strong: #cccccc;
         --max-width: 1200px;
-        --reading-width: 720px;
+        --reading-width: 680px;
         --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
         --font-serif: 'Playfair Display', Georgia, 'Times New Roman', serif;
       }
@@ -101,9 +101,7 @@ const fullTitle = title === siteName ? title : `${title} | ${siteName}`;
       /* ── Header ─────────────────────────────────── */
       .site-header {
         border-bottom: 1px solid var(--brand-border);
-        background: rgba(10, 10, 10, 0.95);
-        backdrop-filter: blur(12px);
-        -webkit-backdrop-filter: blur(12px);
+        background: #ffffff;
         position: sticky;
         top: 0;
         z-index: 100;
@@ -122,41 +120,37 @@ const fullTitle = title === siteName ? title : `${title} | ${siteName}`;
 
       .site-logo {
         font-family: var(--font-serif);
-        font-size: 1.35rem;
+        font-size: 1.25rem;
         font-weight: 800;
         color: var(--brand-text);
         letter-spacing: -0.01em;
         text-decoration: none;
         flex-shrink: 0;
         line-height: 1;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
       }
 
       .site-logo:hover { color: var(--brand-text); }
 
-      .site-logo .accent {
-        color: var(--brand-accent);
-      }
-
       .site-nav {
         display: flex;
         align-items: center;
-        gap: 0.125rem;
+        gap: 0;
       }
 
       .site-nav a {
         color: var(--brand-muted);
-        font-size: 0.75rem;
+        font-size: 0.7rem;
         font-weight: 500;
-        letter-spacing: 0.1em;
+        letter-spacing: 0.12em;
         text-transform: uppercase;
-        padding: 0.45rem 0.85rem;
-        border-radius: 3px;
-        transition: color 0.15s, background 0.15s;
+        padding: 0.4rem 0.85rem;
+        transition: color 0.15s;
       }
 
       .site-nav a:hover {
         color: var(--brand-text);
-        background: var(--brand-surface-2);
       }
 
       .site-nav a.active {
@@ -171,8 +165,7 @@ const fullTitle = title === siteName ? title : `${title} | ${siteName}`;
 
       /* ── Newsletter strip ───────────────────────── */
       .newsletter-strip {
-        background: var(--brand-surface);
-        border-top: 1px solid var(--brand-border);
+        background: var(--brand-text);
         padding: 4rem 2rem;
       }
 
@@ -190,13 +183,13 @@ const fullTitle = title === siteName ? title : `${title} | ${siteName}`;
         font-size: 1.75rem;
         font-weight: 800;
         letter-spacing: -0.02em;
-        color: var(--brand-text);
+        color: #ffffff;
         margin-bottom: 0.5rem;
         line-height: 1.2;
       }
 
       .newsletter-copy p {
-        color: var(--brand-text-secondary);
+        color: rgba(255,255,255,0.6);
         font-size: 0.9375rem;
         line-height: 1.6;
       }
@@ -209,16 +202,15 @@ const fullTitle = title === siteName ? title : `${title} | ${siteName}`;
       .newsletter-form input {
         flex: 1;
         padding: 0.75rem 1rem;
-        border-radius: 4px;
-        border: 1px solid var(--brand-border-strong);
-        background: var(--brand-bg);
-        color: var(--brand-text);
+        border: 1px solid rgba(255,255,255,0.2);
+        background: rgba(255,255,255,0.08);
+        color: #ffffff;
         font-size: 0.9rem;
         font-family: var(--font-sans);
         transition: border-color 0.15s;
       }
 
-      .newsletter-form input::placeholder { color: var(--brand-muted); }
+      .newsletter-form input::placeholder { color: rgba(255,255,255,0.35); }
       .newsletter-form input:focus {
         outline: none;
         border-color: var(--brand-accent);
@@ -226,22 +218,21 @@ const fullTitle = title === siteName ? title : `${title} | ${siteName}`;
 
       .btn {
         padding: 0.75rem 1.5rem;
-        border-radius: 4px;
         font-weight: 600;
         font-size: 0.8125rem;
         cursor: pointer;
         border: none;
         background: var(--brand-accent);
         color: white;
-        transition: background 0.15s, transform 0.1s;
+        transition: background 0.15s;
         white-space: nowrap;
         font-family: var(--font-sans);
-        letter-spacing: 0.03em;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
       }
 
       .btn:hover {
         background: var(--brand-accent-hover);
-        transform: translateY(-1px);
       }
 
       /* ── Footer ─────────────────────────────────── */
@@ -250,7 +241,7 @@ const fullTitle = title === siteName ? title : `${title} | ${siteName}`;
         padding: 2rem;
         font-size: 0.8125rem;
         color: var(--brand-muted);
-        background: var(--brand-bg);
+        background: var(--brand-surface);
       }
 
       .site-footer-inner {
@@ -268,7 +259,8 @@ const fullTitle = title === siteName ? title : `${title} | ${siteName}`;
         font-size: 0.95rem;
         font-weight: 700;
         color: var(--brand-text);
-        letter-spacing: -0.01em;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
       }
 
       .site-footer nav {
@@ -278,7 +270,7 @@ const fullTitle = title === siteName ? title : `${title} | ${siteName}`;
 
       .site-footer nav a {
         color: var(--brand-muted);
-        letter-spacing: 0.06em;
+        letter-spacing: 0.08em;
         text-transform: uppercase;
         font-size: 0.7rem;
         font-weight: 500;
@@ -300,17 +292,17 @@ const fullTitle = title === siteName ? title : `${title} | ${siteName}`;
       }
 
       .label {
-        font-size: 0.675rem;
+        font-size: 0.65rem;
         font-weight: 600;
         text-transform: uppercase;
-        letter-spacing: 0.14em;
+        letter-spacing: 0.16em;
         color: var(--brand-accent);
       }
 
       /* ── Mobile ──────────────────────────────────── */
       @media (max-width: 768px) {
         .site-header-inner { padding: 0 1.25rem; height: 56px; }
-        .site-nav a { padding: 0.4rem 0.6rem; font-size: 0.7rem; letter-spacing: 0.08em; }
+        .site-nav a { padding: 0.35rem 0.6rem; font-size: 0.65rem; }
         .newsletter-inner { grid-template-columns: 1fr; gap: 1.5rem; }
         .newsletter-strip { padding: 3rem 1.25rem; }
         .newsletter-form { flex-direction: column; }
@@ -319,22 +311,33 @@ const fullTitle = title === siteName ? title : `${title} | ${siteName}`;
         .container { padding: 0 1.25rem; }
       }
 
-      @media (max-width: 480px) {
-        .site-nav { display: none; }
+      @media (max-width: 560px) {
+        .site-nav {
+          overflow-x: auto;
+          -webkit-overflow-scrolling: touch;
+          scrollbar-width: none;
+        }
+        .site-nav::-webkit-scrollbar { display: none; }
+        .site-nav a { white-space: nowrap; }
+      }
+
+      @media (max-width: 400px) {
+        .site-logo { font-size: 1rem; }
       }
     </style>
   </head>
   <body>
     <header class="site-header">
       <div class="site-header-inner">
-        <a href="/" class="site-logo">The <span class="accent">Cache</span></a>
+        <a href="/" class="site-logo">The Cache</a>
         <nav class="site-nav">
-          <a href="/articles?cat=gear">Gear</a>
-          <a href="/articles?cat=tech">Tech</a>
-          <a href="/articles?cat=style">Style</a>
           <a href="/articles?cat=cars">Cars</a>
-          <a href="/articles?cat=drinks">Drinks</a>
-          <a href="/articles?cat=etc">Etc.</a>
+          <a href="/articles?cat=watches">Watches</a>
+          <a href="/articles?cat=gear">Gear</a>
+          <a href="/articles?cat=style">Style</a>
+          <a href="/articles?cat=tech">Tech</a>
+          <a href="/articles?cat=books">Books</a>
+          <a href="/articles?cat=art">Art</a>
         </nav>
       </div>
     </header>
@@ -351,7 +354,7 @@ const fullTitle = title === siteName ? title : `${title} | ${siteName}`;
         </div>
         <form class="newsletter-form" onsubmit="return false;">
           <input type="email" placeholder="your@email.com" aria-label="Email address" />
-          <button class="btn" type="submit">Subscribe free</button>
+          <button class="btn" type="submit">Subscribe</button>
         </form>
       </div>
     </div>
@@ -360,7 +363,7 @@ const fullTitle = title === siteName ? title : `${title} | ${siteName}`;
       <div class="site-footer-inner">
         <span class="site-footer-brand">The Cache</span>
         <nav>
-          <a href="/articles">Picks</a>
+          <a href="/articles">All Picks</a>
           <a href="/about">About</a>
           <a href="/rss.xml">RSS</a>
         </nav>
