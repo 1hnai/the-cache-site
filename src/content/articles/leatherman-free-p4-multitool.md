@@ -5,7 +5,11 @@ category: "gear"
 publishedDate: "2026-03-19"
 status: "live"
 price: "$130"
-image: "https://images.unsplash.com/photo-1581873372796-635b67ca2008?w=800&q=80"
+image: "https://m.media-amazon.com/images/I/71X-l6Ps+wL._SL1500_.jpg"
+gallery:
+  - "https://m.media-amazon.com/images/I/71X-l6Ps+wL._SL1500_.jpg"
+  - "https://m.media-amazon.com/images/I/417yWnnsE4L._SL1500_.jpg"
+  - "https://m.media-amazon.com/images/I/41nVI1ZDcNL._SL1500_.jpg"
 buyUrl: "https://www.leatherman.com/free-p4-833688.html"
 featured: false
 ---

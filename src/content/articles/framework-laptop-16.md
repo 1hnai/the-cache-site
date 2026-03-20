@@ -5,7 +5,11 @@ category: "tech"
 publishedDate: "2026-03-18"
 status: "live"
 price: "From $1,049"
-image: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=800&q=80"
+image: "https://images.prismic.io/frameworkmarketplace/6c6fd60e-5c28-4d48-882a-9cc383df0dc9_Work+%26+Play.jpg?auto=compress,format"
+gallery:
+  - "https://images.prismic.io/frameworkmarketplace/6c6fd60e-5c28-4d48-882a-9cc383df0dc9_Work+%26+Play.jpg?auto=compress,format"
+  - "https://images.prismic.io/frameworkmarketplace/5462cefc-cc6f-418e-8d5e-5fa378c85c5a_Make+it+yours+-+cropped.jpg?auto=compress,format"
+  - "https://images.prismic.io/frameworkmarketplace/fc978d6c-c7c3-482f-9d71-048ceabaf1d6_5.+Thoughtfully+designed.jpeg?auto=compress,format"
 buyUrl: "https://frame.work/products/laptop16-diy-amd-7040"
 featured: false
 ---

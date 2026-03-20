@@ -10,6 +10,7 @@ const articles = defineCollection({
     status: z.enum(['draft', 'approved', 'live', 'rejected']).default('draft'),
     price: z.string().optional(),
     image: z.string().optional(),
+    gallery: z.array(z.string()).optional(),
     buyUrl: z.string().optional(),
     featured: z.boolean().optional().default(false),
   }),

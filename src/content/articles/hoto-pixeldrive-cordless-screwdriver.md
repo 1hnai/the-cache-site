@@ -6,6 +6,10 @@ publishedDate: "2026-03-14"
 price: "$79.99"
 buyUrl: "https://hototools.com/products/hoto-pixeldrive-cordless-screwdriver"
 image: "https://m.media-amazon.com/images/I/71Q9qH6JRWL._AC_SL1500_.jpg"
+gallery:
+  - "https://m.media-amazon.com/images/I/71Q9qH6JRWL._AC_SL1500_.jpg"
+  - "https://m.media-amazon.com/images/I/71qK7v3JRVL._AC_SL1500_.jpg"
+  - "https://m.media-amazon.com/images/I/71MRlFB2kwL._AC_SL1500_.jpg"
 status: "live"
 featured: true
 ---

@@ -5,7 +5,11 @@ category: "style"
 publishedDate: "2026-03-17"
 status: "live"
 price: "$298"
-image: "https://images.unsplash.com/photo-1544966503-7cc5ac882d5d?w=800&q=80"
+image: "https://i.ebayimg.com/images/g/EtcAAeSw-8FpmmDM/s-l1600.webp"
+gallery:
+  - "https://i.ebayimg.com/images/g/EtcAAeSw-8FpmmDM/s-l1600.webp"
+  - "https://i.ebayimg.com/images/g/MusAAeSwiwppfC1d/s-l1600.webp"
+  - "https://i.ebayimg.com/images/g/ISoAAeSwrQ5po6oj/s-l1600.webp"
 buyUrl: "https://www.orvis.com/heritage-field-jacket.html"
 featured: false
 ---

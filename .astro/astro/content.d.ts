@@ -141,9 +141,65 @@ declare module 'astro:content' {
 
 	type ContentEntryMap = {
 		"articles": {
+"arcteryx-beta-ar-2025.md": {
+	id: "arcteryx-beta-ar-2025.md";
+  slug: "arcteryx-beta-ar-2025";
+  body: string;
+  collection: "articles";
+  data: InferEntrySchema<"articles">
+} & { render(): Render[".md"] };
+"canyon-grail-cfr-rift.md": {
+	id: "canyon-grail-cfr-rift.md";
+  slug: "canyon-grail-cfr-rift";
+  body: string;
+  collection: "articles";
+  data: InferEntrySchema<"articles">
+} & { render(): Render[".md"] };
+"framework-laptop-16.md": {
+	id: "framework-laptop-16.md";
+  slug: "framework-laptop-16";
+  body: string;
+  collection: "articles";
+  data: InferEntrySchema<"articles">
+} & { render(): Render[".md"] };
+"garmin-fenix-8-solar.md": {
+	id: "garmin-fenix-8-solar.md";
+  slug: "garmin-fenix-8-solar";
+  body: string;
+  collection: "articles";
+  data: InferEntrySchema<"articles">
+} & { render(): Render[".md"] };
 "hoto-pixeldrive-cordless-screwdriver.md": {
 	id: "hoto-pixeldrive-cordless-screwdriver.md";
   slug: "hoto-pixeldrive-cordless-screwdriver";
+  body: string;
+  collection: "articles";
+  data: InferEntrySchema<"articles">
+} & { render(): Render[".md"] };
+"leatherman-free-p4-multitool.md": {
+	id: "leatherman-free-p4-multitool.md";
+  slug: "leatherman-free-p4-multitool";
+  body: string;
+  collection: "articles";
+  data: InferEntrySchema<"articles">
+} & { render(): Render[".md"] };
+"orvis-heritage-waxed-canvas-jacket.md": {
+	id: "orvis-heritage-waxed-canvas-jacket.md";
+  slug: "orvis-heritage-waxed-canvas-jacket";
+  body: string;
+  collection: "articles";
+  data: InferEntrySchema<"articles">
+} & { render(): Render[".md"] };
+"porsche-911-st.md": {
+	id: "porsche-911-st.md";
+  slug: "porsche-911-st";
+  body: string;
+  collection: "articles";
+  data: InferEntrySchema<"articles">
+} & { render(): Render[".md"] };
+"seiko-prospex-1965-heritage-60th-anniversary.md": {
+	id: "seiko-prospex-1965-heritage-60th-anniversary.md";
+  slug: "seiko-prospex-1965-heritage-60th-anniversary";
   body: string;
   collection: "articles";
   data: InferEntrySchema<"articles">

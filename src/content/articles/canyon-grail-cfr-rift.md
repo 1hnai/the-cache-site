@@ -5,7 +5,10 @@ category: "bikes"
 publishedDate: "2026-03-20"
 status: "draft"
 price: "£7,449"
-image: "https://images.unsplash.com/photo-1558981806-ec527fa84c39?w=1200&q=80"
+image: "https://dma.canyon.com/image/upload/w_1500,c_fit/f_png/q_auto/v1747809605/2026_FULL_grail_cfr-di2-rift_4153_R121_P05_vthjlx.png"
+gallery:
+  - "https://dma.canyon.com/image/upload/w_1500,c_fit/f_png/q_auto/v1747809605/2026_FULL_grail_cfr-di2-rift_4153_R121_P05_vthjlx.png"
+  - "https://dma.canyon.com/image/upload/w_750,h_750,c_fill/f_auto/q_auto/v1747895103/2026_TOP-1_grail_cfr-di2-rift_4153_R121_P05_cockpit_qlxhyn.jpg"
 buyUrl: "https://www.canyon.com/en-gb/gravel-bikes/race/grail/cfr/grail-cfr-w%2F-rift/4153.html"
 featured: false
 ---

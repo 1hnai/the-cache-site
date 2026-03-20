@@ -5,7 +5,11 @@ category: "clothing"
 publishedDate: "2026-03-20"
 status: "draft"
 price: "£600"
-image: "https://images.unsplash.com/photo-1578681041175-9717c638e571?w=1200&q=80"
+image: "https://images-dynamic-arcteryx.imgix.net/details/1350x1710/S26-X000009906-Beta-AR-Jacket-Solitude-Void-Front-View.jpg"
+gallery:
+  - "https://images-dynamic-arcteryx.imgix.net/details/1350x1710/S26-X000009906-Beta-AR-Jacket-Solitude-Void-Front-View.jpg"
+  - "https://images-dynamic-arcteryx.imgix.net/details/1350x1710/S26-X000009906-Beta-AR-Jacket-Solitude-Void-Back-View.jpg"
+  - "https://images-dynamic-arcteryx.imgix.net/details/1350x1710/S26-X000009906-Beta-AR-Jacket-Solitude-Void-Side-View.jpg"
 buyUrl: "https://arcteryx.com/gb/en/shop/mens/beta-ar-jacket-9906"
 featured: false
 ---

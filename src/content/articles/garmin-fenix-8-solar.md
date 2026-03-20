@@ -5,7 +5,11 @@ category: "tech"
 publishedDate: "2026-03-20"
 status: "draft"
 price: "£1,119"
-image: "https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?w=1200&q=80"
+image: "https://res.garmin.com/en_GB/products/010-02907-11/v/cf-xl.jpg"
+gallery:
+  - "https://res.garmin.com/en_GB/products/010-02907-11/v/cf-xl.jpg"
+  - "https://res.garmin.com/en_GB/products/010-02907-11/v/rf-xl.jpg"
+  - "https://res.garmin.com/en_GB/products/010-02907-11/v/pd-01-xl.jpg"
 buyUrl: "https://www.garmin.com/en-GB/p/1057968"
 featured: false
 ---

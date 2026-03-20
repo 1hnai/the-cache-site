@@ -5,7 +5,11 @@ category: "watches"
 publishedDate: "2026-03-20"
 status: "draft"
 price: "£1,270"
-image: "https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=1200&q=80"
+image: "https://www.seikoboutique.co.uk/wp-content/uploads/2025/03/SPB511J1_01_1x1-800x800.jpg"
+gallery:
+  - "https://www.seikoboutique.co.uk/wp-content/uploads/2025/03/SPB511J1_01_1x1-800x800.jpg"
+  - "https://www.seikoboutique.co.uk/wp-content/uploads/2025/03/SPB511J1_02_1x1-800x800.jpg"
+  - "https://www.seikoboutique.co.uk/wp-content/uploads/2025/03/SPB511J1_03_1x1-800x800.jpg"
 buyUrl: "https://www.seikoboutique.co.uk/product/prospex-1965-heritage-divers-60th-anniversary-limited-edition-spb511/"
 featured: false
 ---
