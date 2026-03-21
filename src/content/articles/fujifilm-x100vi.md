@@ -3,7 +3,7 @@ title: "Fujifilm X100VI"
 description: "The sixth-generation X100 packs a 40.2MP sensor and 6-stop IBIS into the same compact, dial-driven body that made the series iconic — and adds REALA ACE to the film simulation roster."
 category: "tech"
 publishedDate: "2026-03-21"
-status: "draft"
+status: "live"
 price: "$1,599 / £1,449"
 image: "https://www.fujifilm-x.com/products-cameras-static/x100vi/assets/images/top/sageabe_kv_img_01_01_pc.webp"
 gallery:

@@ -3,7 +3,7 @@ title: "Brompton P Line Urban"
 description: "A titanium-framed folding bike engineered to disappear into city life — under 7.45 kg, folds in 20 seconds, ready for whatever commute you throw at it."
 category: "bikes"
 publishedDate: "2026-03-21"
-status: "draft"
+status: "live"
 price: "From £2,319"
 image: "https://cdn11.bigcommerce.com/s-y6rxtt0m81/products/827/images/73021/H4L0TBB06COC0Q00I0070120TTTB00_1__07167.1770715716.1280.1280.jpg?c=1"
 gallery:
