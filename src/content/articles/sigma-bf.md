@@ -3,7 +3,7 @@ title: "Sigma BF"
 description: "A 24MP full-frame mirrorless machined from a single aluminium billet, with three buttons, no memory card slot, and a 230GB internal SSD."
 category: "tech"
 publishedDate: "2026-03-21"
-status: "draft"
+status: "live"
 price: "£1,869 / $1,999"
 image: "https://www.sigma-global.com/cameras/bf_camera_01.jpg"
 gallery:

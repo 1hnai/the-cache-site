@@ -1,3 +1,7 @@
+{/* QUALITY REVIEW FAILED — 2026-03-21
+  Issues to fix:
+  - Word count: 143 words (minimum 200 required). Expand the body — e.g. ride character, geometry numbers, comparison to previous Grail CFR, or racing pedigree detail.
+*/}
 ---
 title: "Canyon Grail CFR w/ RIFT"
 description: "Canyon's flagship gravel racer with a custom DT Swiss suspension fork — four years in development, 40mm of travel, built to race."

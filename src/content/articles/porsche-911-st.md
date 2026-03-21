@@ -1,3 +1,8 @@
+{/* QUALITY REVIEW FAILED — 2026-03-21
+  Issues to fix:
+  - Word count: 135 words (minimum 200 required). Expand the body — e.g. on-road character, comparison to GT3/GT3 RS, track use context, or ordering/allocation notes.
+  - Image and gallery URLs use web.archive.org (Wayback Machine) rather than a brand CDN, Amazon, or retailer domain. Replace with direct Porsche or retailer image URLs.
+*/}
 ---
 title: "Porsche 911 S/T"
 description: "A 518hp flat-six paired to a six-speed manual, limited to 1,963 units — the lightest and most driver-focused 992 Porsche makes."

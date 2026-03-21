@@ -1,3 +1,7 @@
+{/* QUALITY REVIEW FAILED — 2026-03-21
+  Issues to fix:
+  - Word count: 136 words (minimum 200 required). Expand the body with more detail — e.g. fit notes, specific use cases, comparison to previous Beta AR, or sizing/layering guidance.
+*/}
 ---
 title: "Arc'teryx Beta AR Jacket (2025)"
 description: "The iconic all-round hardshell rebuilt with Gore-Tex PRO ePE fabric — PFAS-free, 80D body with 100D shoulder and arm reinforcements, 460g."

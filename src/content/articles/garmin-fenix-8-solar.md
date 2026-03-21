@@ -1,3 +1,7 @@
+{/* QUALITY REVIEW FAILED — 2026-03-21
+  Issues to fix:
+  - Word count: 136 words (minimum 200 required). Expand the body — e.g. comparison to Fenix 7 Solar, sport-specific features, strap/material options, or real-world battery notes.
+*/}
 ---
 title: "Garmin Fenix 8 Solar"
 description: "Garmin's flagship outdoor GPS watch with upgraded solar panels, 149-hour GPS battery life, built-in microphone and speaker, and 40m dive certification."

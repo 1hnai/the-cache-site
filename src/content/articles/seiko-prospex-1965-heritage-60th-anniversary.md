@@ -1,3 +1,7 @@
+{/* QUALITY REVIEW FAILED — 2026-03-21
+  Issues to fix:
+  - Word count: 121 words (minimum 200 required). Expand the body — e.g. bracelet/strap options, caseback details, comparison to other 62MAS re-issues, availability timeline, or movement accuracy specs.
+*/}
 ---
 title: "Seiko Prospex 1965 Heritage 60th Anniversary"
 description: "A limited 6,000-piece recreation of the original 62MAS diver, with a Great Wave-inspired dial and the 6R55 movement offering 72 hours power reserve."
