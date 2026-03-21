@@ -5,11 +5,11 @@ category: "cars"
 publishedDate: "2026-03-20"
 status: "live"
 price: "£240,000"
-image: "https://images.pistonheads.com/nimg/47526/Porsche-911-S-T-2023-1-1140x570.jpg"
+image: "https://upload.wikimedia.org/wikipedia/commons/3/3d/Porsche_911_992_S-T.jpg"
 gallery:
-  - "https://images.pistonheads.com/nimg/47526/Porsche-911-S-T-2023-1-1140x570.jpg"
-  - "https://images.pistonheads.com/nimg/47526/Porsche-911-S-T-2023-4-1140x570.jpg"
-  - "https://images.pistonheads.com/nimg/47526/Porsche-911-S-T-2023-3-1140x570.jpg"
+  - "https://upload.wikimedia.org/wikipedia/commons/3/3d/Porsche_911_992_S-T.jpg"
+  - "https://upload.wikimedia.org/wikipedia/commons/a/a5/2024_Porsche_911_992_S-T.jpg"
+  - "https://upload.wikimedia.org/wikipedia/commons/a/a5/2024_Porsche_911_992_S-T.jpg"
 buyUrl: "https://www.porsche.com/uk/models/911/911-s-t/"
 featured: true
 ---
