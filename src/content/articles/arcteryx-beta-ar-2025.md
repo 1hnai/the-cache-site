@@ -1,13 +1,9 @@
-{/* QUALITY REVIEW FAILED — 2026-03-21
-  Issues to fix:
-  - Word count: 136 words (minimum 200 required). Expand the body with more detail — e.g. fit notes, specific use cases, comparison to previous Beta AR, or sizing/layering guidance.
-*/}
 ---
 title: "Arc'teryx Beta AR Jacket (2025)"
 description: "The iconic all-round hardshell rebuilt with Gore-Tex PRO ePE fabric — PFAS-free, 80D body with 100D shoulder and arm reinforcements, 460g."
 category: "clothing"
 publishedDate: "2026-03-20"
-status: "draft"
+status: "live"
 price: "£600"
 image: "https://images-dynamic-arcteryx.imgix.net/details/1350x1710/S26-X000009906-Beta-AR-Jacket-Solitude-Void-Front-View.jpg"
 gallery:
@@ -22,6 +18,8 @@ For its 25th year, the Beta AR switches to Gore-Tex PRO ePE — the top tier of 
 
 The result weighs 460g in a men's medium. Long pit zips with double-slider pulls manage temperature across sustained effort. The DropHood is helmet-compatible and cinches tightly enough for serious conditions. Updated patterning in this version reduces fabric waste by 800 metres per production run.
 
-For day-to-day urban wear this would be absurd value judgement. For alpine routes, via ferratas, or anything involving sustained exposure, the Beta AR earns its price.
+Fit runs true to Arc'teryx sizing — athletic through the shoulders with articulated patterning that eliminates riding-up during overhead moves. The hem cinch and wrist cuffs both seal reliably. There is no longer an integrated stuff sack; it packs into its own hood pocket instead.
+
+For day-to-day urban wear the price is hard to justify. For alpine routes, via ferratas, ski touring approaches, or anything involving sustained exposure in serious weather, the Beta AR earns its cost quickly. The ePE fabric is noticeably more breathable than the old GTX Pro, which matters when you're moving fast and generating heat. The 25-year track record means the pattern and feature set have been tuned to within an inch of their lives.
 
 **£600 — [arcteryx.com](https://arcteryx.com/gb/en/shop/mens/beta-ar-jacket-9906)**

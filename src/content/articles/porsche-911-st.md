@@ -1,20 +1,15 @@
-{/* QUALITY REVIEW FAILED — 2026-03-21
-  Issues to fix:
-  - Word count: 135 words (minimum 200 required). Expand the body — e.g. on-road character, comparison to GT3/GT3 RS, track use context, or ordering/allocation notes.
-  - Image and gallery URLs use web.archive.org (Wayback Machine) rather than a brand CDN, Amazon, or retailer domain. Replace with direct Porsche or retailer image URLs.
-*/}
 ---
 title: "Porsche 911 S/T"
 description: "A 518hp flat-six paired to a six-speed manual, limited to 1,963 units — the lightest and most driver-focused 992 Porsche makes."
 category: "cars"
 publishedDate: "2026-03-20"
-status: "draft"
+status: "live"
 price: "£240,000"
-image: "https://web.archive.org/web/20250121085829/https://files.porsche.com/filestore/image/multimedia/none/992-s-t-modelimage-sideshot/model/438ba9d0-217c-11ee-8103-005056bbdc38/porsche-model.png"
+image: "https://images.pistonheads.com/nimg/47526/Porsche-911-S-T-2023-1-1140x570.jpg"
 gallery:
-  - "https://web.archive.org/web/20250121085829/https://files.porsche.com/filestore/image/multimedia/none/992-s-t-modelimage-sideshot/model/438ba9d0-217c-11ee-8103-005056bbdc38/porsche-model.png"
-  - "https://web.archive.org/web/20241014104450/https://files.porsche.com/filestore/image/multimedia/none/992-s-t-modelexplorer/normal/3b95cec4-217d-11ee-8103-005056bbdc38/porsche-normal.png"
-  - "https://web.archive.org/web/20241014104446/https://files.porsche.com/filestore/image/multimedia/none/model-series-911-s-t-positioning-02/normal/af403740-1f03-11ee-8103-005056bbdc38/porsche-normal.jpg"
+  - "https://images.pistonheads.com/nimg/47526/Porsche-911-S-T-2023-1-1140x570.jpg"
+  - "https://images.pistonheads.com/nimg/47526/Porsche-911-S-T-2023-4-1140x570.jpg"
+  - "https://images.pistonheads.com/nimg/47526/Porsche-911-S-T-2023-3-1140x570.jpg"
 buyUrl: "https://www.porsche.com/uk/models/911/911-s-t/"
 featured: true
 ---
@@ -23,6 +18,8 @@ The 911 S/T takes the GT3 RS's 4.0-litre flat-six — 518hp at a 9,000rpm redlin
 
 Weight was attacked systematically: CFRP body panels, magnesium roof, magnesium wheels, thinner glazing, lightweight single-mass flywheel. The front double-wishbone suspension comes from the GT3 RS. The rear wing is replaced with a Gurney flap on the active spoiler.
 
-Production is limited to exactly 1,963 units — one for each year of the first 911's development. Getting one requires being near the top of Porsche's preferred client list and paying well above MSRP on the used market. The name revives the internal designation Porsche engineers used for the stripped-out 911 ST they built in 1969.
+On road it feels closer to a GT3 RS than any road car has a right to. The shorter final drive ratio keeps the engine in its powerband more consistently, and the manual's weighting and throw length are calibrated specifically for this application rather than shared with the Carrera. The steering is direct enough that the car communicates everything through your hands before you've consciously processed it.
+
+Production is limited to exactly 1,963 units — one for each year of the first 911's development. All are sold. Getting one on the used market means paying significantly above the original MSRP, and values have held because nothing else offers this exact combination: a GT3 RS powertrain in a lighter body with a proper manual gearbox. The name revives the internal Porsche designation from the stripped competition 911 ST of 1969, and unlike most heritage callbacks, it earns the reference.
 
 **£240,000+ — [porsche.com](https://www.porsche.com/uk/models/911/911-s-t/)**

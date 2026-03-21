@@ -3,7 +3,7 @@ title: "Lomography Lomo MC-A"
 description: "A metal-bodied 35mm point-and-shoot with autofocus, a five-element coated lens, and USB-C charging — Lomography's most serious camera in thirty years."
 category: "gear"
 publishedDate: "2026-03-21"
-status: "draft"
+status: "live"
 price: "$549"
 image: "https://cdn.shop.lomography.com/media/catalog/product/cache/d48ee8365af56e523deee8f9725f2022/l/o/lomo-mca_black-front-grey.jpg"
 gallery:

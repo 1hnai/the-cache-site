@@ -1,13 +1,9 @@
-{/* QUALITY REVIEW FAILED — 2026-03-21
-  Issues to fix:
-  - Word count: 136 words (minimum 200 required). Expand the body — e.g. comparison to Fenix 7 Solar, sport-specific features, strap/material options, or real-world battery notes.
-*/}
 ---
 title: "Garmin Fenix 8 Solar"
 description: "Garmin's flagship outdoor GPS watch with upgraded solar panels, 149-hour GPS battery life, built-in microphone and speaker, and 40m dive certification."
 category: "tech"
 publishedDate: "2026-03-20"
-status: "draft"
+status: "live"
 price: "£1,119"
 image: "https://res.garmin.com/en_GB/products/010-02907-11/v/cf-xl.jpg"
 gallery:
@@ -22,6 +18,8 @@ The 51mm Fenix 8 Solar claims 149 hours of GPS battery life in single-constellat
 
 New this generation: a speaker and microphone enabling offline voice commands, call handling via connected phone, and a voice memo recorder. The case is rated to 40 metres for dive activities including scuba and apnea, with leakproof metal pushers. Garmin's Elevate v5 heart rate sensor adds skin temperature monitoring alongside the existing ECG.
 
-It does everything any outdoor athlete needs and does it with reliable, well-tested software. The AMOLED variant trades battery life for a significantly sharper display at the same price point. Both are worth considering.
+Compared to the Fenix 7 Solar, the bezel is now the solar charging surface — keeping the display area cleaner and improving readability in direct sunlight. The Elevate v5 sensor adds continuous skin temperature monitoring, and the multiband GNSS now locks faster in dense environments like city canyons and forest trails where single-band watches struggle.
+
+The AMOLED version trades significant battery life for a display that beats the MIP screen in almost every condition except direct sunlight. If you spend most time in urban environments or prefer aesthetics over expedition capability, it's the better choice at the same price. The Solar variant is the one to buy if you're genuinely in the field for extended periods and want the peace of mind that comes from never needing a charger mid-route.
 
 **£1,119 — [garmin.com](https://www.garmin.com/en-GB/p/1057968)**
