@@ -46,24 +46,35 @@ const formattedDate = new Date(publishedDate).toLocaleDateString('en-US', {
         </div>
       )}
 
-      <!-- Hero image + gallery -->
-      {allImages.length > 0 ? (
-        <div class="image-block">
-          <div class="hero-image">
-            <img src={allImages[0]} alt={title} />
+      <!-- Image gallery -->
+      {allImages.length > 0 && (
+        <div class="gallery-wrap" id="gallery">
+          <!-- Main image viewer -->
+          <div class="main-image-frame">
+            <img
+              id="main-img"
+              src={allImages[0]}
+              alt={title}
+              class="main-img"
+            />
           </div>
+
+          <!-- Thumbnails (only shown if >1 image) -->
           {allImages.length > 1 && (
-            <div class="image-gallery">
-              {allImages.slice(1).map((src, i) => (
-                <div class="gallery-item">
-                  <img src={src} alt={`${title} — view ${i + 2}`} />
-                </div>
+            <div class="thumb-row">
+              {allImages.map((src, i) => (
+                <button
+                  class={`thumb-btn${i === 0 ? ' active' : ''}`}
+                  data-src={src}
+                  data-index={i}
+                  aria-label={`View image ${i + 1}`}
+                >
+                  <img src={src} alt={`${title} — view ${i + 1}`} />
+                </button>
               ))}
             </div>
           )}
         </div>
-      ) : (
-        <div class="hero-image-placeholder"></div>
       )}
 
       <!-- Article body -->
@@ -71,7 +82,7 @@ const formattedDate = new Date(publishedDate).toLocaleDateString('en-US', {
         <Content />
       </div>
 
-      <!-- Footer buy strip (if product) -->
+      <!-- Footer buy strip -->
       {price && buyUrl && (
         <div class="article-footer-buy">
           <div class="footer-buy-inner">
@@ -87,6 +98,23 @@ const formattedDate = new Date(publishedDate).toLocaleDateString('en-US', {
     </article>
   </div>
 </BaseLayout>
+
+<script>
+  const mainImg = document.getElementById('main-img') as HTMLImageElement | null;
+  const thumbBtns = document.querySelectorAll<HTMLButtonElement>('.thumb-btn');
+
+  thumbBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const src = btn.dataset.src;
+      if (mainImg && src) {
+        mainImg.src = src;
+        mainImg.alt = btn.querySelector('img')?.alt ?? '';
+      }
+      thumbBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    });
+  });
+</script>
 
 <style>
   .article-outer {
@@ -107,7 +135,6 @@ const formattedDate = new Date(publishedDate).toLocaleDateString('en-US', {
     font-size: 0.7rem;
     margin-bottom: 2rem;
   }
-
   .breadcrumb-link {
     color: var(--brand-muted);
     text-transform: uppercase;
@@ -115,13 +142,8 @@ const formattedDate = new Date(publishedDate).toLocaleDateString('en-US', {
     font-weight: 500;
     transition: color 0.15s;
   }
-
   .breadcrumb-link:hover { color: var(--brand-text); }
-
-  .breadcrumb-sep {
-    color: var(--brand-border-strong);
-  }
-
+  .breadcrumb-sep { color: var(--brand-border-strong); }
   .breadcrumb-cat {
     color: var(--brand-accent);
     text-transform: uppercase;
@@ -135,7 +157,6 @@ const formattedDate = new Date(publishedDate).toLocaleDateString('en-US', {
     border-bottom: 1px solid var(--brand-border);
     margin-bottom: 2rem;
   }
-
   .cat-label {
     display: inline-block;
     font-size: 0.6rem;
@@ -145,7 +166,6 @@ const formattedDate = new Date(publishedDate).toLocaleDateString('en-US', {
     color: var(--brand-accent);
     margin-bottom: 1rem;
   }
-
   .article-title {
     font-family: var(--font-serif);
     font-size: clamp(1.75rem, 4vw, 2.75rem);
@@ -155,7 +175,6 @@ const formattedDate = new Date(publishedDate).toLocaleDateString('en-US', {
     color: var(--brand-text);
     margin-bottom: 1rem;
   }
-
   .article-date {
     font-size: 0.8rem;
     color: var(--brand-muted);
@@ -173,13 +192,11 @@ const formattedDate = new Date(publishedDate).toLocaleDateString('en-US', {
     border: 1px solid var(--brand-border);
     background: var(--brand-bg);
   }
-
   .buy-price {
     font-size: 1.1rem;
     font-weight: 700;
     color: var(--brand-text);
   }
-
   .buy-btn {
     padding: 0.5rem 1.25rem;
     background: var(--brand-accent);
@@ -192,62 +209,61 @@ const formattedDate = new Date(publishedDate).toLocaleDateString('en-US', {
     white-space: nowrap;
     text-transform: uppercase;
   }
+  .buy-btn:hover { background: var(--brand-accent-hover); color: white; }
 
-  .buy-btn:hover {
-    background: var(--brand-accent-hover);
-    color: white;
-  }
-
-  /* ── Images ─────────────────────────────────── */
-  .image-block {
+  /* ── Gallery ─────────────────────────────────── */
+  .gallery-wrap {
     margin-bottom: 2.5rem;
   }
 
-  .hero-image {
+  /* Main image: white background, full image visible, no cropping */
+  .main-image-frame {
+    background: #fff;
+    border: 1px solid var(--brand-border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    min-height: 320px;
+    max-height: 580px;
     overflow: hidden;
-    background: var(--brand-surface-2);
-    margin-bottom: 0.75rem;
   }
-
-  .hero-image img {
-    width: 100%;
-    height: auto;
-    display: block;
+  .main-img {
+    max-width: 100%;
     max-height: 520px;
-    object-fit: cover;
-    object-position: center;
-  }
-
-  .image-gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 0.75rem;
-  }
-
-  .gallery-item {
-    overflow: hidden;
-    background: var(--brand-surface-2);
-  }
-
-  .gallery-item img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    object-position: center;
+    width: auto;
+    height: auto;
+    object-fit: contain;
     display: block;
-    transition: transform 0.3s ease;
+    transition: opacity 0.2s ease;
   }
 
-  .gallery-item img:hover {
-    transform: scale(1.03);
+  /* Thumbnail strip */
+  .thumb-row {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.625rem;
+    flex-wrap: wrap;
   }
-
-  .hero-image-placeholder {
+  .thumb-btn {
+    width: 72px;
+    height: 72px;
+    padding: 0;
+    border: 2px solid var(--brand-border);
+    background: #fff;
+    cursor: pointer;
+    overflow: hidden;
+    flex-shrink: 0;
+    transition: border-color 0.15s;
+  }
+  .thumb-btn img {
     width: 100%;
-    aspect-ratio: 16/9;
-    background: var(--brand-surface-2);
-    margin-bottom: 2.5rem;
+    height: 100%;
+    object-fit: contain;
+    display: block;
   }
+  .thumb-btn:hover { border-color: var(--brand-muted); }
+  .thumb-btn.active { border-color: var(--brand-accent); }
 
   /* ── Article body ──────────────────────────── */
   .article-body :global(p) {
@@ -256,7 +272,6 @@ const formattedDate = new Date(publishedDate).toLocaleDateString('en-US', {
     line-height: 1.82;
     color: var(--brand-text);
   }
-
   .article-body :global(h2) {
     font-family: var(--font-serif);
     font-size: 1.4rem;
@@ -266,47 +281,37 @@ const formattedDate = new Date(publishedDate).toLocaleDateString('en-US', {
     line-height: 1.2;
     color: var(--brand-text);
   }
-
   .article-body :global(h3) {
     font-size: 1.1rem;
     font-weight: 700;
     margin: 2rem 0 0.5rem;
     color: var(--brand-text);
   }
-
   .article-body :global(ul),
   .article-body :global(ol) {
     margin: 0.5rem 0 1.35rem 1.5rem;
   }
-
   .article-body :global(li) {
     margin-bottom: 0.4rem;
     font-size: 1.0625rem;
     line-height: 1.75;
     color: var(--brand-text);
   }
-
   .article-body :global(strong) {
     font-weight: 700;
     color: var(--brand-text);
   }
-
   .article-body :global(hr) {
     border: none;
     border-top: 1px solid var(--brand-border);
     margin: 2.5rem 0;
   }
-
   .article-body :global(a) {
     color: var(--brand-accent);
     text-decoration: underline;
     text-underline-offset: 2px;
   }
-
-  .article-body :global(a:hover) {
-    color: var(--brand-accent-hover);
-  }
-
+  .article-body :global(a:hover) { color: var(--brand-accent-hover); }
   .article-body :global(blockquote) {
     border-left: 3px solid var(--brand-accent);
     padding-left: 1.25rem;
@@ -315,20 +320,18 @@ const formattedDate = new Date(publishedDate).toLocaleDateString('en-US', {
     font-style: italic;
   }
 
-  /* ── Footer buy (bottom) ───────────────────── */
+  /* ── Footer buy ────────────────────────────── */
   .article-footer-buy {
     margin-top: 3rem;
     padding-top: 2rem;
     border-top: 1px solid var(--brand-border);
   }
-
   .footer-buy-inner {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 1rem;
   }
-
   .footer-buy-label {
     display: block;
     font-size: 0.6rem;
@@ -338,7 +341,6 @@ const formattedDate = new Date(publishedDate).toLocaleDateString('en-US', {
     color: var(--brand-muted);
     margin-bottom: 0.25rem;
   }
-
   .footer-buy-price {
     display: block;
     font-size: 1.25rem;
@@ -346,7 +348,6 @@ const formattedDate = new Date(publishedDate).toLocaleDateString('en-US', {
     color: var(--brand-text);
     font-family: var(--font-serif);
   }
-
   .footer-buy-btn {
     padding: 0.75rem 2rem;
     background: var(--brand-text);
@@ -359,15 +360,13 @@ const formattedDate = new Date(publishedDate).toLocaleDateString('en-US', {
     transition: background 0.15s;
     white-space: nowrap;
   }
-
-  .footer-buy-btn:hover {
-    background: var(--brand-accent);
-    color: white;
-  }
+  .footer-buy-btn:hover { background: var(--brand-accent); color: white; }
 
   /* ── Responsive ──────────────────────────────── */
   @media (max-width: 768px) {
     .article-outer { padding: 2rem 1.25rem 4rem; }
+    .main-image-frame { min-height: 220px; max-height: 400px; padding: 1rem; }
+    .main-img { max-height: 360px; }
     .footer-buy-inner { flex-direction: column; align-items: flex-start; }
     .footer-buy-btn { width: 100%; text-align: center; }
   }
