@@ -4,8 +4,8 @@ description: "200km above the Arctic Circle, a hotel rebuilt from scratch each w
 category: "travel"
 publishedDate: "2026-03-22"
 status: "draft"
-price: null
-image: null
+price:
+image:
 buyUrl: "https://www.icehotel.com"
 featured: false
 ---

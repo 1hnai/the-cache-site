@@ -4,8 +4,8 @@ description: "The score to Bong Joon Ho's sci-fi black comedy, recorded across A
 category: "culture"
 publishedDate: "2026-03-22"
 status: "draft"
-price: null
-image: null
+price:
+image:
 buyUrl: "https://waxworkrecords.com/collections/all/products/mickey-17"
 featured: false
 ---

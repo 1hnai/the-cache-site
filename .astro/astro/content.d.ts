@@ -190,6 +190,13 @@ declare module 'astro:content' {
   collection: "articles";
   data: InferEntrySchema<"articles">
 } & { render(): Render[".md"] };
+"david-candaux-dc12-maverik.md": {
+	id: "david-candaux-dc12-maverik.md";
+  slug: "david-candaux-dc12-maverik";
+  body: string;
+  collection: "articles";
+  data: InferEntrySchema<"articles">
+} & { render(): Render[".md"] };
 "framework-laptop-16.md": {
 	id: "framework-laptop-16.md";
   slug: "framework-laptop-16";
@@ -225,6 +232,20 @@ declare module 'astro:content' {
   collection: "articles";
   data: InferEntrySchema<"articles">
 } & { render(): Render[".md"] };
+"icehotel-jukkasjarvi.md": {
+	id: "icehotel-jukkasjarvi.md";
+  slug: "icehotel-jukkasjarvi";
+  body: string;
+  collection: "articles";
+  data: InferEntrySchema<"articles">
+} & { render(): Render[".md"] };
+"ikea-varmblixt-sabine-marcelis.md": {
+	id: "ikea-varmblixt-sabine-marcelis.md";
+  slug: "ikea-varmblixt-sabine-marcelis";
+  body: string;
+  collection: "articles";
+  data: InferEntrySchema<"articles">
+} & { render(): Render[".md"] };
 "leatherman-free-p4-multitool.md": {
 	id: "leatherman-free-p4-multitool.md";
   slug: "leatherman-free-p4-multitool";
@@ -235,6 +256,13 @@ declare module 'astro:content' {
 "lomography-lomo-mc-a.md": {
 	id: "lomography-lomo-mc-a.md";
   slug: "lomography-lomo-mc-a";
+  body: string;
+  collection: "articles";
+  data: InferEntrySchema<"articles">
+} & { render(): Render[".md"] };
+"mickey-17-jung-jae-il-ost.md": {
+	id: "mickey-17-jung-jae-il-ost.md";
+  slug: "mickey-17-jung-jae-il-ost";
   body: string;
   collection: "articles";
   data: InferEntrySchema<"articles">
@@ -281,6 +309,13 @@ declare module 'astro:content' {
   collection: "articles";
   data: InferEntrySchema<"articles">
 } & { render(): Render[".md"] };
+"sami-tamimi-boustany.md": {
+	id: "sami-tamimi-boustany.md";
+  slug: "sami-tamimi-boustany";
+  body: string;
+  collection: "articles";
+  data: InferEntrySchema<"articles">
+} & { render(): Render[".md"] };
 "seiko-prospex-1965-heritage-60th-anniversary.md": {
 	id: "seiko-prospex-1965-heritage-60th-anniversary.md";
   slug: "seiko-prospex-1965-heritage-60th-anniversary";
@@ -298,6 +333,13 @@ declare module 'astro:content' {
 "teenage-engineering-tx-6.md": {
 	id: "teenage-engineering-tx-6.md";
   slug: "teenage-engineering-tx-6";
+  body: string;
+  collection: "articles";
+  data: InferEntrySchema<"articles">
+} & { render(): Render[".md"] };
+"tobermory-1996-29-year-old.md": {
+	id: "tobermory-1996-29-year-old.md";
+  slug: "tobermory-1996-29-year-old";
   body: string;
   collection: "articles";
   data: InferEntrySchema<"articles">

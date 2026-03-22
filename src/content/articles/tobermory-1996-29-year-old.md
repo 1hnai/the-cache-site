@@ -5,7 +5,7 @@ category: "drink"
 publishedDate: "2026-03-22"
 status: "draft"
 price: "£199.95"
-image: null
+image:
 buyUrl: "https://www.masterofmalt.com/whiskies/tobermory/tobermory-29-year-old-1996-single-cask-master-of-malt-whisky/"
 featured: false
 ---
