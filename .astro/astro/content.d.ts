@@ -141,9 +141,44 @@ declare module 'astro:content' {
 
 	type ContentEntryMap = {
 		"articles": {
+"alfa-romeo-junior-veloce.md": {
+	id: "alfa-romeo-junior-veloce.md";
+  slug: "alfa-romeo-junior-veloce";
+  body: string;
+  collection: "articles";
+  data: InferEntrySchema<"articles">
+} & { render(): Render[".md"] };
 "arcteryx-beta-ar-2025.md": {
 	id: "arcteryx-beta-ar-2025.md";
   slug: "arcteryx-beta-ar-2025";
+  body: string;
+  collection: "articles";
+  data: InferEntrySchema<"articles">
+} & { render(): Render[".md"] };
+"bang-olufsen-beosound-a5.md": {
+	id: "bang-olufsen-beosound-a5.md";
+  slug: "bang-olufsen-beosound-a5";
+  body: string;
+  collection: "articles";
+  data: InferEntrySchema<"articles">
+} & { render(): Render[".md"] };
+"baracuta-g9-harrington.md": {
+	id: "baracuta-g9-harrington.md";
+  slug: "baracuta-g9-harrington";
+  body: string;
+  collection: "articles";
+  data: InferEntrySchema<"articles">
+} & { render(): Render[".md"] };
+"barbour-beaufort-jacket.md": {
+	id: "barbour-beaufort-jacket.md";
+  slug: "barbour-beaufort-jacket";
+  body: string;
+  collection: "articles";
+  data: InferEntrySchema<"articles">
+} & { render(): Render[".md"] };
+"brompton-p-line-urban.md": {
+	id: "brompton-p-line-urban.md";
+  slug: "brompton-p-line-urban";
   body: string;
   collection: "articles";
   data: InferEntrySchema<"articles">
@@ -162,9 +197,23 @@ declare module 'astro:content' {
   collection: "articles";
   data: InferEntrySchema<"articles">
 } & { render(): Render[".md"] };
+"fujifilm-x100vi.md": {
+	id: "fujifilm-x100vi.md";
+  slug: "fujifilm-x100vi";
+  body: string;
+  collection: "articles";
+  data: InferEntrySchema<"articles">
+} & { render(): Render[".md"] };
 "garmin-fenix-8-solar.md": {
 	id: "garmin-fenix-8-solar.md";
   slug: "garmin-fenix-8-solar";
+  body: string;
+  collection: "articles";
+  data: InferEntrySchema<"articles">
+} & { render(): Render[".md"] };
+"hilleberg-akto.md": {
+	id: "hilleberg-akto.md";
+  slug: "hilleberg-akto";
   body: string;
   collection: "articles";
   data: InferEntrySchema<"articles">
@@ -183,6 +232,27 @@ declare module 'astro:content' {
   collection: "articles";
   data: InferEntrySchema<"articles">
 } & { render(): Render[".md"] };
+"lomography-lomo-mc-a.md": {
+	id: "lomography-lomo-mc-a.md";
+  slug: "lomography-lomo-mc-a";
+  body: string;
+  collection: "articles";
+  data: InferEntrySchema<"articles">
+} & { render(): Render[".md"] };
+"nemo-dagger-osmo-2p.md": {
+	id: "nemo-dagger-osmo-2p.md";
+  slug: "nemo-dagger-osmo-2p";
+  body: string;
+  collection: "articles";
+  data: InferEntrySchema<"articles">
+} & { render(): Render[".md"] };
+"nomos-club-campus-38.md": {
+	id: "nomos-club-campus-38.md";
+  slug: "nomos-club-campus-38";
+  body: string;
+  collection: "articles";
+  data: InferEntrySchema<"articles">
+} & { render(): Render[".md"] };
 "orvis-heritage-waxed-canvas-jacket.md": {
 	id: "orvis-heritage-waxed-canvas-jacket.md";
   slug: "orvis-heritage-waxed-canvas-jacket";
@@ -197,12 +267,63 @@ declare module 'astro:content' {
   collection: "articles";
   data: InferEntrySchema<"articles">
 } & { render(): Render[".md"] };
+"remarkable-paper-pro.md": {
+	id: "remarkable-paper-pro.md";
+  slug: "remarkable-paper-pro";
+  body: string;
+  collection: "articles";
+  data: InferEntrySchema<"articles">
+} & { render(): Render[".md"] };
+"royal-enfield-flying-flea-c6.md": {
+	id: "royal-enfield-flying-flea-c6.md";
+  slug: "royal-enfield-flying-flea-c6";
+  body: string;
+  collection: "articles";
+  data: InferEntrySchema<"articles">
+} & { render(): Render[".md"] };
 "seiko-prospex-1965-heritage-60th-anniversary.md": {
 	id: "seiko-prospex-1965-heritage-60th-anniversary.md";
   slug: "seiko-prospex-1965-heritage-60th-anniversary";
   body: string;
   collection: "articles";
   data: InferEntrySchema<"articles">
+} & { render(): Render[".md"] };
+"sigma-bf.md": {
+	id: "sigma-bf.md";
+  slug: "sigma-bf";
+  body: string;
+  collection: "articles";
+  data: InferEntrySchema<"articles">
+} & { render(): Render[".md"] };
+"teenage-engineering-tx-6.md": {
+	id: "teenage-engineering-tx-6.md";
+  slug: "teenage-engineering-tx-6";
+  body: string;
+  collection: "articles";
+  data: InferEntrySchema<"articles">
+} & { render(): Render[".md"] };
+"tudor-black-bay-58-burgundy.md": {
+	id: "tudor-black-bay-58-burgundy.md";
+  slug: "tudor-black-bay-58-burgundy";
+  body: string;
+  collection: "articles";
+  data: InferEntrySchema<"articles">
+} & { render(): Render[".md"] };
+"util-kgt-box.md": {
+	id: "util-kgt-box.md";
+  slug: "util-kgt-box";
+  body: string;
+  collection: "articles";
+  data: InferEntrySchema<"articles">
+} & { render(): Render[".md"] };
+};
+"looks": {
+"the-weekender.md": {
+	id: "the-weekender.md";
+  slug: "the-weekender";
+  body: string;
+  collection: "looks";
+  data: InferEntrySchema<"looks">
 } & { render(): Render[".md"] };
 };
 
