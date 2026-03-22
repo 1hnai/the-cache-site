@@ -17,8 +17,10 @@ Canyon and DT Swiss spent four years building the F 132 ONE - a 40mm gravel susp
 
 The CFR carbon layup keeps weight low despite the added fork hardware. Geometry runs a 27mm longer wheelbase than older Grails with a slacker headtube, giving genuine stability at speed over rough ground without blunting the handling. Shimano GRX 825 Di2, DT Swiss GRC 1100 50mm wheels, and an integrated Gear Groove Pro cockpit round out the build.
 
+<!-- VERIFY: head tube angle 71.2° — not confirmed in available specifications; check Canyon geometry table at canyon.com -->
 Geometry sits at a 71.2° head tube angle, purposefully aggressive but not punishing for six-hour efforts. The integrated Gear Groove Pro cockpit eliminates the standard bar-and-stem interface, which limits aftermarket swap-out but saves real weight and eliminates the flex point that plagues most gravel cockpits at pace. Tyre clearance runs to 45mm, meaning the race-spec build can be respecced for bikepacking without buying a different frame.
 
+<!-- VERIFY: claim that Mathieu van der Poel's team uses the Grail CFR RIFT — MvdP races for Alpecin-Deceuninck which sponsors Canyon, but verify specific model used in competition -->
 This is the bike Mathieu van der Poel's team rides to win races. The RIFT fork makes it considerably more versatile across rough terrain. Forty millimetres of precisely damped travel absorbs chatter that destroys hands over 100 miles of washboard gravel without sacrificing the direct feel that makes the Grail worth racing in the first place. At £7,449 you're buying a legitimate podium machine, not an aspirational lookalike.
 
 **£7,449 — [canyon.com](https://www.canyon.com/en-gb/gravel-bikes/race/grail/cfr/grail-cfr-w%2F-rift/4153.html)**

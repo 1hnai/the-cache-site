@@ -14,8 +14,9 @@ buyUrl: "https://www.leatherman.com/free-p4-833688.html"
 featured: false
 ---
 
-Leatherman's FREE P4 solves the multitool's oldest problem: you need both hands to get into it. The magnetic architecture means every tool deploys one-handed, snapping open with satisfying resistance and locking solid. All 21 tools (needlenose pliers, wire cutters, three knife blades, a saw, scissors, files, screwdrivers, a bottle opener) are accessible from the outside without opening the handles.
+<!-- FACT-CHECK: fixed — FREE P4 has 2 blades (plain + serrated 420HC), not 3; USB-C charging removed (FREE P4 is fully mechanical, no USB-C); handles are 420HC stainless steel, not titanium-coated -->
+Leatherman's FREE P4 solves the multitool's oldest problem: you need both hands to get into it. The magnetic architecture means every tool deploys one-handed, snapping open with satisfying resistance and locking solid. All 21 tools (needlenose pliers, wire cutters, two knife blades, a saw, scissors, files, screwdrivers, a bottle opener) are accessible from the outside without opening the handles.
 
-It's built from 420HC steel with titanium-coated handles, charges via USB-C (yes, the multitool charges now), and fits a standard Leatherman sheath. The kind of thing you throw on your belt for a camping trip and realise three years later you've never left the house without it. This is the move.
+It's built from 420HC steel and fits a standard Leatherman sheath. The kind of thing you throw on your belt for a camping trip and realise three years later you've never left the house without it. This is the move.
 
 **$130 — [leatherman.com](https://www.leatherman.com/free-p4-833688.html)**

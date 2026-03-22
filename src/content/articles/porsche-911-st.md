@@ -20,6 +20,7 @@ Weight was attacked systematically: CFRP body panels, magnesium roof, magnesium 
 
 On road it feels closer to a GT3 RS than any road car has a right to. The shorter final drive ratio keeps the engine in its powerband more consistently, and the manual's weighting and throw length are calibrated specifically for this application rather than shared with the Carrera. The steering is direct enough that the car communicates everything through your hands before you've consciously processed it.
 
-Production is limited to exactly 1,963 units, one for each year of the first 911's development. All are sold. Getting one on the used market means paying significantly above the original MSRP, and values have held because nothing else offers this exact combination: a GT3 RS powertrain in a lighter body with a proper manual gearbox. The name revives the internal Porsche designation from the stripped competition 911 ST of 1969, and unlike most heritage callbacks, it earns the reference.
+<!-- FACT-CHECK: fixed — 1,963 units references the year 1963 when the 911 debuted at the Frankfurt IAA, not "years of development" -->
+Production is limited to exactly 1,963 units, one for each year since the 911's 1963 debut. All are sold. Getting one on the used market means paying significantly above the original MSRP, and values have held because nothing else offers this exact combination: a GT3 RS powertrain in a lighter body with a proper manual gearbox. The name revives the internal Porsche designation from the stripped competition 911 ST of 1969, and unlike most heritage callbacks, it earns the reference.
 
 **£240,000+ — [porsche.com](https://www.porsche.com/uk/models/911/911-s-t/)**

@@ -1,6 +1,6 @@
 ---
 title: "Nomos Glashütte Club Campus 38"
-description: "In-house DUW 3001 movement, Geneva stripes and perlage at sub-£1,500 retail, a warm beige dial, and a 38mm case — the Club Campus makes the Glashütte designation accessible."
+description: "In-house DUW 4001 movement, Glashütte ribbing and perlage at sub-£1,500 retail, a warm beige dial, and a 38mm case — the Club Campus makes the Glashütte designation accessible."
 category: "watches"
 publishedDate: "2026-03-21"
 status: "live"
@@ -12,8 +12,10 @@ buyUrl: "https://nomos-glashuette.com/en-gb/club/club-campus-38-735"
 featured: false
 ---
 
-The Club Campus 38 carries the DUW 3001 — an in-house movement built and finished inside Nomos's own facility in Glashütte, which qualifies it under the strict German origin designation. The case measures 38 millimetres, sits 9.15 millimetres thick, and wears the warm beige dial that makes this reference the most legible in the Campus range. What Nomos achieves at this price point is difficult to replicate elsewhere: Geneva stripes and perlage applied to movements priced below £1,500, assembled in a building the brand actually owns.
+<!-- FACT-CHECK: fixed — movement corrected from DUW 3001 (automatic) to DUW 4001 (hand-wound); case thickness corrected from 9.15mm to 8.5mm; power reserve corrected from 43h to 53h; "Geneva stripes" corrected to "Glashütte ribbing" in body text and description -->
 
-The Club line is the least architecturally severe of the Nomos collections — dial typography is looser, the colour palette warmer — which places the Campus between the pared-back Tangente and the sport-facing Ahoi on a spectrum of character. Power reserve is 43 hours; water resistance is 100 metres. The leather strap changes at home through a standard spring-bar tool without sending the watch anywhere. For a first serious mechanical watch, it offers more than almost any Swiss equivalent at equivalent money.
+The Club Campus 38 carries the DUW 4001 — an in-house movement built and finished inside Nomos's own facility in Glashütte, which qualifies it under the strict German origin designation. The case measures 38 millimetres, sits 8.5 millimetres thick, and wears the warm beige dial that makes this reference the most legible in the Campus range. What Nomos achieves at this price point is difficult to replicate elsewhere: Glashütte ribbing and perlage applied to movements priced below £1,500, assembled in a building the brand actually owns.
+
+The Club line is the least architecturally severe of the Nomos collections — dial typography is looser, the colour palette warmer — which places the Campus between the pared-back Tangente and the sport-facing Ahoi on a spectrum of character. Power reserve is 53 hours; water resistance is 100 metres. The leather strap changes at home through a standard spring-bar tool without sending the watch anywhere. For a first serious mechanical watch, it offers more than almost any Swiss equivalent at equivalent money.
 
 **£1,480 — [nomos-glashuette.com](https://nomos-glashuette.com/en-gb/club/club-campus-38-735)**

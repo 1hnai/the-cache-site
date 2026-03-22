@@ -24,4 +24,5 @@ Film Simulations total 20 with the addition of REALA ACE, a new mode based on Fu
 
 At $1,599 it costs more than the V did at launch, but the sensor and stabilisation alone justify the gap. The X100VI is the most complete compact camera Fujifilm has built.
 
+<!-- STALE: price was $1,599 at launch (2024); check fujifilm-x.com for current pricing -->
 **$1,599 — [fujifilm-x.com](https://fujifilm-x.com/global/products/cameras/x100vi/)**

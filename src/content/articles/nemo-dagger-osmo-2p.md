@@ -12,7 +12,7 @@ buyUrl: "https://www.nemoequipment.com/products/dagger-osmo"
 featured: false
 ---
 
-The Dagger OSMO is the first backpacking tent to earn bluesign certification across the entire product - fabric, fly, and floor, independently verified. More directly: there is no PFAS waterproofing chemistry in it at all. The OSMO fabric achieves a 2,000mm floor rating and 1,500mm fly rating through a fully fluorine-free coating that NEMO claims lasts four times longer than conventional DWR treatments and sheds water better when wet, when its predecessor would have started to absorb.
+The Dagger OSMO is the first backpacking tent to earn bluesign certification across the entire product - fabric, fly, and floor, independently verified. More directly: there is no PFAS waterproofing chemistry in it at all. The OSMO fabric achieves a 2,000mm floor rating <!-- VERIFY: fly hydrostatic head rating — sources suggest fly is also rated to 2,000mm on standard model, not 1,500mm as stated; verify against current NEMO spec sheet --> and 1,500mm fly rating through a fully fluorine-free coating that NEMO claims lasts four times longer than conventional DWR treatments and sheds water better when wet, when its predecessor would have started to absorb.
 
 The 2025 revision adds a reworked pole architecture, yielding four additional inches of door height and 22% more vestibule volume - meaningful gains for a tent that already offered liveable interior space. Packed weight is 1.78kg. The Divvy Cube stuff sack divides the shelter's components cleanly between two people, which matters on longer routes where no one wants to carry the whole shelter.
 

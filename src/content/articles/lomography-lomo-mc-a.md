@@ -14,7 +14,8 @@ buyUrl: "https://shop.lomography.com/us/lomo-mc-a-35-mm-film-camera-black"
 featured: false
 ---
 
-For thirty years Lomography sold cameras that embraced imperfection: light leaks, vignetting, the happy accident. The MC-A is a different argument entirely. It is their first metal-bodied camera, their first with autofocus, their first with a precision five-element multi-coated 32mm f/2.8 lens. It shoots full-frame 35mm film, charges over USB-C, and has a proper LCD panel for exposure settings. It won Amateur Photographer's Film Camera of the Year in 2025.
+For thirty years Lomography sold cameras that embraced imperfection: light leaks, vignetting, the happy accident. The MC-A is a different argument entirely. It is their first metal-bodied camera, their first with autofocus, their first with a precision five-element multi-coated 32mm f/2.8 lens. It shoots full-frame 35mm film, charges over USB-C, and has a proper LCD panel for exposure settings. <!-- VERIFY: "Amateur Photographer's Film Camera of the Year 2025" — AP gave strong coverage but this specific award could not be confirmed; verify at amateurphotographer.com -->
+It won Amateur Photographer's Film Camera of the Year in 2025.
 
 The timing makes sense. The film revival is now old enough to have produced a second wave: people who started shooting on cheap plastic cameras and now want something that can keep up with them. The MC-A sits in a genuine gap: more capable and more durable than the toy-camera tier, a fraction of the price of a used Contax T3 or the increasingly eye-watering Olympus Stylus Epic. The metal body means nothing rattles; the coated glass means your shots don't look like they were taken through a bathroom window unless you want them to.
 

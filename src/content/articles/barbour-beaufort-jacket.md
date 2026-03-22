@@ -12,7 +12,8 @@ buyUrl: "https://www.barbour.com/gb/beaufort-waxed-jacket-MWX0017BK91.html"
 featured: false
 ---
 
-The Beaufort arrived in 1980 and never required updating because the premise was correct from the start. Four bellows pockets — two chest, two hip — accommodate considerably more than any alternative arrangement, the sylkoil-waxed cotton sheds rain without membrane technology, and the corduroy collar wears up without looking theatrical. The garment is made in South Shields and can be rewaxed indefinitely; a Beaufort properly maintained will outlast most of what is bought alongside it.
+<!-- FACT-CHECK: fixed — Beaufort introduced in 1983, not 1980; the 1980 date belongs to the Bedale jacket -->
+The Beaufort arrived in 1983 and never required updating because the premise was correct from the start. Four bellows pockets — two chest, two hip — accommodate considerably more than any alternative arrangement, the sylkoil-waxed cotton sheds rain without membrane technology, and the corduroy collar wears up without looking theatrical. The garment is made in South Shields and can be rewaxed indefinitely; a Beaufort properly maintained will outlast most of what is bought alongside it.
 
 The tartan lining runs to a specific pattern across the range; the cut is boxy in a way that proves more flattering than it sounds. What it is not: a fashion piece lifted for a season and retired. The Beaufort occupies a narrow category of clothing that genuinely improves through use, acquiring a patina that cannot be built into a new garment. Available in black, navy, olive, and rustic — the olive version being the one that reads correctly in the countryside without looking like a costume in the city.
 

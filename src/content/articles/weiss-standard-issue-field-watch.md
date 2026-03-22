@@ -14,4 +14,5 @@ Cameron Weiss apprenticed at Audemars Piguet and Vacheron Constantin before leav
 
 The Caliber 2130 — a hand-finished ETA 2892A2 base with polished bridges and Geneva striping visible through the exhibition caseback — runs at 28,800 vph with a 42-hour power reserve. The hand-painted naval brass dial carries BGW9 Super-Luminova. Straps on limited models are cut from CF Stead tannery suede out of Huddersfield. At a moment when "made in America" is largely a marketing phrase, Weiss can account for over 95% of components by domestic origin. Not a reissue, not a homage. Something genuinely its own.
 
+<!-- STALE: price subject to change; verify current pricing at weisswatchcompany.com -->
 **$2,850 — [weisswatchcompany.com](https://weisswatchcompany.com/collections/38mm-standard-issue-field-watches)**
