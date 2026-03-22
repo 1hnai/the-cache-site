@@ -1,35 +1,35 @@
 ---
-title: The Weekender
-description: A relaxed but considered set for two days away — nothing excessive, nothing missing.
+title: The Autumn Standard
+description: Four considered pieces in camel, navy and tan. A palette that works without thinking about it.
 publishedDate: "2026-03-22"
 status: live
 featured: true
-season: Spring 2026
+season: Autumn 2026
 items:
-  - name: Cortez Jacket
-    brand: Arpenteur
+  - name: Wool Overcoat
+    brand: Drakes
     category: Outerwear
-    price: "£475"
-    buyUrl: https://arpenteur.net
-    image: https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=800&q=85
-  - name: Submariner Date
-    brand: Rolex
+    price: "£995"
+    buyUrl: https://drakes.com
+    image: https://images.unsplash.com/photo-1539533018447-63fcce2678e3?w=900&q=90&auto=format&fit=crop
+  - name: Orta Slim Chino
+    brand: Incotex
+    category: Trousers
+    price: "£265"
+    buyUrl: https://incotex.com
+    image: https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?w=900&q=90&auto=format&fit=crop
+  - name: Tangente 38
+    brand: Nomos
     category: Watch
-    price: "£9,250"
-    buyUrl: https://rolex.com
-    image: https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=800&q=85
-  - name: M/S Backpack
-    brand: Mismo
-    category: Bag
-    price: "£395"
-    buyUrl: https://mismo.dk
-    image: https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=800&q=85
-  - name: 1461 Derby
-    brand: Dr. Martens
+    price: "£1,480"
+    buyUrl: https://nomos-glashuette.com
+    image: https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=900&q=90&auto=format&fit=crop
+  - name: Bourton Brogue
+    brand: Tricker's
     category: Footwear
-    price: "£149"
-    buyUrl: https://drmartens.com
-    image: https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800&q=85
+    price: "£595"
+    buyUrl: https://trickers.com
+    image: https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=900&q=90&auto=format&fit=crop
 ---
 
-Four things that carry you through a weekend without overthinking. The Arpenteur jacket is a French workwear staple — the cut is generous, the cotton is dense, and it only improves with a few creases. The Submariner needs no introduction. The Mismo backpack holds two days of kit without bulk. The 1461 walks better with every mile.
+The overcoat earns its cost by doing most of the work. Underneath it, the Incotex chino in a stone that reads through every season. The Nomos Tangente — a clean white dial, no complications, no excuses. The Tricker's Bourton is the one pair of shoes worth having resoled. Four things. One palette. No decisions left to make.
