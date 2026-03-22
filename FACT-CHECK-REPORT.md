@@ -97,3 +97,24 @@
 - **orvis-heritage-waxed-canvas-jacket**: No specific verifiable claims beyond generic waxed canvas description; price noted as potentially stale.
 - **kestin-crammond-shirt**: Founded 2015 (corrected from 2016), Japanese seersucker, made in Portugal — confirmed.
 - **seiko-prospex-1965-heritage-60th-anniversary**: 62MAS original at 150m, SPB511J1 at 300m, 6,000 pieces limited, 40mm case, 72-hour power reserve, 6R55 movement — confirmed (beat rate and accuracy corrected).
+
+---
+
+## Update — 2026-03-22 (second run)
+## New articles checked: 7
+## New issues found: 2
+
+### CRITICAL
+- **engineered-garments-nanga-detachable-down-coat**: Article stated "NANGA has been making down sleeping bags and outerwear in Shiga Prefecture since 1947" — INCORRECT. NANGA's official company profile confirms founding year **1941** (not 1947). The company started as a futon/textile manufacturer before pivoting to technical down products. Fixed directly; text updated to reflect accurate founding year and corporate history.
+
+### STALE
+- **creed-wild-vetiver**: Article references "the Kering acquisition" — Kering did acquire Creed in June 2023, but subsequently sold its entire beauty portfolio including Creed to L'Oréal. The ownership reference may mislead readers. Flagged with HTML comment.
+
+### CLEAN
+- **ming-57-04-phoenix**: Founded 2017 in Kuala Lumpur by Ming Thein (CORRECT); limited to 150 pieces (CORRECT per brand communications); price CHF 6,250 (CORRECT per ming.watch listing); inaugural 57.03 Iris limited to 100 pieces (consistent with brand history).
+- **springbank-hand-filled-2026**: Operating since 1828 (CORRECT); only Scottish distillery to malt, distil, mature, and bottle on site (CORRECT); Campbeltown once held thirty distilleries, today three — Springbank, Glen Scotia, Glengyle (CORRECT); 58.6% ABV (confirmed for 2026 release per retailer listing).
+- **hal-fischer-seminal-works**: Gay Semiotics photographed 1977–1978 (CORRECT); Aperture monograph February 2026 (CORRECT per Aperture listing); "two years before the AIDS crisis" — Fischer documented 1977–78, AIDS crisis emerged c. 1981–82; approximately correct timing.
+- **louis-poulsen-rumee-220**: Founded 1874 (CORRECT); Gabriel Tan Singapore-based, named Louis Poulsen Designer of the Year 2025 (CORRECT); IP44 rating and two light modes (CORRECT per Louis Poulsen product page).
+- **project-hail-mary**: Andy Weir's 2021 novel (CORRECT — published May 4, 2021); directed by Phil Lord and Christopher Miller (CORRECT); Ryan Gosling as Ryland Grace (CORRECT); released US theatres 20 March 2026 (CORRECT).
+- **creed-wild-vetiver**: Opening notes bergamot and Timur pepper; heart rose centifolia — consistent with available fragrance notes. Price $610 (consistent with Creed boutique listing).
+- **engineered-garments-nanga-detachable-down-coat**: Post-fix content is accurate — available in black, navy, khaki, and purple (CORRECT per EG); sold through Nepenthes (CORRECT — Nepenthes is EG's primary retailer).
