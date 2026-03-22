@@ -3,7 +3,7 @@ title: "Project Hail Mary"
 description: "Lord and Miller's adaptation of Andy Weir's novel lands in cinemas this week — a film whose central relationship cannot be explained without destroying it."
 category: "culture"
 publishedDate: "2026-03-22"
-status: "draft"
+status: "live"
 price: null
 image:
 buyUrl:

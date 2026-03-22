@@ -3,7 +3,7 @@ title: "Jung Jae-il — Mickey 17 OST"
 description: "The score to Bong Joon Ho's sci-fi black comedy, recorded across Abbey Road, Teldex, and Budapest — the composer's most personal work to date."
 category: "culture"
 publishedDate: "2026-03-22"
-status: "draft"
+status: "live"
 price:
 image:
 buyUrl: "https://waxworkrecords.com/collections/all/products/mickey-17"

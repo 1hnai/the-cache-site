@@ -3,7 +3,7 @@ title: "Tobermory 29 Year Old 1996 — Master of Malt"
 description: "A single cask survivor from Scotland's oldest island distillery, laid down during its most turbulent era and released in 268 bottles."
 category: "drink"
 publishedDate: "2026-03-22"
-status: "draft"
+status: "live"
 price: "£199.95"
 image:
 buyUrl: "https://www.masterofmalt.com/whiskies/tobermory/tobermory-29-year-old-1996-single-cask-master-of-malt-whisky/"

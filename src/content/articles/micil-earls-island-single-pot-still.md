@@ -3,7 +3,7 @@ title: "Micil Earls Island Single Pot Still"
 description: "Six generations of Connemara distilling knowledge, now legal — finished in Bordeaux casks with a peat character that predates any Scottish influence."
 category: "drink"
 publishedDate: "2026-03-22"
-status: "draft"
+status: "live"
 price: "£46"
 image: null
 buyUrl: "https://www.masterofmalt.com/whiskies/micil/micil-earls-island-single-pot-still-whiskey/"

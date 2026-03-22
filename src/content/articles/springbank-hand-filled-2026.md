@@ -3,7 +3,7 @@ title: "Springbank Hand Filled 2026"
 description: "Cask strength Campbeltown, bottled by hand at source — the vertical distillery in full expression."
 category: "drink"
 publishedDate: "2026-03-22"
-status: "draft"
+status: "live"
 price: "£79.95"
 image:
 buyUrl: "https://whiskyinternationalonline.com/products/springbank-2025-hand-filled-distillery-exclusive-release-58-6"

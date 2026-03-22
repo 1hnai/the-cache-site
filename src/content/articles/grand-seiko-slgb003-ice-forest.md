@@ -3,7 +3,7 @@ title: "Grand Seiko SLGB003 Ice Forest"
 description: "The most accurate mainspring-powered wristwatch currently in production, rendered in titanium and a dial that shifts with the light."
 category: "watches"
 publishedDate: "2026-03-22"
-status: "draft"
+status: "live"
 price: "£9,950"
 image: null
 buyUrl: "https://www.grand-seiko.com/us-en/special/9RB2"

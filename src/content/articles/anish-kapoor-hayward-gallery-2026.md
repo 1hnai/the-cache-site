@@ -3,7 +3,7 @@ title: "Anish Kapoor — Hayward Gallery"
 description: "His first UK survey in nearly thirty years includes Vantablack works that absorb 99.96% of visible light — objects that cannot be conveyed by any photograph."
 category: "culture"
 publishedDate: "2026-03-22"
-status: "draft"
+status: "live"
 price: "£22"
 image: null
 buyUrl: "https://www.southbankcentre.co.uk/whats-on/anish-kapoor/"

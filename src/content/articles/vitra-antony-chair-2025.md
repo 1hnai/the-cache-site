@@ -3,7 +3,7 @@ title: "Vitra Antony Chair Limited Edition 2025"
 description: "Jean Prouvé's final furniture design, reissued in European pine with the exact rouge corsaire finish from his original production drawings."
 category: "design"
 publishedDate: "2026-03-22"
-status: "draft"
+status: "live"
 price: "£2,500"
 image: null
 buyUrl: "https://www.vitra.com/en-gb/product/details/antony-limited-edition-2025"

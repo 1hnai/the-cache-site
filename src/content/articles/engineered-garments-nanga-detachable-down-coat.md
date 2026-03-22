@@ -3,7 +3,7 @@ title: "Engineered Garments × NANGA Detachable Down Coat"
 description: "A modular down coat from two makers who understand function — six components, independent attachment, no redundant warmth."
 category: "clothing"
 publishedDate: "2026-03-22"
-status: "draft"
+status: "live"
 price: "¥136,400"
 image:
 buyUrl: "https://www.engineeredgarments.com/stories/engineered-garments-x-nanga-detachable-down-coat-fw25"

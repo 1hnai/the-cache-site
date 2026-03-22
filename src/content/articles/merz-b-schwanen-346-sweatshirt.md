@@ -3,7 +3,7 @@ title: "Merz b. Schwanen 346 Loopwheeled Sweatshirt"
 description: "Made on century-old loopwheel machines in Germany's Swabian Alps — one of two places on earth where this method still runs at scale."
 category: "clothing"
 publishedDate: "2026-03-22"
-status: "draft"
+status: "live"
 price: "£70"
 image: null
 buyUrl: "https://www.merzbschwanen.com/products/mens-loopwheeled-sweatshirt-10oz-sq-yd-classic-fit-2"

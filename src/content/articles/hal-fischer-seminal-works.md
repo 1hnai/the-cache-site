@@ -3,7 +3,7 @@ title: "Hal Fischer: Seminal Works"
 description: "Aperture's February 2026 monograph collects the full Gay Semiotics series — the most precise piece of visual anthropology produced in 1970s America."
 category: "books"
 publishedDate: "2026-03-22"
-status: "draft"
+status: "live"
 price: "$65"
 image:
 buyUrl: "https://aperture.org/books/coming-soon/hal-fischer-seminal-works/"

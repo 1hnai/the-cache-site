@@ -3,7 +3,7 @@ title: "Creed Wild Vetiver"
 description: "Named for vetiver, leading with rose — Creed's March 2026 launch is a fragrance of deliberate misdirection and genuine complexity."
 category: "grooming"
 publishedDate: "2026-03-22"
-status: "draft"
+status: "live"
 price: "$610"
 image:
 buyUrl: "https://creedboutique.com/pages/wild-vetiver"

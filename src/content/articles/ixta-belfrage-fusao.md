@@ -3,7 +3,7 @@ title: "Ixta Belfrage — Fusão"
 description: "An 8,000km research journey through Brazil produces the serious English-language entry point into a cuisine that has been waiting for this book."
 category: "food"
 publishedDate: "2026-03-22"
-status: "draft"
+status: "live"
 price: "£28"
 image: null
 buyUrl: "https://www.waterstones.com/book/9781529932829"

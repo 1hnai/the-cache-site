@@ -3,7 +3,7 @@ title: "Ming 57.04 Phoenix"
 description: "The Malaysian independent's return to monopusher chronography: destro configuration, 150 pieces, a dial that rewards patience."
 category: "watches"
 publishedDate: "2026-03-22"
-status: "draft"
+status: "live"
 price: "CHF 6,250"
 image:
 buyUrl: "https://www.ming.watch/featured-product/ming-57-04-phoenix-polymesh"

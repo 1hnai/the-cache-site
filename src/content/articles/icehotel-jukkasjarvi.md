@@ -3,7 +3,7 @@ title: "ICEHOTEL — Jukkasjärvi"
 description: "200km above the Arctic Circle, a hotel rebuilt from scratch each winter using ice from the frozen Torne River — then left to melt."
 category: "travel"
 publishedDate: "2026-03-22"
-status: "draft"
+status: "live"
 price:
 image:
 buyUrl: "https://www.icehotel.com"

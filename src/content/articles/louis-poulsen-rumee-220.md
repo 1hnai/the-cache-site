@@ -3,7 +3,7 @@ title: "Louis Poulsen Rumee 220"
 description: "Gabriel Tan's portable lamp for the Danish house: recycled plastic, IP44-rated, two light modes — designed to belong to its user, not a room."
 category: "interiors"
 publishedDate: "2026-03-22"
-status: "draft"
+status: "live"
 price: "£170"
 image:
 buyUrl: "https://www.louispoulsen.com/en/catalog/private/table/rumee-220-portable-lamp"

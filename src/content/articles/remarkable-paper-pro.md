@@ -3,7 +3,7 @@ title: "reMarkable Paper Pro"
 description: "An 11.8-inch colour e-ink writing tablet that feels closer to paper than any screen has a right to, named TIME Magazine's Best Invention of 2025."
 category: "tech"
 publishedDate: "2026-03-21"
-status: "draft"
+status: "live"
 price: "From $579"
 image: "https://cdn.sanity.io/images/xpujt61d/production/0deca8af1b6aceb0ed5081a209e2ba959882a2c2-5760x3784.png"
 gallery:
