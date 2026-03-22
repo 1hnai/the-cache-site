@@ -1,35 +1,35 @@
 ---
 title: The Autumn Standard
-description: Four considered pieces in camel, navy and tan. A palette that works without thinking about it.
+description: Four considered pieces in camel, stone and tan. A palette that works without thinking about it.
 publishedDate: "2026-03-22"
 status: live
 featured: true
 season: Autumn 2026
 items:
-  - name: Wool Overcoat
-    brand: Drakes
+  - name: Caramel Double-Breasted Overcoat
+    brand: Drake's
     category: Outerwear
-    price: "£995"
-    buyUrl: https://drakes.com
-    image: https://images.unsplash.com/photo-1539533018447-63fcce2678e3?w=900&q=90&auto=format&fit=crop
-  - name: Orta Slim Chino
+    price: "£2,350"
+    buyUrl: https://www.drakes.com/products/caramel-double-breasted-teddy-overcoat
+    image: https://www.drakes.com/cdn/shop/files/DR2A1P25506-01-300-1.jpg?v=1759759523
+  - name: Tapered Cotton Chino
     brand: Incotex
     category: Trousers
-    price: "£265"
-    buyUrl: https://incotex.com
-    image: https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?w=900&q=90&auto=format&fit=crop
+    price: "£295"
+    buyUrl: https://www.slowear.com/en/products/tapered-fit-cotton-trousers-medium-beige-11s18890936417
+    image: https://www.slowear.com/cdn/shop/files/11S188.90936.417.1.H1.jpg?v=1767959390
   - name: Tangente 38
-    brand: Nomos
+    brand: NOMOS Glashütte
     category: Watch
-    price: "£1,480"
-    buyUrl: https://nomos-glashuette.com
-    image: https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=900&q=90&auto=format&fit=crop
-  - name: Bourton Brogue
+    price: "£1,920"
+    buyUrl: https://nomos-glashuette.com/en-gb/tangente/tangente-38-165
+    image: https://cdn.nomos-glashuette.com/img/f=scale-down,w=1024,bg=white,sf=png/webshop/b2/6d/66/1759953287/164-165-tangente-38-2d-front-masked.jpg
+  - name: Bourton Country Shoe
     brand: Tricker's
     category: Footwear
-    price: "£595"
-    buyUrl: https://trickers.com
-    image: https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=900&q=90&auto=format&fit=crop
+    price: "£650"
+    buyUrl: https://trickers.com/products/bourton-country-shoe-acorn-antique
+    image: https://trickers.com/cdn/shop/files/bourton-country-shoe-acorn-antique-851335.jpg?v=1707835223
 ---
 
-The overcoat earns its cost by doing most of the work. Underneath it, the Incotex chino in a stone that reads through every season. The Nomos Tangente — a clean white dial, no complications, no excuses. The Tricker's Bourton is the one pair of shoes worth having resoled. Four things. One palette. No decisions left to make.
+The overcoat earns its keep by doing most of the work. Underneath it, the Incotex cotton chino in a stone that reads through every season. The NOMOS Tangente — a clean white dial, no complications, no excuses. The Tricker's Bourton is the one pair of shoes worth having resoled. Four things. One palette. No decisions left to make.
