@@ -118,3 +118,34 @@
 - **project-hail-mary**: Andy Weir's 2021 novel (CORRECT — published May 4, 2021); directed by Phil Lord and Christopher Miller (CORRECT); Ryan Gosling as Ryland Grace (CORRECT); released US theatres 20 March 2026 (CORRECT).
 - **creed-wild-vetiver**: Opening notes bergamot and Timur pepper; heart rose centifolia — consistent with available fragrance notes. Price $610 (consistent with Creed boutique listing).
 - **engineered-garments-nanga-detachable-down-coat**: Post-fix content is accurate — available in black, navy, khaki, and purple (CORRECT per EG); sold through Nepenthes (CORRECT — Nepenthes is EG's primary retailer).
+
+---
+
+## Update — 2026-03-24 (third run)
+## New articles checked: 2
+## New issues found: 0 (factual), 2 (image URL fixes)
+
+### CRITICAL
+- None
+
+### IMAGE URL FIXES
+- **kilchoman-maury-cask-matured-2026**: Image URL pointed to `kilchomania.com` (an independent fan/enthusiast site, not affiliated with the distillery). Replaced with official `kilchomandistillery.com` CDN URL: `https://www.kilchomandistillery.com/wp-content/uploads/2026/02/WebsiteBanner_2-01-scaled.jpg` (source: official Kilchoman Maury Cask Matured release page on kilchomandistillery.com).
+- **bulleit-bourbon-mesquite-smoked-malt**: Image URL pointed to `woodencork.com` (a third-party retail site). Replaced with official press release image from MultiVu (Bulleit/Diageo's official press distribution platform): `https://www.multivu.com/bulleit/image/9384751-Mesquite-Smoked-Malt-Bottle-w-food.jpg` (source: official PR Newswire press release, March 2026).
+
+### VERIFIED CORRECT — kilchoman-maury-cask-matured-2026
+- Founded 2005 by Anthony Wills — confirmed via kilchomandistillery.com and Wikipedia
+- "Only working farm distillery on Islay" — confirmed
+- 19 Maury butts filled 2021, full maturation (not a finish) — confirmed via Kilchoman release notes and multiple whisky press sources
+- ~15,000 bottles at 50% ABV, non-chill filtered — confirmed
+- Maury from Roussillon, France; Grenache Noir; fortified with eau de vie; comparable to Port — confirmed
+
+### VERIFIED CORRECT — bulleit-bourbon-mesquite-smoked-malt
+- Distilled November 2018 at Bulleit Distilling Co., Shelbyville, Kentucky — confirmed via official press release
+- 93 proof (46.5% ABV) — confirmed
+- Mashbill: 65% corn, 30% mesquite-smoked malt, 5% malted barley; no rye — confirmed
+- First time brand removed rye from recipe — confirmed
+- Six-year minimum age, pulled from barrel 2025 — confirmed
+- One-time release — confirmed
+
+### QUALITY GATE
+- Em dashes in body text replaced with commas or colons in both articles. No AI filler phrases found. Both articles set to live.
