@@ -10,7 +10,7 @@ gallery:
   - "https://cdn.sanity.io/images/xpujt61d/production/0deca8af1b6aceb0ed5081a209e2ba959882a2c2-5760x3784.png"
   - "https://cdn.sanity.io/images/xpujt61d/production/654d713bab3ff13403707eb72b3a6d8d231cba8d-4320x2784.png"
   - "https://cdn.sanity.io/images/xpujt61d/production/fcf8467729f599e400de88c6dbe5f1b326e55573-2551x3436.png"
-buyUrl: "https://remarkable.com/store/remarkable-paper-pro"
+buyUrl: "https://remarkable.com/paper-pro"
 featured: false
 ---
 
@@ -26,4 +26,4 @@ Cloud sync, handwriting search, and integrations with Google Drive and OneDrive 
 <!-- FACT-CHECK: fixed — base price corrected from $629 to $579 (with basic Marker); $629 is the Marker Plus bundle price. Both are "From $579." -->
 At $579 for the base configuration (or $629 with the Marker Plus), the Paper Pro is priced at the serious end of the stationery market. It earned a place on TIME's Best Inventions of 2025. The 50-day trial is there if you need convincing.
 
-**From $579 — [remarkable.com](https://remarkable.com/store/remarkable-paper-pro)**
+**From $579 — [remarkable.com](https://remarkable.com/paper-pro)**

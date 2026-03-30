@@ -5,8 +5,8 @@ category: "food"
 publishedDate: "2026-03-29"
 status: "live"
 price: "£55"
-image: "https://www.hasbean.co.uk/cdn/shop/products/porlex-mini-ii-stainless-steel-coffee-grinder-main.jpg"
-buyUrl: "https://www.hasbean.co.uk/products/porlex-mini-ii-stainless-steel-coffee-grinder"
+image: "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=800&q=80"
+buyUrl: "https://www.freshgroundcoffee.co.uk/products/porlex-mini-ii-hand-grinder"
 featured: false
 ---
 
@@ -16,6 +16,6 @@ What changed in the second generation: a revised burr geometry that handles ligh
 
 The handle folds flat and slots into the body for packing. The whole thing weighs 160g. It will grind enough for two cups in about two minutes of steady turning. For travel, camping, or a desk drawer, this is the grinder that requires no further research or upgrade path. Buy it once.
 
-Made in Japan, distributed in the UK by Has Bean and Square Mile Coffee.
+Made in Japan, distributed in the UK by Fresh Ground Coffee and Square Mile Coffee.
 
-**£55 — [hasbean.co.uk](https://www.hasbean.co.uk/products/porlex-mini-ii-stainless-steel-coffee-grinder)**
+**£55 — [freshgroundcoffee.co.uk](https://www.freshgroundcoffee.co.uk/products/porlex-mini-ii-hand-grinder)**
