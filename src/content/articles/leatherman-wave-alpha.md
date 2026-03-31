@@ -22,4 +22,4 @@ The rest of the tool is familiar: needlenose and regular pliers, wire cutters wi
 
 At £229.95 it sits about £80 above the Wave+. The MagnaCut blade alone doesn't justify that gap for everyone, but the G10 handles and the scissors close it. If you are buying a multitool once and keeping it for a decade, the Wave Alpha is the version worth having.
 
-**£229.95 — [uk.leatherman.com](https://uk.leatherman.com/products/wave-alpha)**
+**£229.95 at [uk.leatherman.com](https://uk.leatherman.com/products/wave-alpha)**
