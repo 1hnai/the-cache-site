@@ -20,4 +20,4 @@ Half-frame is a commitment. The smaller negative requires slower film in bright 
 
 Film photography has its frictions. The Pentax 17 removes most of the unnecessary ones while keeping the ones that matter.
 
-**£369 — [ricoh-imaging.co.jp](https://www.ricoh-imaging.co.jp/english/products/pentax-17/)**
+**£369 - [ricoh-imaging.co.jp](https://www.ricoh-imaging.co.jp/english/products/pentax-17/)**

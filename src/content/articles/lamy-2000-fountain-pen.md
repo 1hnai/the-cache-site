@@ -20,4 +20,4 @@ No cartridges. No converter needed. Fill it from a bottle and write.
 
 Alternatives have multiplied in the decades since: Pelikan M200, TWSBI 580, various Chinese pens in the same idiom. None are identical. The Lamy 2000 remains the reference.
 
-**£158 — [cultpens.com](https://www.cultpens.com/products/lamy-2000-fountain-pen)**
+**£158 - [cultpens.com](https://www.cultpens.com/products/lamy-2000-fountain-pen)**

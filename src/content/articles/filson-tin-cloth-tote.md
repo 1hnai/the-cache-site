@@ -20,4 +20,4 @@ Waxed cotton marks with contact, especially when new. The otter green colour sho
 
 Alternatives exist at lower price points, but few are built to the same specification or carry the same guarantee of replacement if the stitching fails. Filson replaces or repairs defective products.
 
-**£195 — [filson.com](https://www.filson.com/products/tin-cloth-tote-bag.html)**
+**£195 - [filson.com](https://www.filson.com/products/tin-cloth-tote-bag.html)**
