@@ -14,4 +14,4 @@ Osprey has made the Aether in some form since the 1990s. The Plus series updates
 
 At 60 litres there is enough volume for a long weekend in the hills or a week-long trip if you pack without sentiment. The main compartment opens top and bottom, the hip belt pockets are large enough to be useful, and the frame adjusts to fit torso lengths from 16 to 22 inches.
 
-The materials are robust without being heavy. Total pack weight sits around 2kg before you add anything — acceptable for this capacity. Trims in Brindle Brown and Astro Blue avoid the neon palettes that dominate the category.
+The materials are robust without being heavy. Total pack weight sits around 2kg before you add anything - acceptable for this capacity. Trims in Brindle Brown and Astro Blue avoid the neon palettes that dominate the category.

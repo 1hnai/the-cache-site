@@ -10,7 +10,7 @@ buyUrl: "https://gestalten.com/products/less-but-better"
 featured: false
 ---
 
-Dieter Rams spent four decades at Braun shaping how domestic objects look and work. His ten principles — good design is innovative, useful, honest, long-lasting, and unobtrusive among them — remain the clearest framework for thinking about why some things feel right and others do not.
+Dieter Rams spent four decades at Braun shaping how domestic objects look and work. His ten principles - good design is innovative, useful, honest, long-lasting, and unobtrusive among them - remain the clearest framework for thinking about why some things feel right and others do not.
 
 This Gestalten edition presents the principles alongside photographs of Rams's product archive, essays on his working method, and images from his own home. The book is smaller than most design monographs, which suits its subject. It sits well on a desk. It gets read rather than displayed.
 
