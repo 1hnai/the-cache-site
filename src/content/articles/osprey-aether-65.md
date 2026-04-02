@@ -10,7 +10,7 @@ buyUrl: "https://www.osprey.com/gb/en/product/aether-65-AETHER65S25.html"
 featured: false
 ---
 
-The Aether has been the sensible choice for multi-day trips since its first generation. The current version keeps the AirSpeed suspended mesh back panel — a taut trampoline between your spine and the load that lets air move freely behind you — while trimming 200g from the frame. The hip belt is anatomically shaped, transfers load predictably, and does not slip when you scramble.
+The Aether has been the sensible choice for multi-day trips since its first generation. The current version keeps the AirSpeed suspended mesh back panel - a taut trampoline between your spine and the load that lets air move freely behind you - while trimming 200g from the frame. The hip belt is anatomically shaped, transfers load predictably, and does not slip when you scramble.
 
 At 65 litres it handles four to seven nights without forcing you to choose between a decent sleep system and a change of clothes. The lid detaches into a daypack. The sleeping bag compartment divider unzips to give a single cavernous space. The integrated rain cover stows in the bottom and actually fits over the pack when loaded.
 
