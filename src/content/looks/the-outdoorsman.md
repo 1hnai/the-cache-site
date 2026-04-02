@@ -1,0 +1,35 @@
+---
+title: "The Outdoorsman"
+description: "Technical and considered. Built for somewhere that earns the view."
+publishedDate: "2026-03-22"
+status: "live"
+featured: false
+season: "Spring 2026"
+items:
+  - name: "Ventile Overshirt"
+    brand: "Arpenteur"
+    category: "clothing"
+    price: "£480"
+    buyUrl: "https://arpenteur.net"
+    image: "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=400&bg=white"
+  - name: "Explorer Chronograph"
+    brand: "Longines"
+    category: "watch"
+    price: "£2,150"
+    buyUrl: "https://longines.com"
+    image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400"
+  - name: "Sentinel Pack 20L"
+    brand: "Filson"
+    category: "bag"
+    price: "£295"
+    buyUrl: "https://filson.com"
+    image: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=400"
+  - name: "1460 Smooth Boot"
+    brand: "Dr. Martens"
+    category: "shoes"
+    price: "£169"
+    buyUrl: "https://drmartens.com"
+    image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400"
+---
+
+Assembled for elevation and endurance. Everything earns its place.
