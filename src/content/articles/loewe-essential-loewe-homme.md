@@ -16,4 +16,4 @@ The bottle is frosted glass with a brushed anodised cap, designed by the same ho
 
 This is the sort of thing you reach for when you want to smell presentable without context. It works equally well in a boardroom and on a Saturday morning. At £115 for 100ml it is, relative to the niche fragrance market, straightforwardly priced for what it delivers.
 
-**£115 — [loewe.com](https://www.loewe.com/gbr/en/fragrances/mens-fragrances/essential-loewe-homme-eau-de-toilette-100ml/P35100.html)**
+**£115 - [loewe.com](https://www.loewe.com/gbr/en/fragrances/mens-fragrances/essential-loewe-homme-eau-de-toilette-100ml/P35100.html)**

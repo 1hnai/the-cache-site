@@ -16,4 +16,4 @@ Frame is a perforated foam back panel that sits off the spine. The shoulder harn
 
 Made with 100% recycled nylon fabric. Patagonia repairs rather than replaces, and most trail wear on this pack is fixable. It suits winter running, fastpacking with an overnight shelter, or anything where a vest feels too slight and a 30-litre daypack feels like an apology.
 
-**£120 — [patagonia.com](https://www.patagonia.com/product/nine-trails-pack-20-liters/49301.html)**
+**£120 - [patagonia.com](https://www.patagonia.com/product/nine-trails-pack-20-liters/49301.html)**

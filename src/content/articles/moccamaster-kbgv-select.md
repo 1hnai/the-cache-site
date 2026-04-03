@@ -16,4 +16,4 @@ The hot plate holds 80°C for 40 minutes, then cuts out. The carafe is thermal g
 
 Available in fifteen colours including Polished Silver, Matte Black, Off-White, and a specific shade of turquoise that photographs well and looks better in person. Five-year manufacturer warranty. This is the sensible end of coffee equipment.
 
-**£249 — [moccamaster.eu](https://www.moccamaster.eu/product/kbgv-select/)**
+**£249 - [moccamaster.eu](https://www.moccamaster.eu/product/kbgv-select/)**
