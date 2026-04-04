@@ -5,7 +5,7 @@ category: "food"
 publishedDate: "2026-03-22"
 status: "live"
 price: "£28"
-image: null
+image: "https://cdn.penguin.co.uk/dam-assets/books/9781529932829/9781529932829-jacket-large.jpg"
 buyUrl: "https://www.waterstones.com/book/9781529932829"
 featured: false
 ---

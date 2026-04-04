@@ -5,7 +5,7 @@ category: "culture"
 publishedDate: "2026-03-22"
 status: "live"
 price: "£22"
-image: null
+image: "https://media.timeout.com/images/106360544/image.jpg"
 buyUrl: "https://www.southbankcentre.co.uk/whats-on/anish-kapoor/"
 featured: false
 ---

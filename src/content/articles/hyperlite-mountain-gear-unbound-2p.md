@@ -5,7 +5,7 @@ category: "outdoor"
 publishedDate: "2026-03-22"
 status: "live"
 price: "$775"
-image: ""
+image: "https://hyperlitemountaingear.com/cdn/shop/products/hyperlite-staging-unbound-2p-31198433247277.jpg?v=1666624398&width=1024"
 buyUrl: "https://hyperlitemountaingear.com/products/unbound-2-tent"
 featured: false
 ---

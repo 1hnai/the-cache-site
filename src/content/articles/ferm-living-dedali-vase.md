@@ -5,7 +5,7 @@ category: "design"
 publishedDate: "2026-03-22"
 status: "live"
 price: "£95"
-image: ""
+image: "https://fermliving.us/cdn/shop/files/499655_1104269012_1.png?v=1765890955"
 buyUrl: "https://fermliving.com/products/dedali-vase-off-white"
 featured: false
 ---

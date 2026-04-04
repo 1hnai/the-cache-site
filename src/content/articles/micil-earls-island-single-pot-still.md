@@ -5,7 +5,7 @@ category: "drink"
 publishedDate: "2026-03-22"
 status: "live"
 price: "£46"
-image: null
+image: "https://micildistillery.com/wp-content/uploads/2021/12/Micil-Distillery-Earls-Island-Whiskey-Box-2025.jpg"
 buyUrl: "https://www.masterofmalt.com/whiskies/micil/micil-earls-island-single-pot-still-whiskey/"
 featured: false
 ---

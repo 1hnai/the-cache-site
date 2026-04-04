@@ -5,7 +5,7 @@ category: "fashion"
 publishedDate: "2026-03-22"
 status: "live"
 price: "£189"
-image: ""
+image: "https://www.aimeleondore.com/cdn/shop/files/AimeLeonDore698e5d3c68c336698e5d3c68e16.27812042698e5d3c68e16_grande.jpg?v=1771000017"
 buyUrl: "https://www.endclothing.com/gb/aime-leon-dore-rugby-shirt-s00409.html"
 featured: false
 ---

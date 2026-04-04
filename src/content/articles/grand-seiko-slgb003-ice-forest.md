@@ -5,7 +5,7 @@ category: "watches"
 publishedDate: "2026-03-22"
 status: "live"
 price: "£9,950"
-image: null
+image: "https://www.grand-seiko.com/us-en/-/media/Images/Product--Image/All/GrandSeiko/2025/01/09/21/12/SLGB003G/SLGB003G.png"
 buyUrl: "https://www.grand-seiko.com/us-en/special/9RB2"
 featured: true
 ---

@@ -5,7 +5,7 @@ category: "design"
 publishedDate: "2026-03-22"
 status: "live"
 price: "£2,500"
-image: null
+image: "https://dplusa.s3-ap-southeast-1.amazonaws.com/uploads/9538794-antony-limited-edition-2025-v-fullbleed-1440x.jpg"
 buyUrl: "https://www.vitra.com/en-gb/product/details/antony-limited-edition-2025"
 featured: false
 ---

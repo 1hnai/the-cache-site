@@ -5,7 +5,7 @@ category: "watches"
 publishedDate: "2026-03-22"
 status: "live"
 price: "£3,750"
-image: ""
+image: "https://api.ecom.longines.com/media/catalog/product/w/a/watch-collection-longines-spirit-zulu-time-1925-l3-803-5-53-6-fdc6b9-hero.png"
 buyUrl: "https://www.longines.com/en-gb/watches/spirit/spirit-zulu-time"
 featured: false
 ---

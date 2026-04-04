@@ -5,7 +5,7 @@ category: "food"
 publishedDate: "2026-03-22"
 status: "live"
 price: "£26"
-image: ""
+image: "https://images2.penguinrandomhouse.com/cover/9780593961582"
 buyUrl: "https://www.waterstones.com/book/monsoon/asma-khan/9780241687963"
 featured: false
 ---

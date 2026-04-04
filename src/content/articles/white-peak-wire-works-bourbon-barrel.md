@@ -5,7 +5,7 @@ category: "drink"
 publishedDate: "2026-03-22"
 status: "live"
 price: "£65"
-image: ""
+image: "https://www.whitepeakdistillery.co.uk/wp-content/uploads/2024/07/White-Peak-Distillery-May-2024-38-scaled.jpg"
 buyUrl: "https://www.whitepeakdistillery.co.uk/shop/"
 featured: true
 ---

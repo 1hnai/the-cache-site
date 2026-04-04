@@ -5,7 +5,7 @@ category: "clothing"
 publishedDate: "2026-03-22"
 status: "live"
 price: "£70"
-image: null
+image: "https://www.merzbschwanen.com/cdn/shop/files/346_80_11_new_grande.jpg?v=1746271824"
 buyUrl: "https://www.merzbschwanen.com/products/mens-loopwheeled-sweatshirt-10oz-sq-yd-classic-fit-2"
 featured: false
 ---
