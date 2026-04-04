@@ -16,4 +16,4 @@ The novel alternates between brutality and precise comic timing, sometimes withi
 
 It won both the Pulitzer Prize for Fiction and the National Book Award in 2025. The Picador paperback arrived in February 2025. If you read one novel this year, make it this one.
 
-**£9.99 — [waterstones.com](https://www.waterstones.com/book/james/percival-everett/9781035031269)**
+**£9.99 - [waterstones.com](https://www.waterstones.com/book/james/percival-everett/9781035031269)**

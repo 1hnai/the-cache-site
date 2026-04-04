@@ -16,4 +16,4 @@ Most supermarket harissa is chilli paste with some cumin. Belazu's is something 
 
 Ottolenghi has used it in recipes for over a decade. The number of chefs who cite it as a pantry essential is long enough to be convincing. At under £5 a jar, there's no reason not to have one in the fridge permanently.
 
-**£4.95 — [belazu.com](https://belazu.com/shop-all/rose-harissa/)**
+**£4.95 - [belazu.com](https://belazu.com/shop-all/rose-harissa/)**

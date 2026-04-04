@@ -18,4 +18,4 @@ The headband velvet and ear pad foam wear out over years of use. Beyerdynamic se
 
 At £133 from Thomann, there is nothing more capable for the price.
 
-**£133 — [thomann.co.uk](https://www.thomann.co.uk/beyerdynamic_dt770_pro80_ohm.htm)**
+**£133 - [thomann.co.uk](https://www.thomann.co.uk/beyerdynamic_dt770_pro80_ohm.htm)**
