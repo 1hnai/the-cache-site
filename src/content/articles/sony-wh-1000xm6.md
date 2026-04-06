@@ -14,4 +14,4 @@ The XM6 is meaningfully different from the XM5. Sony fitted the new HD Noise Can
 
 The headline specification is LE Audio support. It is the first XM-series headphone to use the Bluetooth standard's LE Audio codec, delivering notably lower latency than LDAC for video work and gaming. LDAC is still present for high-resolution audio streaming.
 
-Available in Black, Platinum Silver, and Midnight Blue. Black remains the right choice — it photographs better and shows less wear. At £399 it competes directly with the Bose QuietComfort 45, but the Sony's processing is several steps ahead.
+Available in Black, Platinum Silver, and Midnight Blue. Black remains the right choice - it photographs better and shows less wear. At £399 it competes directly with the Bose QuietComfort 45, but the Sony's processing is several steps ahead.
