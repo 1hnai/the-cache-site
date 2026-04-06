@@ -5,7 +5,7 @@ category: "design"
 publishedDate: "2026-04-01"
 status: "live"
 price: "£158"
-image: "https://images.cultpens.com/is/image/CultPens/LAM0010?wid=1200&hei=1200&fit=crop,1"
+image: "https://cdn.shopify.com/s/files/1/0854/1890/1838/files/LAMY-001-2000_Fountain-pen-1.webp?v=1751033900"
 buyUrl: "https://www.cultpens.com/products/lamy-2000-fountain-pen"
 featured: false
 ---

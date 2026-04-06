@@ -5,7 +5,7 @@ category: "grooming"
 publishedDate: "2026-03-22"
 status: "live"
 price: "£28"
-image: "https://www.dulcie.world/cdn/shop/files/Algae-Plump-Serum-30ml.jpg"
+image: "https://www.bristolgeneralstore.com/cdn/shop/files/algae-plump-serum-30ml-fkah-184279_grande.jpg?v=1742689341"
 buyUrl: "https://www.dulcie.world/products/algae-plump-serum"
 featured: false
 ---

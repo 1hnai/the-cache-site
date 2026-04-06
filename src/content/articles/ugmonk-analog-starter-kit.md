@@ -5,7 +5,7 @@ category: "design"
 publishedDate: "2026-04-03"
 status: "live"
 price: "£49"
-image: "https://ugmonk.com/cdn/shop/products/analog-starter-kit-natural-1_1200x.jpg"
+image: "https://ugmonk.com/cdn/shop/files/new-solo.jpg?v=1771626446"
 buyUrl: "https://ugmonk.com/products/analog-starter-kit"
 featured: false
 ---

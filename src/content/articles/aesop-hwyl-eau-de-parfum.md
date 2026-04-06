@@ -5,7 +5,7 @@ category: "grooming"
 publishedDate: "2026-03-25"
 status: "live"
 price: "$175"
-image: "https://www.aesop.com/u1nb1km2t5q5/6Mf7TuA8bLbVMpKMGTtnpq/8e25fa98e1041b04db3a6b7fcf5f9773/PFRA01-Hwyl-EDP-50mL-Slice.jpg"
+image: "https://www.spacenk.com/dw/image/v2/ABCE_PRD/on/demandware.static/-/Sites-spacenkmastercatalog/default/dw1fffb829/products/AESOP/UK200028203_AESOP.jpg"
 buyUrl: "https://www.aesop.com/us/p/fragrance/eau-de-parfum/hwyl-eau-de-parfum/"
 featured: false
 ---

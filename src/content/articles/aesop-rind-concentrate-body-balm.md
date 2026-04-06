@@ -5,7 +5,7 @@ category: "design"
 publishedDate: "2026-03-31"
 status: "live"
 price: "£48"
-image: "https://www.aesop.com/u1nb1km2t5q5/3T9ZnJqJMoMKf0MhNGUMTj/8e2a7a2c7ea4d13ce3f4d5fb1c6c4be8/Rind-Concentrate-Body-Balm-120mL-large.jpg"
+image: "https://bluemercury.com/cdn/shop/files/global_images-9319944030716-1_efe7d305-4374-4539-b180-ed341ed5457c_1024x.jpg?v=1773154924"
 buyUrl: "https://www.aesop.com/uk/p/body/moisturisers/rind-concentrate-body-balm/"
 featured: false
 ---

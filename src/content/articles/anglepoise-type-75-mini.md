@@ -5,7 +5,7 @@ category: "design"
 publishedDate: "2026-04-02"
 status: "live"
 price: "£185"
-image: "https://www.anglepoise.com/cdn/shop/files/AP3028-BG_1.jpg"
+image: "https://www.anglepoise.com/wp-content/uploads/sites/3/2021/12/type-75-mini-desk-lamp-alpine-white-2.jpg"
 buyUrl: "https://www.anglepoise.com/products/type-75-mini-desk-lamp"
 featured: false
 ---

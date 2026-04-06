@@ -5,7 +5,7 @@ category: "tech"
 publishedDate: "2026-04-01"
 status: "live"
 price: "£5,750"
-image: "https://leica-camera.com/sites/default/files/styles/product_stage_large/public/2024-03/6004005_Leica-Q3-43_black_front.jpg"
+image: "https://leicastoresf.com/cdn/shop/files/Untitled-1_0000_19084_Leica_Q3-43_front_HiRes.jpg?v=1726847957"
 buyUrl: "https://uk.leica-camera.com/Photography/Leica-Q/Leica-Q3-43"
 featured: false
 ---

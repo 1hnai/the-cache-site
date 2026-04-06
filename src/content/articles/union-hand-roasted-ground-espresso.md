@@ -5,7 +5,7 @@ category: "food-drink"
 publishedDate: "2026-04-02"
 status: "live"
 price: "£11.95"
-image: "https://www.unionroasted.com/cdn/shop/products/RevelationEspresso_250g.jpg"
+image: "https://unionroasted.com/cdn/shop/files/revelation-coffee-recyclable-bag-with-two-small-cups.png?v=1773847273"
 buyUrl: "https://www.unionroasted.com/products/revelation-espresso"
 featured: false
 ---

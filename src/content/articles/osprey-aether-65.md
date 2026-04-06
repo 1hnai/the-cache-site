@@ -5,7 +5,7 @@ category: "outdoor"
 publishedDate: "2026-04-02"
 status: "live"
 price: "£285"
-image: "https://www.osprey.com/on/demandware.static/-/Sites-osprey-master-catalog/default/dwd2e5a24f/images/hi-res/F24_AETHER65_FRONT_HEROKEY_BONSAIGREEN_OSPREY.jpg"
+image: "https://www.gearx.com/cdn/shop/files/Aether65F20_S21_Side_Black-resized.webp?v=1773324286"
 buyUrl: "https://www.osprey.com/gb/en/product/aether-65-AETHER65S25.html"
 featured: false
 ---

@@ -5,7 +5,7 @@ category: "outdoor"
 publishedDate: "2026-04-01"
 status: "live"
 price: "£280"
-image: "https://www.osprey.com/images/product/hero/10005795_SRC_AETHERPLUS60_Brindle_Brown_HERO.jpg"
+image: "https://skyviewcamping.com/cdn/shop/files/aetherplus60_s21_side_axogreen_1748x.jpg?v=1712789278"
 buyUrl: "https://www.osprey.com/gb/en/product/aether-plus-60-AETHERPLUS60.html"
 featured: false
 ---

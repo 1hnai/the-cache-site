@@ -5,7 +5,7 @@ category: "food-drink"
 publishedDate: "2026-04-03"
 status: "live"
 price: "£249"
-image: "https://www.moccamaster.eu/wp-content/uploads/2022/09/KBGV-Select-Turquoise.jpg"
+image: "https://us.moccamaster.com/cdn/shop/products/MoccaMaster_Set_53941_KBGV_PolishedSilver_3533-01_093ed5a7-d0a7-496b-b3e4-2f8c30f5843c-160939_grande.png?v=1752176783"
 buyUrl: "https://www.moccamaster.eu/product/kbgv-select/"
 featured: false
 ---

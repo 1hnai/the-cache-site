@@ -5,7 +5,7 @@ category: "design"
 publishedDate: "2026-04-05"
 status: "live"
 price: "£63 / $65"
-image: "https://www.victorinox.com/en-GB/Products/Swiss-Army-Knives/Medium-Pocket-Knives/Farmer-X-Alox/p/0.8271.26"
+image: "https://imageengine.victorinox.com/transform/6d3eed32-5b9b-43c6-a425-9241c826eee0/SAK_0-8271-26_S1"
 buyUrl: "https://www.victorinox.com/en-GB/Products/Swiss-Army-Knives/Medium-Pocket-Knives/Farmer-X-Alox/p/0.8271.26"
 featured: false
 ---

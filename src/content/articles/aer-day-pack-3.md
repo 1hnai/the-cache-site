@@ -5,7 +5,7 @@ category: "tech"
 publishedDate: "2026-04-04"
 status: "live"
 price: "£195"
-image: "https://cdn.shopify.com/s/files/1/0020/1/products/aer-day-pack-3-black-front.jpg"
+image: "https://aersf.com/cdn/shop/files/1AER31014_daypack3_34hero.jpg?v=1708907708"
 buyUrl: "https://www.aersf.com/products/day-pack-3"
 featured: false
 ---

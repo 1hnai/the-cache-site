@@ -5,7 +5,7 @@ category: "grooming"
 publishedDate: "2026-04-03"
 status: "live"
 price: "£145"
-image: "https://www.aesop.com/u1nb1km2t5q7/5iGtJRSMCNH3QQsWBuuT0b/7d2e9b6e9e3e9c9e9e9e9e9e/Eidesis-EDP-50mL-large.png"
+image: "https://www.spacenk.com/dw/image/v2/ABCE_PRD/on/demandware.static/-/Sites-spacenkmastercatalog/default/dw0517853b/products/AESOP/UK200036552_AESOP.jpg"
 buyUrl: "https://www.aesop.com/gb/p/fragrance/eau-de-parfum/eidesis-eau-de-parfum/"
 featured: false
 ---

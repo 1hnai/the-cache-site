@@ -5,7 +5,7 @@ category: "books"
 publishedDate: "2026-04-01"
 status: "live"
 price: "£40"
-image: "https://gestalten.com/cdn/shop/products/less-but-better-dieter-rams-gestalten-book.jpg"
+image: "https://us.gestalten.com/cdn/shop/products/LessButBetter_front.png?v=1587719439&width=1920"
 buyUrl: "https://gestalten.com/products/less-but-better"
 featured: false
 ---

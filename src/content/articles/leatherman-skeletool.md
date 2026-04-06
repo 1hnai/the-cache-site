@@ -5,7 +5,7 @@ category: "tech"
 publishedDate: "2026-04-02"
 status: "live"
 price: "£69"
-image: "https://www.leatherman.com/cdn/shop/files/SKELETOOL_CX_CLOSED_FRONT.jpg"
+image: "https://www.leatherman.com/cdn/shop/files/akeneo_f_f_f_b_fffb4eed5f9c96d2235d78912903ca83e4228f61_skeletool_cx_nightshade_fanned_shopify.jpg?v=1775237931&width=1214"
 buyUrl: "https://www.leatherman.com/products/skeletool"
 featured: false
 ---

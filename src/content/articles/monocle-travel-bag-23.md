@@ -5,7 +5,7 @@ category: "fashion"
 publishedDate: "2026-04-02"
 status: "live"
 price: "£295"
-image: "https://images.monocle.com/editorial/products/porter-travel-bag-23/main.jpg"
+image: "https://cdn.swell.store/monocle/684c0829f47f22001210f34d/27688a358fe051912595205ee3a974a2/Porrter_Travel%20Tote_Olive_20250512_MONOCLE_eCOM_066.jpg"
 buyUrl: "https://monocle.com/shop/bags-and-luggage/monocle-x-porter-travel-bag-23/"
 featured: false
 ---

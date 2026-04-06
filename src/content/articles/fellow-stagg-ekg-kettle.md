@@ -5,7 +5,7 @@ category: "tech"
 publishedDate: "2026-03-31"
 status: "live"
 price: "£145"
-image: "https://cdn.shopify.com/s/files/1/0283/3738/products/Matte-Black-EKG-Electric-Pour-Over-Kettle_1024x1024.jpg"
+image: "https://fellowproducts.com/cdn/shop/files/Web_PDP_StaggEKGElectricKettle-Pro_Woodland_Walnut_1.png?v=1773351258"
 buyUrl: "https://fellowproducts.com/products/staggekg"
 featured: false
 ---

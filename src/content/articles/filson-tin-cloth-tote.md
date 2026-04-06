@@ -5,7 +5,7 @@ category: "fashion"
 publishedDate: "2026-04-01"
 status: "live"
 price: "£195"
-image: "https://cdn.filson.com/media/catalog/product/1/1/11063244-tin-cloth-tote-bag-otter-green_1.jpg"
+image: "https://www.filson.com/cdn/shop/files/3406fbcce45cf6e3af8326fa7f948c23537d9b4257b14bb2a7276dc1fd817cfb.png?v=1770941567"
 buyUrl: "https://www.filson.com/products/tin-cloth-tote-bag.html"
 featured: false
 ---

@@ -5,7 +5,7 @@ category: "tech"
 publishedDate: "2026-04-01"
 status: "live"
 price: "£369"
-image: "https://www.ricoh-imaging.co.jp/english/products/pentax-17/img/kv_camera_front.jpg"
+image: "https://us.ricoh-imaging.com/wp-content/uploads/2024/06/pentax-17-square.png"
 buyUrl: "https://www.ricoh-imaging.co.jp/english/products/pentax-17/"
 featured: false
 ---

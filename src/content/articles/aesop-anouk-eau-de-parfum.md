@@ -5,7 +5,7 @@ category: "design"
 publishedDate: "2026-04-02"
 status: "live"
 price: "£145"
-image: "https://www.aesop.com/medias/Aesop-Fragrance-Anouk-EDP-50mL-01-MasterImage.jpg"
+image: "https://www.spacenk.com/dw/image/v2/ABCE_PRD/on/demandware.static/-/Sites-spacenkmastercatalog/default/dw201387cf/products/AESOP/UK200040202_AESOP.jpg"
 buyUrl: "https://www.aesop.com/gb/fragrance/anouk-eau-de-parfum/"
 featured: false
 ---

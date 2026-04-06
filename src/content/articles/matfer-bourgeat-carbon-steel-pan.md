@@ -5,7 +5,7 @@ category: "design"
 publishedDate: "2026-04-04"
 status: "live"
 price: "£62"
-image: "https://www.matferbourgeatusa.com/wp-content/uploads/2020/01/062005-Carbon-Steel-Frying-Pan-11-Inch-1.jpg"
+image: "https://matferbourgeatusa.com/wp-content/uploads/51g3b9N49wL._AC_SL1500_.jpeg"
 buyUrl: "https://www.amazon.co.uk/Matfer-Bourgeat-Black-Carbon-Steel/dp/B00460YLON"
 featured: false
 ---

@@ -5,7 +5,7 @@ category: "grooming"
 publishedDate: "2026-04-03"
 status: "live"
 price: "£115"
-image: "https://www.loewe.com/dw/image/v2/BCBX_PRD/on/demandware.static/-/Sites-loewe-master-catalog/default/dw2f0b2e1b/images/fragrances/Essential-LOEWE-Homme-EDT-100ml.jpg"
+image: "https://i8.amplience.net/i/liberty/000712213-R370952006-1?$large$"
 buyUrl: "https://www.loewe.com/gbr/en/fragrances/mens-fragrances/essential-loewe-homme-eau-de-toilette-100ml/P35100.html"
 featured: false
 ---

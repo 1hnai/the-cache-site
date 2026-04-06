@@ -5,7 +5,7 @@ category: "interiors"
 publishedDate: "2026-03-22"
 status: "live"
 price: "£154"
-image: "https://www.hay.com/dw/image/v2/BDMQ_PRD/on/demandware.static/-/Sites-HAY-master-catalog/default/dw7a1f6b9c/images/parade-table-lamp/Parade-Table-Lamp-S-Shell-White-LR.jpg"
+image: "https://cdn.andlight.dk/images/ab690-b523-ah47-parade-table-lamp-240-shell-white-p.jpg"
 buyUrl: "https://www.nest.co.uk/product/hay-parade-table-lamp"
 featured: false
 ---
