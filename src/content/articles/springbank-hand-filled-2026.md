@@ -5,7 +5,7 @@ category: "drink"
 publishedDate: "2026-03-22"
 status: "live"
 price: "£79.95"
-image:
+image: "https://www.theraremalt.com/cdn/shop/files/DSC_0636.jpg?v=1761988598"
 buyUrl: "https://whiskyinternationalonline.com/products/springbank-2025-hand-filled-distillery-exclusive-release-58-6"
 featured: false
 ---

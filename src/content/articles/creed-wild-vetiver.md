@@ -5,7 +5,7 @@ category: "grooming"
 publishedDate: "2026-03-22"
 status: "live"
 price: "$610"
-image:
+image: "https://creedboutique.com/cdn/shop/files/1500x1500__0003_Wild-Vetiver_100ml_Bottle-GREY_0be1966a-110a-4f8f-9774-145a1a9deeda.jpg?v=1772554766&width=1500"
 buyUrl: "https://creedboutique.com/pages/wild-vetiver"
 featured: false
 ---

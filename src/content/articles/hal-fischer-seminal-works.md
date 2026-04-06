@@ -5,7 +5,7 @@ category: "books"
 publishedDate: "2026-03-22"
 status: "live"
 price: "$65"
-image:
+image: "https://store.aperture.org/cdn/shop/files/2025Fischer002_2400px_jpg.jpg?v=1772654570"
 buyUrl: "https://aperture.org/books/coming-soon/hal-fischer-seminal-works/"
 featured: false
 ---

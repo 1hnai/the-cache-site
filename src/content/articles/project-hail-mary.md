@@ -5,7 +5,7 @@ category: "culture"
 publishedDate: "2026-03-22"
 status: "live"
 price: null
-image:
+image: "https://image.tmdb.org/t/p/w500/yihdXomYb5kTeSivtFndMy5iDmf.jpg"
 buyUrl:
 featured: false
 ---

@@ -5,7 +5,7 @@ category: "interiors"
 publishedDate: "2026-03-22"
 status: "live"
 price: "£170"
-image:
+image: "https://cdn.connox.com/m/100030/864683/media/.repository/8/6/4/864683.webp"
 buyUrl: "https://www.louispoulsen.com/en/catalog/private/table/rumee-220-portable-lamp"
 featured: false
 ---

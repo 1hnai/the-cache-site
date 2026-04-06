@@ -5,7 +5,7 @@ category: "culture"
 publishedDate: "2026-03-22"
 status: "live"
 price:
-image:
+image: "https://waxworkrecords.com/cdn/shop/files/Mickey-17_Front-Cover.jpg?v=1739916876"
 buyUrl: "https://waxworkrecords.com/collections/all/products/mickey-17"
 featured: false
 ---

@@ -5,7 +5,7 @@ category: "travel"
 publishedDate: "2026-03-22"
 status: "live"
 price:
-image:
+image: "https://www.icehotel.com/sites/cb_icehotelweb/files/styles/3_2_1920x1280/public/ICEHOTEL%2035%20%2C%20Asaf%20Kliger-2%20copy%20lowres.jpg.webp"
 buyUrl: "https://www.icehotel.com"
 featured: false
 ---

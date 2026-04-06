@@ -5,7 +5,7 @@ category: "watches"
 publishedDate: "2026-03-22"
 status: "live"
 price: "CHF 6,250"
-image:
+image: "https://cdn.prod.website-files.com/62cd089edd0c372e58a75932/699c01a2ac35cdac38f95b8b_5704%20Phoenix_27.jpg"
 buyUrl: "https://www.ming.watch/featured-product/ming-57-04-phoenix-polymesh"
 featured: true
 ---

@@ -5,7 +5,7 @@ category: "clothing"
 publishedDate: "2026-03-22"
 status: "live"
 price: "¥136,400"
-image:
+image: "https://images.squarespace-cdn.com/content/v1/5cdc8e26b914496b390c7e45/1765151021820-UOM23HDBW2SLTPF3YWFI/002.JPG"
 buyUrl: "https://www.engineeredgarments.com/stories/engineered-garments-x-nanga-detachable-down-coat-fw25"
 featured: false
 ---
