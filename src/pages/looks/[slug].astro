@@ -1,0 +1,369 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+export async function getStaticPaths() {
+  const looks = await getCollection('looks', ({ data }) => data.status === 'live' || data.status === 'approved');
+  return looks.map(look => ({
+    params: { slug: look.slug },
+    props: { look },
+  }));
+}
+
+const { look } = Astro.props;
+const { Content } = await look.render();
+const { title, description, season, publishedDate, items } = look.data;
+
+const compositeUrl = `/looks/${look.slug}.jpg`;
+
+const formattedDate = new Date(publishedDate).toLocaleDateString('en-US', {
+  month: 'long', day: 'numeric', year: 'numeric',
+});
+
+// Price range
+function priceRange(items: Array<{ price?: string }>) {
+  const prices = items
+    .map(i => i.price)
+    .filter(Boolean)
+    .map(p => {
+      const m = p!.replace(/[^0-9.]/g, '');
+      return m ? parseFloat(m) : null;
+    })
+    .filter((n): n is number => n !== null);
+  if (prices.length === 0) return null;
+  const total = prices.reduce((a, b) => a + b, 0);
+  const firstPrice = items.find(i => i.price);
+  const symbol = firstPrice?.price?.match(/^[£$€]/)?.[0] ?? '£';
+  return `${symbol}${total.toLocaleString()} approx. total`;
+}
+
+const range = priceRange(items);
+---
+
+<BaseLayout
+  title={title}
+  description={description ?? `A curated look from The Cache — ${items.length} items selected and priced.`}
+  ogImage={compositeUrl}
+  article={true}
+  publishedDate={publishedDate}
+>
+
+  <div class="look-outer">
+
+    <!-- ── COMPOSITE HERO ───────────────────────────── -->
+    <div class="composite-hero">
+      <div class="composite-wrap">
+        <img src={compositeUrl} alt={title} class="composite-img" loading="eager" />
+      </div>
+    </div>
+
+    <!-- ── LOOK HEADER ──────────────────────────────── -->
+    <div class="look-header-wrap">
+      <div class="container">
+        <div class="look-header">
+          <div class="look-header-meta">
+            <a href="/looks" class="breadcrumb-link">&larr; All Looks</a>
+            {season && <span class="season-chip">{season}</span>}
+          </div>
+          <h1 class="look-title">{title}</h1>
+          {description && <p class="look-desc">{description}</p>}
+          <div class="look-stats">
+            <span class="stat">{items.length} items</span>
+            {range && <span class="stat-sep">·</span>}
+            {range && <span class="stat">{range}</span>}
+            <span class="stat-sep">·</span>
+            <span class="stat">{formattedDate}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── ITEM GRID ─────────────────────────────────── -->
+    <div class="items-section">
+      <div class="container">
+        <div class="items-grid">
+          {items.map(item => (
+            <div class="item-tile">
+              <div class="item-image-wrap">
+                <img
+                  src={item.image}
+                  alt={`${item.brand} ${item.name}`}
+                  class="item-img"
+                  loading="lazy"
+                />
+              </div>
+              <div class="item-info">
+                <span class="item-brand">{item.brand}</span>
+                <p class="item-name">{item.name}</p>
+                <div class="item-foot">
+                  {item.price && <span class="item-price">{item.price}</span>}
+                  {item.buyUrl && (
+                    <a
+                      href={item.buyUrl}
+                      class="item-buy"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Buy &rarr;
+                    </a>
+                  )}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+
+    <!-- ── LOOK BODY (optional editorial copy) ─────── -->
+    <div class="look-body-wrap">
+      <div class="container">
+        <div class="look-body">
+          <Content />
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</BaseLayout>
+
+<style>
+  .look-outer {
+    min-height: 100vh;
+  }
+
+  /* ── Composite hero ──────────────────────────── */
+  .composite-hero {
+    background: #fff;
+    border-bottom: 1px solid #e5e5e5;
+  }
+
+  .composite-wrap {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  .composite-img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+  }
+
+  /* ── Look header ─────────────────────────────── */
+  .look-header-wrap {
+    background: var(--surface);
+    border-bottom: 1px solid var(--surface-3);
+    padding: 3rem 0 2.5rem;
+  }
+
+  .look-header {
+    max-width: 760px;
+  }
+
+  .look-header-meta {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .breadcrumb-link {
+    font-family: var(--font-sans);
+    font-size: 0.625rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--text-3);
+    text-decoration: none;
+    transition: color 0.15s;
+  }
+
+  .breadcrumb-link:hover {
+    color: var(--accent);
+  }
+
+  .season-chip {
+    font-family: var(--font-sans);
+    font-size: 0.5625rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent);
+    background: rgba(212, 175, 55, 0.12);
+    padding: 0.25rem 0.6rem;
+  }
+
+  .look-title {
+    font-family: var(--font-serif);
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1.05;
+    color: var(--text);
+    margin-bottom: 0.75rem;
+  }
+
+  .look-desc {
+    font-size: 1.0625rem;
+    color: var(--text-2);
+    line-height: 1.65;
+    margin-bottom: 1.25rem;
+    max-width: 620px;
+  }
+
+  .look-stats {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .stat {
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    color: var(--text-3);
+    font-weight: 400;
+  }
+
+  .stat-sep {
+    color: var(--surface-3);
+    font-size: 0.75rem;
+  }
+
+  /* ── Items section ───────────────────────────── */
+  .items-section {
+    padding: 4rem 0;
+    background: var(--brand-surface);
+    border-bottom: 1px solid var(--surface-3);
+  }
+
+  .items-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 2px;
+  }
+
+  /* ── Item tile ───────────────────────────────── */
+  .item-tile {
+    background: var(--surface);
+    display: flex;
+    flex-direction: column;
+    transition: background 0.15s;
+  }
+
+  .item-tile:hover {
+    background: var(--surface-2);
+  }
+
+  .item-image-wrap {
+    background: #fff;
+    aspect-ratio: 1;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #e8e8e8;
+  }
+
+  .item-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 1.25rem;
+    display: block;
+  }
+
+  .item-info {
+    padding: 1rem 1.25rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    flex: 1;
+  }
+
+  .item-brand {
+    font-family: var(--font-sans);
+    font-size: 0.5rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--text-3);
+  }
+
+  .item-name {
+    font-family: var(--font-serif);
+    font-size: 0.9375rem;
+    font-weight: 700;
+    color: var(--text);
+    line-height: 1.25;
+    margin-top: 0.1rem;
+  }
+
+  .item-foot {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: auto;
+    padding-top: 0.75rem;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .item-price {
+    font-family: var(--font-sans);
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--text);
+  }
+
+  .item-buy {
+    font-family: var(--font-sans);
+    font-size: 0.5625rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent);
+    text-decoration: none;
+    transition: opacity 0.15s;
+  }
+
+  .item-buy:hover {
+    opacity: 0.7;
+  }
+
+  /* ── Look body ───────────────────────────────── */
+  .look-body-wrap {
+    padding: 4rem 0 5rem;
+    background: var(--brand-surface);
+  }
+
+  .look-body {
+    max-width: 660px;
+    font-size: 1.0625rem;
+    line-height: 1.75;
+    color: var(--text-2);
+  }
+
+  .look-body p {
+    margin-bottom: 1.5rem;
+  }
+
+  @media (max-width: 700px) {
+    .items-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .look-header-wrap {
+      padding: 2rem 0 1.75rem;
+    }
+  }
+
+  @media (max-width: 460px) {
+    .items-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

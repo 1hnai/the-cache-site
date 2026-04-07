@@ -1,0 +1,253 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const looks = await getCollection('looks', ({ data }) => data.status === 'live' || data.status === 'approved');
+looks.sort((a, b) => new Date(b.data.publishedDate).getTime() - new Date(a.data.publishedDate).getTime());
+
+function formatDate(d: string) {
+  return new Date(d).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+}
+
+// Calculate a price range label for a look
+function priceRange(items: Array<{ price?: string }>) {
+  const prices = items
+    .map(i => i.price)
+    .filter(Boolean)
+    .map(p => {
+      const m = p!.replace(/[^0-9.]/g, '');
+      return m ? parseFloat(m) : null;
+    })
+    .filter((n): n is number => n !== null);
+  if (prices.length === 0) return null;
+  const min = Math.min(...prices);
+  const firstPrice = items.find(i => i.price);
+  const symbol = firstPrice?.price?.match(/^[£$€]/)?.[0] ?? '£';
+  return `From ${symbol}${min.toLocaleString()}`;
+}
+---
+
+<BaseLayout
+  title="Looks — The Cache"
+  description="Curated outfits and ensembles. Every item hand-picked, priced, and linked."
+>
+
+  <div class="page-outer">
+    <div class="container">
+
+      <div class="page-header">
+        <span class="page-kicker">Looks</span>
+        <h1 class="page-title">Assembled.</h1>
+        <p class="page-sub">Curated sets of objects that belong together. Every item linked and priced.</p>
+      </div>
+
+      {looks.length > 0 ? (
+        <div class="looks-grid">
+          {looks.map(look => {
+            const compositeUrl = `/looks/${look.slug}.jpg`;
+            const previewItems = look.data.items.slice(0, 4);
+            const range = priceRange(look.data.items);
+            const categories = [...new Set(look.data.items.map(i => i.category))];
+            return (
+              <a href={`/looks/${look.slug}`} class="look-card">
+                <div class="look-card-image">
+                  <img
+                    src={compositeUrl}
+                    alt={look.data.title}
+                    loading="lazy"
+                    class="look-composite"
+                  />
+                  {look.data.season && (
+                    <span class="season-pill">{look.data.season}</span>
+                  )}
+                </div>
+                <div class="look-card-body">
+                  <h2 class="look-title">{look.data.title}</h2>
+                  {look.data.description && (
+                    <p class="look-desc">{look.data.description}</p>
+                  )}
+                  <div class="look-meta">
+                    <span class="look-count">{look.data.items.length} items</span>
+                    {range && <span class="look-range">{range}</span>}
+                    <span class="look-cta">View Look &rarr;</span>
+                  </div>
+                </div>
+              </a>
+            );
+          })}
+        </div>
+      ) : (
+        <p class="empty-state">First looks dropping soon.</p>
+      )}
+
+    </div>
+  </div>
+
+</BaseLayout>
+
+<style>
+  .page-outer {
+    padding: 4rem 0 6rem;
+    background: var(--brand-surface);
+  }
+
+  /* ── Page header ───────────────────────────── */
+  .page-header {
+    padding: 3rem 0 3rem;
+    border-bottom: 1px solid var(--surface-3);
+    margin-bottom: 3.5rem;
+  }
+
+  .page-kicker {
+    display: block;
+    font-family: var(--font-sans);
+    font-size: 0.6rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.75rem;
+  }
+
+  .page-title {
+    font-family: var(--font-serif);
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1;
+    color: var(--text);
+    margin-bottom: 1rem;
+  }
+
+  .page-sub {
+    font-size: 1rem;
+    color: var(--text-2);
+    max-width: 540px;
+    line-height: 1.65;
+  }
+
+  /* ── Grid ──────────────────────────────────── */
+  .looks-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(480px, 1fr));
+    gap: 2px;
+  }
+
+  /* ── Look card ─────────────────────────────── */
+  .look-card {
+    display: block;
+    background: var(--surface);
+    text-decoration: none;
+    color: inherit;
+    transition: background 0.15s;
+  }
+
+  .look-card:hover {
+    background: var(--surface-2);
+  }
+
+  .look-card-image {
+    position: relative;
+    aspect-ratio: 16/9;
+    overflow: hidden;
+    background: #fff;
+  }
+
+  .look-composite {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+  }
+
+  .look-card:hover .look-composite {
+    transform: scale(1.02);
+  }
+
+  .season-pill {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background: rgba(0,0,0,0.75);
+    color: #fff;
+    font-family: var(--font-sans);
+    font-size: 0.5625rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    padding: 0.3rem 0.75rem;
+    backdrop-filter: blur(8px);
+  }
+
+  .look-card-body {
+    padding: 1.5rem 2rem 2rem;
+    border-top: 1px solid var(--surface-3);
+  }
+
+  .look-title {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+    color: var(--text);
+    margin-bottom: 0.5rem;
+    line-height: 1.15;
+  }
+
+  .look-desc {
+    font-size: 0.875rem;
+    color: var(--text-2);
+    line-height: 1.6;
+    margin-bottom: 1.25rem;
+  }
+
+  .look-meta {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  .look-count {
+    font-family: var(--font-sans);
+    font-size: 0.6rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--text-3);
+  }
+
+  .look-range {
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--text-2);
+  }
+
+  .look-cta {
+    font-family: var(--font-sans);
+    font-size: 0.6rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-left: auto;
+  }
+
+  .empty-state {
+    color: var(--text-3);
+    font-size: 1rem;
+    padding: 4rem 0;
+    text-align: center;
+  }
+
+  @media (max-width: 700px) {
+    .looks-grid {
+      grid-template-columns: 1fr;
+    }
+    .look-card-body {
+      padding: 1.25rem 1.25rem 1.5rem;
+    }
+  }
+</style>

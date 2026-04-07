@@ -1,0 +1,35 @@
+---
+title: "The Weekender"
+description: "Two nights, one bag. Objects chosen to do more with less."
+publishedDate: "2026-04-06"
+status: "live"
+featured: false
+season: "Spring 2026"
+items:
+  - name: "Holdall 40L"
+    brand: "Filson"
+    category: "bag"
+    price: "£495"
+    buyUrl: "https://www.filson.com/collections/duffle-bags"
+    image: "https://www.filson.com/media/catalog/product/cache/b27f5e52d7a9edd0e5cdabf99c8c9c8e/7/0/70104-dark-tan-open_0.jpg"
+  - name: "Submariner Date"
+    brand: "Rolex"
+    category: "watch"
+    price: "£9,800"
+    buyUrl: "https://www.rolex.com/en-gb/watches/submariner/m126610ln-0001.html"
+    image: "https://content.rolex.com/dam/2024/upright-bba-with-shadow/m126610ln-0001.png"
+  - name: "Ventile Oxford Shirt"
+    brand: "Albam"
+    category: "clothing"
+    price: "£135"
+    buyUrl: "https://www.albamclothing.com/collections/shirts"
+    image: "https://www.albamclothing.com/cdn/shop/products/VentileOxfordShirt_Navy_001.jpg"
+  - name: "Chukka Boot"
+    brand: "Grenson"
+    category: "shoes"
+    price: "£295"
+    buyUrl: "https://www.grenson.com/collections/mens-chukka-boots"
+    image: "https://www.grenson.com/cdn/shop/products/GRENSON_CHUKKA_TAN_FRONTAL.jpg"
+---
+
+A weekend away doesn't need much. The right bag carries everything without announcing it. The watch keeps time without commentary. The rest fills the gaps.
