@@ -14,6 +14,6 @@ There are headphones with better frequency response. There are headphones with m
 
 The headline is eleven levels of noise cancellation, adjustable through the Bose app, plus a transparency mode that actually sounds like the room rather than like a filtered room. The earcups are plush without being clammy. The headband clamps with enough pressure to keep things in place without the tension headache that plagues most over-ears in this bracket. Battery runs to 24 hours at moderate volume, which covers most long-haul flights with charge to spare.
 
-The sound signature leans warm — a gentle low-end emphasis that works well for podcasts and long listening sessions, less so if you're trying to scrutinise a mix. For everything else, including the daily commute, a conference call in a noisy office, or a seven-hour train journey, this is the headphone that disappears into the background and lets you focus on whatever you're actually doing.
+The sound signature leans warm - a gentle low-end emphasis that works well for podcasts and long listening sessions, less so if you're trying to scrutinise a mix. For everything else, including the daily commute, a conference call in a noisy office, or a seven-hour train journey, this is the headphone that disappears into the background and lets you focus on whatever you're actually doing.
 
 At £199, the price point has come down considerably from peak QC pricing. At this number, the value case is compelling.

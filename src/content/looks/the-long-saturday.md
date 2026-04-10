@@ -38,8 +38,8 @@ items:
     image: "https://www.seikoboutique.co.uk/wp-content/uploads/2025/03/SPB511J1_01_1x1-800x800.jpg"
 ---
 
-The long Saturday has its own logic. It starts without a plan and accumulates one as it goes. What you wear should be able to absorb whatever that means — a slow coffee, a walk that gets longer than intended, a pub you hadn't planned to stop in, a train you take on impulse.
+The long Saturday has its own logic. It starts without a plan and accumulates one as it goes. What you wear should be able to absorb whatever that means - a slow coffee, a walk that gets longer than intended, a pub you hadn't planned to stop in, a train you take on impulse.
 
-The Beaufort has been solving this problem since 1983. Over it, the Merz b. Schwanen sweatshirt brings warmth without bulk — loopwheel construction from a process that hasn't changed in decades, in a natural shade that gets better with every wash. The New Balance 574 is the trainer that does everything without announcing itself. The Aer pack carries a book you might open and everything you definitely need. The Seiko Prospex handles the timekeeping without requiring care.
+The Beaufort has been solving this problem since 1983. Over it, the Merz b. Schwanen sweatshirt brings warmth without bulk - loopwheel construction from a process that hasn't changed in decades, in a natural shade that gets better with every wash. The New Balance 574 is the trainer that does everything without announcing itself. The Aer pack carries a book you might open and everything you definitely need. The Seiko Prospex handles the timekeeping without requiring care.
 
 Five pieces. No decisions by lunchtime.
