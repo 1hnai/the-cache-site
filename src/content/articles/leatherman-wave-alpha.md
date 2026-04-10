@@ -1,25 +1,19 @@
 ---
-title: "Leatherman Wave Alpha"
-description: "The Wave has been Leatherman's best-selling multitool for nearly 30 years. The Alpha is the first serious redesign: MagnaCut blade, G10 handles, and full-size scissors."
-category: "tools"
-publishedDate: "2026-03-30"
+title: "Wave Alpha — Leatherman"
+description: "Leatherman's 18-tool Wave Alpha brings premium steel and bold colourways to the multi-tool that started it all."
+category: "outdoors"
+publishedDate: "2026-04-10"
 status: "live"
-price: "£229.95"
-image: "https://s3.amazonaws.com/images.gearjunkie.com/uploads/2025/09/Leatherman_Wave-Alpha-Hero.jpg"
-buyUrl: "https://uk.leatherman.com/products/wave-alpha"
 featured: false
+price: "£229.95"
+image: "https://uk.leatherman.com/cdn/shop/files/carousel_wave_alpha_canyonland_01_20260402201600.jpg"
+buyUrl: "https://uk.leatherman.com/collections/new/products/wave-alpha"
 ---
 
-The original Wave launched in 1998 and stayed largely unchanged for a quarter century. It sold well enough that Leatherman had little reason to touch it. The Wave Alpha, released in late 2025, is the first genuine upgrade: same 18-tool layout, same pliers-first format, but rebuilt from better materials where it matters.
+The Wave is the multi-tool that defined the category. The Wave Alpha is what happens when Leatherman revisits the formula with better steel and a sharper eye for detail.
 
-The blade is the headline change. Where the Wave+ used 420HC steel, the Alpha moves to MagnaCut, a powdered steel developed by metallurgist Larrin Thomas that outperforms 420HC on edge retention and corrosion resistance without sacrificing toughness. It is the same steel appearing in premium production knives from Benchmade, Spyderco, and Kershaw. The blade shape also changes to a reverse tanto with a thumb stud for one-handed deployment.
+Eighteen tools are packed into the familiar frame, now finished in three considered colourways: Canyonland, Cascadia, and Obsidian. The blades are made from S35VN steel, a step up from the standard 420HC, holding an edge noticeably longer under heavy use. All tools lock open, and the outside-accessible knife and saw mean you can get to the most-used tools without unfolding the whole thing.
 
-The handles swap stainless for G10 fibre scales, machined with a topographic texture that grips better than bare metal and doesn't change colour with use. They taper toward both ends, which makes the tool sit more naturally in different hand sizes. The result is noticeably more comfortable than the Wave+ during extended use.
+The design retains the classic Wave silhouette, which fits naturally in a belt sheath or coat pocket. It is the kind of tool you reach for without thinking, whether you need pliers on a campsite or a screwdriver in a van.
 
-The scissors are the third upgrade worth noting. Leatherman made them full-size for the first time on a pliers-based tool. The awl shifts to the slot the smaller scissors previously occupied. Spring-loaded and one-hand operable, the scissors handle cord, zip ties, and fabric without slipping.
-
-The rest of the tool is familiar: needlenose and regular pliers, wire cutters with replaceable jaws, screwdrivers, a file, a saw, a can and bottle opener. Weight is 234g and closed length is 10.26cm. The 25-year warranty applies. There is no pocket clip or pouch in the box at this price, which is a reasonable criticism, though third-party options are straightforward to find.
-
-At £229.95 it sits about £80 above the Wave+. The MagnaCut blade alone doesn't justify that gap for everyone, but the G10 handles and the scissors close it. If you are buying a multitool once and keeping it for a decade, the Wave Alpha is the version worth having.
-
-**£229.95 at [uk.leatherman.com](https://uk.leatherman.com/products/wave-alpha)**
+Backed by Leatherman's 25-year warranty, the Wave Alpha is built to be used for decades. The price reflects the quality of the steel and the precision of the build. If you already own a Wave and have wondered whether the upgrade is worth it, the answer is yes.
