@@ -1,19 +1,19 @@
 ---
-title: "Aesop Hwyl Eau de Parfum"
-description: "A fragrance built around Japanese hinoki — the wood that temples are made of. Nothing else in this price range smells quite like it."
-category: "grooming"
-publishedDate: "2026-03-25"
+title: "Hwyl Eau de Parfum — Aesop"
+description: "A fragrance built around hinoki cypress that smells like the inside of a Japanese mountain forest."
+category: "design"
+publishedDate: "2026-04-14"
 status: "live"
-price: "$175"
-image: "https://www.spacenk.com/dw/image/v2/ABCE_PRD/on/demandware.static/-/Sites-spacenkmastercatalog/default/dw1fffb829/products/AESOP/UK200028203_AESOP.jpg"
-buyUrl: "https://www.aesop.com/us/p/fragrance/eau-de-parfum/hwyl-eau-de-parfum/"
 featured: false
+price: "£150"
+image: "https://www.spacenk.com/dw/image/v2/ABCE_PRD/on/demandware.static/-/Sites-spacenkmastercatalog/default/dw1fffb829/products/AESOP/UK200028203_AESOP.jpg?sw=582&sh=582"
+buyUrl: "https://www.aesop.com/uk/p/fragrance/woody/hwyl-eau-de-parfum/"
 ---
 
-Hwyl is a Welsh word meaning something between vigour and high spirits  -  a state of animated wellbeing that has no precise English translation. Aesop named a fragrance after it. The connection to Japanese hinoki cypress, which is the dominant note, is not immediately obvious until you understand what hinoki smells like: clean, resinous, slightly medicinal, the specific atmosphere of an old wooden temple in Kyoto after rain. It is not a green note or a forest note in the conventional marketing sense. It is more precise than that.
+Hwyl takes its name from a Welsh word that has no direct English equivalent - something between fervour and the state of feeling fully alive. Aesop named it after the emotion you might feel standing in an old-growth forest at altitude, which is also what it smells like.
 
-The construction is spare. Hinoki cypress, Atlantic cedar, and vetiver form the base; a measured amount of incense smoke and dried citrus work through the mid-section. There is no sweetness, no gourmand quality, no obvious crowd-pleasing anchor. The result is a fragrance that reads as genuinely neutral  -  neither masculine nor feminine in any coded sense  -  and that performs better in the cold months than the warm ones. It opens medicinal and dries down to something warmer and more ambiguous. The sillage is modest. The longevity, especially on fabric, is not.
+The composition is built around hinoki cypress oil, a rare ingredient extracted from the Japanese white cypress. Hinoki has a quality that most wood-based fragrances approximate and fail at: it smells genuinely cold and resinous and alive, not like a cosmetic interpretation of the outdoors. The opening is sharp and slightly medicinal, which some people find off-putting and others find immediately addictive. The dry-down settles into something richer - there is vetiver and patchouli in the base, but neither dominates. The result is a fragrance that reads as outdoors without reading as sport.
 
-At $175 for 50ml from a brand that does not discount, this sits in the upper-mid tier where fragrance quality is genuinely variable. Hwyl earns its place. If you know someone who reflexively says they "don't really wear fragrance," this is one of the few things that might change their mind.
+Aesop's bottle design is consistent across their range - amber glass with minimal labelling - which means it looks composed on a shelf. The 50ml size lasts a reasonable amount of time given how dry the sillage projects.
 
-**$175  -  [aesop.com](https://www.aesop.com/us/p/fragrance/eau-de-parfum/hwyl-eau-de-parfum/)**
+This is a fragrance for people who find most commercial perfumes too sweet or too loud. It wears close to skin and rewards proximity.
