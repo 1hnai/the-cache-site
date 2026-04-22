@@ -12,9 +12,9 @@ buyUrl: "https://www.johnlewis.com/oura-ring-4-health-fitness-tracker-smart-ring
 
 The Oura Ring 4 is a clean argument against the smartwatch: a titanium ring with no screen, no notifications, no distractions. It just sits on your finger, measures things you care about, and sends a report to your phone each morning.
 
-That report covers more than most people expect. Thirty-plus biometrics — sleep stages, resting heart rate, heart rate variability, blood oxygen, body temperature, and activity — get distilled into three daily scores: Readiness, Sleep, and Activity. The Readiness Score in particular has become genuinely useful for people training hard; it tells you when to push and when to back off based on the previous night's data.
+That report covers more than most people expect. Thirty-plus biometrics - sleep stages, resting heart rate, heart rate variability, blood oxygen, body temperature, and activity - get distilled into three daily scores: Readiness, Sleep, and Activity. The Readiness Score in particular has become genuinely useful for people training hard; it tells you when to push and when to back off based on the previous night's data.
 
-The ring itself is machined titanium and available in six finishes. Battery lasts up to eight days on a single charge via a magnetic puck, which is worth something when you compare it to the daily charging ritual of most wearables. Sizing comes via a try-at-home kit — critical given you cannot adjust a ring.
+The ring itself is machined titanium and available in six finishes. Battery lasts up to eight days on a single charge via a magnetic puck, which is worth something when you compare it to the daily charging ritual of most wearables. Sizing comes via a try-at-home kit - critical given you cannot adjust a ring.
 
 The one cost to know about: there is an app subscription of £5.99 per month after the first month included. That covers the AI-powered features and trend analysis. For the people who actually use the data, it earns its keep.
 

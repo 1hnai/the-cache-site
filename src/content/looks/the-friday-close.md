@@ -38,10 +38,10 @@ items:
     image: "https://www.allycapellino.co.uk/cdn/shop/files/Fritz-001_984.jpg"
 ---
 
-This look is built around a palette that works from a desk to a table: the navy of the Oliver Spencer Brook Shirt against the sand tone of the Utility Trouser creates enough contrast to look deliberate without trying hard. The Brook is a straightforward garment — woven cotton, a neat collar, a fit that's relaxed without being shapeless. The Utility Trouser sits higher at the waist and tapers gently, keeping the proportions clean.
+This look is built around a palette that works from a desk to a table: the navy of the Oliver Spencer Brook Shirt against the sand tone of the Utility Trouser creates enough contrast to look deliberate without trying hard. The Brook is a straightforward garment - woven cotton, a neat collar, a fit that's relaxed without being shapeless. The Utility Trouser sits higher at the waist and tapers gently, keeping the proportions clean.
 
 Common Projects Achilles Low in white is the shoe that goes with almost everything in this range of colours. Low profile, clean construction, no logo beyond an embossed gold number on the heel. It's worn enough to be a known quantity at this point, but that's also why it continues to make sense.
 
-The Seiko 5 Sports SRPH29K1 wears small and reads clearly — a blue dial, steel bracelet, 38mm case. It's an automatic at under £300, which in the watch world is as close to a reliable recommendation as exists. The Ally Capellino Fritz Rucksack in black waxed cotton is the kind of bag that improves with use: structured enough to carry a laptop, worn enough in the material to not look precious. Made in England, repairable, useful.
+The Seiko 5 Sports SRPH29K1 wears small and reads clearly - a blue dial, steel bracelet, 38mm case. It's an automatic at under £300, which in the watch world is as close to a reliable recommendation as exists. The Ally Capellino Fritz Rucksack in black waxed cotton is the kind of bag that improves with use: structured enough to carry a laptop, worn enough in the material to not look precious. Made in England, repairable, useful.
 
 The look doesn't require a jacket. In late April that's usually correct.

@@ -12,7 +12,7 @@ buyUrl: "https://www.albamclothing.com/products/alm114618cd224011"
 
 Albam makes clothes for men who have stopped caring about trends and started caring about whether their clothes still look right in five years. The Cord Clarence Jacket sits squarely in that territory: a spring outer in 14-wale corduroy, cut with a slightly long body and a relaxed shoulder that doesn't demand a particular body type to work.
 
-The corduroy is the right weight for the season — substantial enough to feel like outerwear, light enough that you won't overheat on a mild April day. The charcoal colourway is the most versatile; it sits comfortably over white, navy, olive, and most things in between without creating a matching problem.
+The corduroy is the right weight for the season - substantial enough to feel like outerwear, light enough that you won't overheat on a mild April day. The charcoal colourway is the most versatile; it sits comfortably over white, navy, olive, and most things in between without creating a matching problem.
 
 The construction is clean. There are two patch pockets, a single chest pocket, and a lining that makes it easy to put on and take off. The jacket closes with tortoiseshell buttons that feel appropriately considered without being decorative.
 

@@ -14,8 +14,8 @@ There are dozens of lightweight down jackets. Few of them hold up when the tempe
 
 The current version uses 750-fill-power European goose down, sewn through a lightweight Pertex Quantum shell. The result weighs 290g in a medium and compresses into its own left-hand chest pocket. This is the jacket that lives at the bottom of a pack and earns its keep every time a cloud rolls in.
 
-What separates the Microlight Alpine from the crowd is the cut. Rab has always designed for alpinism first — the slim fit, articulated elbows, and slightly longer back hem make sense if you imagine wearing a harness over the top. But you don't need to be heading up anything technical to appreciate a jacket that doesn't bunch under a softshell or billow in the wind.
+What separates the Microlight Alpine from the crowd is the cut. Rab has always designed for alpinism first - the slim fit, articulated elbows, and slightly longer back hem make sense if you imagine wearing a harness over the top. But you don't need to be heading up anything technical to appreciate a jacket that doesn't bunch under a softshell or billow in the wind.
 
-The baffles are stitch-through rather than box-wall, which keeps weight and bulk down. You lose a small amount of thermal efficiency compared to a box-baffle design, but for a mid-layer or shoulder-season jacket it's never felt like a problem. Available in a range of understated colours — the sage is a quiet, earthy tone that works year-round.
+The baffles are stitch-through rather than box-wall, which keeps weight and bulk down. You lose a small amount of thermal efficiency compared to a box-baffle design, but for a mid-layer or shoulder-season jacket it's never felt like a problem. Available in a range of understated colours - the sage is a quiet, earthy tone that works year-round.
 
 At £275, it's not cheap. But it's also not a jacket you'll replace for a decade.

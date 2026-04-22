@@ -32,6 +32,6 @@ items:
     image: "https://www.loake.com/wp-content/uploads/2023/09/PIMDK-SIDE-1.webp"
 ---
 
-A grey Norse Projects hoodie is the kind of thing you reach for without thinking — heavy enough to feel substantial, cut generously enough to layer over or under anything. The Standard Hoodie in Grey Melange earns its place in the rotation the same way the best wardrobe pieces do: quietly, consistently, without demanding attention.
+A grey Norse Projects hoodie is the kind of thing you reach for without thinking - heavy enough to feel substantial, cut generously enough to layer over or under anything. The Standard Hoodie in Grey Melange earns its place in the rotation the same way the best wardrobe pieces do: quietly, consistently, without demanding attention.
 
-The Hamilton Murph anchors the look with something that has a story behind it. Field-watch proportions, a clean dial, and a case shaped to disappear under a cuff — then reappear when you need it. The Fjällräven Vardag Pocket Small handles the carry with Scandinavian understatement: canvas, G-1000, unadorned. The Loake Pimlico in dark brown finishes it — a proper British chukka that improves with every outing.
+The Hamilton Murph anchors the look with something that has a story behind it. Field-watch proportions, a clean dial, and a case shaped to disappear under a cuff - then reappear when you need it. The Fjällräven Vardag Pocket Small handles the carry with Scandinavian understatement: canvas, G-1000, unadorned. The Loake Pimlico in dark brown finishes it - a proper British chukka that improves with every outing.

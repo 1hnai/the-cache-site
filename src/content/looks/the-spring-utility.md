@@ -38,7 +38,7 @@ items:
     image: "https://cdn.shopify.com/s/files/1/1831/8429/files/SS24hi0713_1.jpg?v=1718879087"
 ---
 
-Start with Oliver Spencer's Conduit Classic in Nash Blue — a faded, medium-weight cotton shirt that sits between casual and considered. The colour is close to slate, which means it works against olive, navy, and most neutrals without visual noise.
+Start with Oliver Spencer's Conduit Classic in Nash Blue - a faded, medium-weight cotton shirt that sits between casual and considered. The colour is close to slate, which means it works against olive, navy, and most neutrals without visual noise.
 
 Underneath and below, Universal Works' Aston Pant in light olive twill. It's a mid-rise, straight-cut trouser that isn't trying to be anything other than a reliable garment. The olive reads warm in spring light and connects to the green of the F/CE sacoche without matching it exactly.
 

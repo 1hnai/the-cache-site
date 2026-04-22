@@ -12,9 +12,9 @@ buyUrl: "https://www.fjallraven.com/uk/en-gb/bags-gear/kanken/kanken-bags/kanken
 
 The Kånken was designed in 1978 to address a specific problem: Swedish schoolchildren were developing back problems from carrying heavy bags incorrectly. Åke Nordin, Fjällräven's founder, solved it by designing a flat-backed pack that distributes weight across the full back and encourages a straight posture rather than a forward lean.
 
-The design worked. It became standard issue across Swedish schools, then gradually spread outward into everyday use, and is now one of the most recognisable backpacks in the world. The silhouette has changed almost nothing since 1978 — the flat body, the top carry handle, the zip front pocket, the side water bottle pockets. All original. All still sensible.
+The design worked. It became standard issue across Swedish schools, then gradually spread outward into everyday use, and is now one of the most recognisable backpacks in the world. The silhouette has changed almost nothing since 1978 - the flat body, the top carry handle, the zip front pocket, the side water bottle pockets. All original. All still sensible.
 
-The Kånken is made from Vinylon F, a polyester-derived fabric that is water-resistant, hard-wearing, and holds its shape over years of use. It is not a technical bag — no frame, no lumbar support, no load lifters. What it is is a capable, low-profile 16-litre everyday bag that weighs 300g and works for everything from a daily commute to a short trip.
+The Kånken is made from Vinylon F, a polyester-derived fabric that is water-resistant, hard-wearing, and holds its shape over years of use. It is not a technical bag - no frame, no lumbar support, no load lifters. What it is is a capable, low-profile 16-litre everyday bag that weighs 300g and works for everything from a daily commute to a short trip.
 
 The colour range is worth exploring. The classic navy is the safe choice and a good one. Ox red and clay are worth considering if you want something that works against a wider range of clothing. The bag is machine washable and straightforward to maintain.
 

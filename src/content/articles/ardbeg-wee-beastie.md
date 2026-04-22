@@ -10,7 +10,7 @@ image: "https://www.houseofmalt.co.uk/wp-content/uploads/2020/04/Ardbeg-5-Wee-Be
 buyUrl: "https://www.houseofmalt.co.uk/product/ardbeg-wee-beastie-5-year-old-single-malt-whisky/"
 ---
 
-Most distilleries reserve their young whisky for blending or quiet disposal. Ardbeg put theirs in a bottle and named it honestly. Wee Beastie is five years old, matured in a combination of ex-bourbon and ex-sherry casks on Islay, and released at 47.4% — a strength that lets the spirit speak without water-bath dilution.
+Most distilleries reserve their young whisky for blending or quiet disposal. Ardbeg put theirs in a bottle and named it honestly. Wee Beastie is five years old, matured in a combination of ex-bourbon and ex-sherry casks on Islay, and released at 47.4% - a strength that lets the spirit speak without water-bath dilution.
 
 The nose comes in hard: pine resin, fresh pepper, a thread of medicinal smoke that is distinctly Ardbeg rather than generic peat. On the palate you get green apple, aniseed, and a leathery dryness that settles into dark chocolate and sea salt on the finish. For a five-year-old it has unusual depth, which comes partly from the island warehouse conditions and partly from the quality of the new make going into those casks.
 

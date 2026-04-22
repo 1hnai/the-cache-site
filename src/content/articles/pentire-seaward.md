@@ -10,4 +10,4 @@ image: "https://pentiredrinks.com/cdn/shop/files/0GRY_SEA.jpg?v=1772556119"
 buyUrl: "https://pentiredrinks.com/products/pentire-seaward-alcohol-free-spirit"
 ---
 
-Pentire's Seaward is the most interesting non-alcoholic spirit on the British market — a cold-distilled botanical blend built around foraged Cornish rock samphire, with sage, citrus, and sea salt rounding out a profile that's genuinely adult. Serves beautifully with a premium tonic and a slice of grapefruit, and holds its own alongside any gin-based drink. Made in small batches on the Camel Estuary.
+Pentire's Seaward is the most interesting non-alcoholic spirit on the British market - a cold-distilled botanical blend built around foraged Cornish rock samphire, with sage, citrus, and sea salt rounding out a profile that's genuinely adult. Serves beautifully with a premium tonic and a slice of grapefruit, and holds its own alongside any gin-based drink. Made in small batches on the Camel Estuary.

@@ -14,6 +14,6 @@ The Koda 16 is the version of this oven that makes sense. The 12-inch Koda is ca
 
 The L-shaped flame burner is the key piece of engineering. It wraps around the back and side of the cooking chamber rather than sitting directly behind the stone, which creates a more even heat distribution than earlier single-burner designs. The stone heats consistently across its surface, which means your base cooks at the same rate as your crust without constant rotation.
 
-Setup is genuinely fast — fold down the legs, connect to a standard propane bottle, light it. The stainless body handles outdoor use without issue. The folding legs make storage straightforward when the season ends.
+Setup is genuinely fast - fold down the legs, connect to a standard propane bottle, light it. The stainless body handles outdoor use without issue. The folding legs make storage straightforward when the season ends.
 
 At £499 the Koda 16 sits at the top of Ooni's gas range, but the cooking surface upgrade over the Koda 12 is real and worth it if you're cooking for more than two people with any regularity. It is the most capable piece of outdoor cooking equipment at this price.
